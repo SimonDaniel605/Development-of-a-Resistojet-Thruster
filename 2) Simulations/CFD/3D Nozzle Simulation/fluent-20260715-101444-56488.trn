@@ -1,0 +1,473 @@
+Auto-Transcript Start Time:  10:14:44, 15 Jul 2026 South Africa Standard Time 
+Current Directory: "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD"
+
+              Welcome to ANSYS Fluent 2026 R1
+
+              Copyright 2026 Synopsys, Inc. and ANSYS, Inc. All rights reserved.
+              Unauthorized use, distribution or duplication is prohibited.
+              This product is subject to U.S. laws governing export and re-export.
+              For full Legal Notice, see documentation.
+
+Build Time: Feb  2 2026 16:32:00 EST  Build Id: 10262  
+ 
+Connected License Server List:	<Non FlexNet Publisher License Server (FNPLS)>
+
+     --------------------------------------------------------------
+     This is a student version of ANSYS FLUENT. Usage of this product
+     license is limited to the terms and conditions specified in your ANSYS
+     license form, additional terms section.
+     --------------------------------------------------------------
+Host spawning Node 0 on machine "SimonAsusLaptop" (win64).
+Host waiting for connection from Node 0 at 127.0.0.1:55404 
+
+Node 0 connecting to the Host ... connection established.
+
+------------------------------------------------------------------------------------------
+ID    Hostname         Core  O.S.         PID    CPU Model Name                          
+------------------------------------------------------------------------------------------
+n3    SimonAsusLaptop  4/20  Windows-x64  40208  12th Gen Intel(R) Core(TM) i7-12700H    
+n2    SimonAsusLaptop  3/20  Windows-x64  66448  12th Gen Intel(R) Core(TM) i7-12700H    
+n1    SimonAsusLaptop  2/20  Windows-x64  16784  12th Gen Intel(R) Core(TM) i7-12700H    
+n0*   SimonAsusLaptop  1/20  Windows-x64  58828  12th Gen Intel(R) Core(TM) i7-12700H    
+host  SimonAsusLaptop        Windows-x64  71832  12th Gen Intel(R) Core(TM) i7-12700H    
+
+MPI Option Selected: intel
+Selected system interconnect: default
+------------------------------------------------------------------------------------------
+
+Cleanup script file is C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\cleanup-fluent-SimonAsusLaptop-71832.bat
+Note: Rank = 0: Process affinity not being set (6).
+Note: Rank = 1: Process affinity not being set (6).
+Note: Rank = 2: Process affinity not being set (6).
+Note: Rank = 3: Process affinity not being set (6).
+
+Graphics driver currently in use: dx11
+
+
+Posting ANSYS Product Improvement Program startup data
+Done.
+
+> (cx-gui-do cx-activate-item "MenuBar*ReadSubMenu*Case & Data...")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "Nozzle_axial_1500iterations.cas.h5") "CFF Case Files (*.cas.h5 )")
+Fast-loading "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v261\fluent\fluent26.1.0\\addons\afd\lib\hdfio.bin"
+Done.
+
+Reading from SimonAsusLaptop:"C:/Users/Simon/Projects/MEng Electronics/Development of a Resistojet Thruster/2) Simulations/CFD/Nozzle_axial_1500iterations.cas.h5" in NODE0 mode ...
+  Reading mesh ...
+      487606 cells,     3 cell zones ...
+         123178 mixed cells,  zone id: 2287
+          71222 mixed cells,  zone id: 2292
+         293206 mixed cells,  zone id: 2297
+     2290794 faces,    12 face zones ...
+           5376 polygonal wall faces,  zone id: 1969
+           5376 polygonal wall faces,  zone id: 2
+           1951 polygonal wall faces,  zone id: 1882
+           1951 polygonal wall faces,  zone id: 1
+            190 polygonal interior faces,  zone id: 999
+            190 polygonal wall faces,  zone id: 48
+           1543 polygonal wall faces,  zone id: 47
+          26672 polygonal pressure-outlet faces,  zone id: 46
+            618 polygonal pressure-inlet faces,  zone id: 42
+        1345918 mixed interior faces,  zone id: 2299
+         365279 mixed interior faces,  zone id: 2294
+         535730 mixed interior faces,  zone id: 2289
+     1431185 nodes,     1 node zone  ...
+  Done.
+
+
+Building...
+     mesh
+	distributing mesh
+		pairs....,
+		parts....,
+		faces....,
+		nodes....,
+		shadow nodes....,
+		cells....,
+        bandwidth reduction using Reverse Cuthill-McKee: 114227/3134 = 36.4477
+  Reading boundary layer flags ...
+  Done.
+
+     materials,
+     interface,
+     domains,
+	mixture
+     zones,
+	internal-wall:1969-shadow
+	nozzle-volume-vacuum-shadow
+	internal-wall:1969
+	nozzle-volume-vacuum
+	outlet:999
+	nozzle-wall
+	nozzle:1
+	vacuum-boundaries
+	inlet
+	interior--volume-vacuum
+	interior--nozzle
+	interior--volume-fluid
+	volume-fluid
+	volume-vacuum
+	nozzle
+     parallel,
+Done.
+
+Reading from SimonAsusLaptop:"C:/Users/Simon/Projects/MEng Electronics/Development of a Resistojet Thruster/2) Simulations/CFD/Nozzle_axial_1500iterations.dat.h5" in NODE0 mode ...
+
+
+  Reading results.
+Parallel variables...
+Done.
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|cfl-number"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|cfl-number"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|cfl-number"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|mass-flow-inlet"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|mass-flow-inlet"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|mass-flow-inlet"))
+(cx-gui-do cx-set-toggle-button2 "Flux Report Definition*Table2*Table1*CheckButton10(Create Output Parameter)" #t)
+(cx-gui-do cx-activate-item "Flux Report Definition*Table2*Table1*CheckButton10(Create Output Parameter)")
+(cx-gui-do cx-activate-item "Flux Report Definition*PanelButtons*PushButton5(Compute)")
+
+                  Mass Flow Rate              [kg/s]
+-------------------------------- -------------------
+                           inlet                   0
+(cx-gui-do cx-set-toggle-button2 "Flux Report Definition*Table2*Table1*CheckButton10(Create Output Parameter)" #f)
+(cx-gui-do cx-activate-item "Flux Report Definition*Table2*Table1*CheckButton10(Create Output Parameter)")
+(cx-gui-do cx-set-toggle-button2 "Flux Report Definition*Table2*Table1*CheckButton4(Per Zone)" #t)
+(cx-gui-do cx-activate-item "Flux Report Definition*Table2*Table1*CheckButton4(Per Zone)")
+(cx-gui-do cx-set-toggle-button2 "Flux Report Definition*Table2*Table1*CheckButton4(Per Zone)" #f)
+(cx-gui-do cx-activate-item "Flux Report Definition*Table2*Table1*CheckButton4(Per Zone)")
+(cx-gui-do cx-set-toggle-button2 "Flux Report Definition*Table2*Table1*CheckButton4(Per Zone)" #t)
+(cx-gui-do cx-activate-item "Flux Report Definition*Table2*Table1*CheckButton4(Per Zone)")
+(cx-gui-do cx-activate-item "Flux Report Definition*PanelButtons*PushButton5(Compute)")
+
+                  Mass Flow Rate              [kg/s]
+-------------------------------- -------------------
+                           inlet                   0
+                ---------------- -------------------
+                             Net                   0
+(cx-gui-do cx-set-toggle-button2 "Flux Report Definition*Table2*Table1*CheckButton4(Per Zone)" #f)
+(cx-gui-do cx-activate-item "Flux Report Definition*Table2*Table1*CheckButton4(Per Zone)")
+(cx-gui-do cx-set-list-selections "Flux Report Definition*Table2*Table1*List8(Report Plots)" '())
+(cx-gui-do cx-activate-item "Flux Report Definition*Table2*Table1*List8(Report Plots)")
+(cx-gui-do cx-set-list-selections "Flux Report Definition*Table2*Table1*List8(Report Plots)" '( 0))
+(cx-gui-do cx-activate-item "Flux Report Definition*Table2*Table1*List8(Report Plots)")
+(cx-gui-do cx-activate-item "Flux Report Definition*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|mass-flow-inlet"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-mass-flow-inlet*Edit...")
+(cx-gui-do cx-activate-item "Flux Report Definition*PanelButtons*PushButton2(Cancel)")
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(build-popup-menu)
+(cx-gui-do cx-activate-item "MenuBar*GraphicsSubMenu*Mesh Display...")
+(cx-gui-do cx-set-list-selections "Mesh Display*Table1*Frame3*Frame1*List1(Surfaces)" '( 0 1 2 3 4 5 6 7 8))
+(cx-gui-do cx-activate-item "Mesh Display*Table1*Frame3*Frame1*List1(Surfaces)")
+(cx-gui-do cx-activate-item "Mesh Display*PanelButtons*PushButton1(OK)")
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-gui-do cx-activate-item "Mesh Display*Table1*Frame1*Frame4*PushButton2(Interior)")
+(cx-gui-do cx-activate-item "Mesh Display*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-toggle-button2 "Mesh Display*Table1*Frame1*Frame1*ToggleBox1(Options)*CheckButton4(Partitions)" #t)
+(cx-gui-do cx-activate-item "Mesh Display*Table1*Frame1*Frame1*ToggleBox1(Options)*CheckButton4(Partitions)")
+(cx-gui-do cx-activate-item "Mesh Display*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-toggle-button2 "Mesh Display*Table1*Frame1*Frame1*ToggleBox1(Options)*CheckButton4(Partitions)" #f)
+(cx-gui-do cx-activate-item "Mesh Display*Table1*Frame1*Frame1*ToggleBox1(Options)*CheckButton4(Partitions)")
+(cx-gui-do cx-set-toggle-button2 "Mesh Display*Table1*Frame1*Frame1*ToggleBox1(Options)*CheckButton2(Edges)" #t)
+(cx-gui-do cx-activate-item "Mesh Display*Table1*Frame1*Frame1*ToggleBox1(Options)*CheckButton2(Edges)")
+(cx-gui-do cx-activate-item "Mesh Display*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Mesh Display*PanelButtons*PushButton2(Cancel)")
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-set-camera-relative '(0 0 0) '(0 0 0) '(0 0 0) 0 0)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(build-popup-menu)
+(cx-gui-do cx-activate-item "MenuBar*GraphicsSubMenu*Contour...")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 0))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 0 1))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton4(Compute)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 0 1 7))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-gui-do cx-set-text-entry "Contours*Table1*TextEntry2(Contour Name)" "contour-pressure")
+(cx-gui-do cx-set-toggle-button2 "Contours*Table1*Frame1*ToggleBox1(Options)*CheckButton9(Draw Mesh)" #t)
+(cx-gui-do cx-activate-item "Contours*Table1*Frame1*ToggleBox1(Options)*CheckButton9(Draw Mesh)")
+(cx-gui-do cx-activate-item "Mesh Display*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-toggle-button2 "Contours*Table1*Frame1*ToggleBox1(Options)*CheckButton9(Draw Mesh)" #f)
+(cx-gui-do cx-activate-item "Contours*Table1*Frame1*ToggleBox1(Options)*CheckButton9(Draw Mesh)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 0 7))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 7))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '())
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 6))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-use-window-id 51)
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '())
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 5))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '())
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 4))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '())
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 3))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '())
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 2))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '())
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 1))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '())
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 0))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 0 1))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 0 1 8))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 0 1 7 8))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 0 1 7))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton2(Cancel)")
+(cx-use-window-id 51)
+(build-popup-menu)
+(cx-gui-do cx-activate-item "MenuBar*GraphicsSubMenu*Contour...")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Table1*DropDownList1(Contours of)" '( 3))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Table1*DropDownList1(Contours of)")
+(cx-gui-do cx-set-text-entry "Contours*Table1*TextEntry2(Contour Name)" "contour-temperature")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 8))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-use-window-id 51)
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '())
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 7))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-use-window-id 51)
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '())
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 7))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 1 7))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 0 1 7))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton4(Compute)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours"))
+(cx-use-window-id 51)
+(build-popup-menu)
+(cx-gui-do cx-activate-item "MenuBar*GraphicsSubMenu*Contour...")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Table1*DropDownList1(Contours of)" '( 1))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Table1*DropDownList1(Contours of)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 0))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 0 1))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Frame2*List2(Surfaces)" '( 0 1 7))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Table1*DropDownList1(Contours of)" '( 4))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Table1*DropDownList1(Contours of)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Table1*DropDownList2" '( 1))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Table1*DropDownList2")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Table1*DropDownList2" '( 2))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Table1*DropDownList2")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Table1*DropDownList2" '( 6))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Table1*DropDownList2")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Table1*DropDownList1(Contours of)" '( 5))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Table1*DropDownList1(Contours of)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-use-window-id 51)
+(cxg-clear-all-selections (cx-active-window))
+(cxg-add-surfaces-to-selection '(internal-wall:1969) (cx-active-window))
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(handle-key "")
+(cxg-clear-all-selections (cx-active-window))
+(cxg-add-surfaces-to-selection '() (cx-active-window))
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Table1*DropDownList2" '( 1))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Table1*DropDownList2")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Table1*DropDownList2" '( 2))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Table1*DropDownList2")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Table1*DropDownList2" '( 3))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Table1*DropDownList2")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Table1*DropDownList2" '( 4))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Table1*DropDownList2")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Table1*DropDownList2" '( 5))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Table1*DropDownList2")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Table1*DropDownList2" '( 6))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Table1*DropDownList2")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Table1*DropDownList2" '( 7))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Table1*DropDownList2")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Table1*DropDownList2" '( 8))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Table1*DropDownList2")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Table1*DropDownList2" '( 9))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Table1*DropDownList2")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Table1*DropDownList2" '( 8))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Table1*DropDownList2")
+(cx-use-window-id 51)
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Table1*DropDownList1(Contours of)" '( 2))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Table1*DropDownList1(Contours of)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Table1*DropDownList2" '( 2))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Table1*DropDownList2")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton4(Compute)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-use-window-id 51)
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Table1*DropDownList2" '( 3))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Table1*DropDownList2")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Table1*DropDownList2" '( 7))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Table1*DropDownList2")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Table1*DropDownList2" '( 1))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Table1*DropDownList2")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Table1*DropDownList2" '( 7))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Table1*DropDownList2")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-use-window-id 51)
+(cx-gui-do cx-set-text-entry "Contours*Table1*TextEntry2(Contour Name)" "contour-mach")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Viscous (Laminar)"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Viscous (Laminar)"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Viscous (Laminar)"))
+(cx-gui-do cx-set-toggle-button2 "Viscous Model*Table1*ToggleBox1(Model)*Inviscid" #t)
+(cx-gui-do cx-activate-item "Viscous Model*Table1*ToggleBox1(Model)*Inviscid")
+(cx-gui-do cx-activate-item "Viscous Model*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-activate-item "Solution Initialization*Table1*Frame9*PushButton1(Initialize)")
+(cx-gui-do cx-activate-item "Solution Initialization*Table1*Frame9*PushButton1(Initialize)")
+(cx-gui-do cx-activate-item "Question*OK")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*PushButton1(Run Calculation)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*Table3(Controls)*PushButton1(Controls)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*PushButton1(Run Calculation)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*Table3(Run Calculation)*PushButton9(Calculate)")
+
+(cx-gui-do cx-activate-item "Question*OK")
+Creating new file C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\.\\exit-mach-rfile_1_1.out
+Creating new file C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\.\\exit-pressure-rfile_1_1.out
+Creating new file C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\.\\report-def-0-rfile_1_1.out
+Creating new file C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\.\\mass-flow-outlet-rfile_1_1.out
+Creating new file C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\.\\mass-flow-inlet-rfile_1_1.out
+
+  iter  continuity  x-velocity  y-velocity  z-velocity      energy   exit-mach  exit-press      thrust     time/iter
+
+==============================================================================
+
+Node 3: Process 40208: Received signal SIGSEGV.
+
+==============================================================================
+ Error in the fluent (fl) process : connection reset
+
+Operation stopped.
+(cx-gui-do cx-activate-item "Question*OK")
+Auto-Transcript Stop Time:  10:54:00, 15 Jul 2026 South Africa Standard Time 
+Total Transcript Time: 39 Minute 15 Second.

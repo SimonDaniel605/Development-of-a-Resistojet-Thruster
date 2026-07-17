@@ -1,0 +1,4624 @@
+Auto-Transcript Start Time:  12:06:51, 13 Jul 2026 South Africa Standard Time 
+Current Directory: "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD"
+
+              Welcome to ANSYS Fluent 2026 R1
+
+              Copyright 2026 Synopsys, Inc. and ANSYS, Inc. All rights reserved.
+              Unauthorized use, distribution or duplication is prohibited.
+              This product is subject to U.S. laws governing export and re-export.
+              For full Legal Notice, see documentation.
+
+Build Time: Feb  2 2026 16:32:00 EST  Build Id: 10262  
+ 
+Connected License Server List:	<Non FlexNet Publisher License Server (FNPLS)>
+
+     --------------------------------------------------------------
+     This is a student version of ANSYS FLUENT. Usage of this product
+     license is limited to the terms and conditions specified in your ANSYS
+     license form, additional terms section.
+     --------------------------------------------------------------
+Host spawning Node 0 on machine "SimonAsusLaptop" (win64).
+Host waiting for connection from Node 0 at 127.0.0.1:63874 
+
+Node 0 connecting to the Host ... connection established.
+
+------------------------------------------------------------------------------------------
+ID    Hostname         Core  O.S.         PID    CPU Model Name                          
+------------------------------------------------------------------------------------------
+n3    SimonAsusLaptop  4/20  Windows-x64  42936  12th Gen Intel(R) Core(TM) i7-12700H    
+n2    SimonAsusLaptop  3/20  Windows-x64  61152  12th Gen Intel(R) Core(TM) i7-12700H    
+n1    SimonAsusLaptop  2/20  Windows-x64  63320  12th Gen Intel(R) Core(TM) i7-12700H    
+n0*   SimonAsusLaptop  1/20  Windows-x64  53860  12th Gen Intel(R) Core(TM) i7-12700H    
+host  SimonAsusLaptop        Windows-x64  67432  12th Gen Intel(R) Core(TM) i7-12700H    
+
+MPI Option Selected: intel
+Selected system interconnect: default
+------------------------------------------------------------------------------------------
+
+Cleanup script file is C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\cleanup-fluent-SimonAsusLaptop-67432.bat
+Note: Rank = 0: Process affinity not being set (6).
+Note: Rank = 1: Process affinity not being set (6).
+Note: Rank = 2: Process affinity not being set (6).
+Note: Rank = 3: Process affinity not being set (6).
+
+Graphics driver currently in use: dx11
+
+(cx-gui-do cx-activate-tab-index "NavigationPane*Frame1(TreeTab)" 0)
+
+Posting ANSYS Product Improvement Program startup data
+Done.
+
+Meshing> 
+Importing one geom object per program-controlled and one zone per body ...
+    C:\\Program Files\\ANSYS Inc\\ANSYS Student\\v261\\commonfiles\\CPython\\3_10\\winx64\\Release\\python\\..\\Ansys\\TGrid\\CADReaders.py started by Simon on SimonAsusLaptop winx64 on Mon Jul 13 12:08:26 2026
+    using Python 3.10.19 (remotes/origin/54ee32c922d15cece27c63aab31ba27b8fb8da4e-dirty:54ee32c9, Dec  2 2) [MSC v.1942 64 bit (AMD64)]
+    
+    using Ansys.Meshing.FieldMesher build Feb  3 2026 15:07:12
+    
+    running ANSYS TGrid CADToTGridConverter ...
+    setting up parameters ...
+    setting up parameters done.
+    running conversion ...
+    converting 1 file(s) from Workbench to FLTG using output path 'C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\FM_SimonAsusLaptop_50352/out1783937265.95885950352.tgf'
+    converting file 'Nozzle_axial.dsco' (1 of 1) from Workbench to FLTG using output path 'C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\FM_SimonAsusLaptop_50352'
+    importing data ...
+    importing meshing model from PartMgr from file 'C:/Users/Simon/Projects/MEng Electronics/Development of a Resistojet Thruster/2) Simulations/CFD/Nozzle_axial.dsco' ...
+    setting enclosure and symmetry processing to False
+    setting transfer named selections to True
+    setting named selection prefixes to ''
+    setting mixed import resolution type to 'SolidAndSurface'
+    setting target application to 'FluentMeshing'
+    attaching to assembly ...
+    attaching to assembly done in 74.907 [s]
+    processing assembly 'C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\Nozzle_axial.dsco' with ID 1 and reference key '<?xml version="1.0" encoding="utf-16"?>
+    <IdTable xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <Table>
+        <Entry>
+          <AssemblyVersionInfo>
+            <AssemblySavedVersion>2147483647</AssemblySavedVersion>
+            <AssemblySavedBuildDate>2147483647</AssemblySavedBuildDate>
+            <IsLegacyLabel>false</IsLegacyLabel>
+          </AssemblyVersionInfo>
+          <Text>~sO_~iIe2a814f7-616f-43d8-8a28-8d9e11a7da02.61_#~oEe2a814f7-616f-43d8-8a28-8d9e11a7da02.57_#_</Text>
+          <ExplodedBodyText>~sO_~iIe2a814f7-616f-43d8-8a28-8d9e11a7da02.61_#~oEe2a814f7-616f-43d8-8a28-8d9e11a7da02.64_#_</ExplodedBodyText>
+          <Id>10000</Id>
+          <IsExploded>true</IsExploded>
+        </Entry>
+        <Entry>
+          <AssemblyVersionInfo>
+            <AssemblySavedVersion>2147483647</AssemblySavedVersion>
+            <AssemblySavedBuildDate>2147483647</AssemblySavedBuildDate>
+            <IsLegacyLabel>false</IsLegacyLabel>
+          </AssemblyVersionInfo>
+          <Text>~sO_~iIe2a814f7-616f-43d8-8a28-8d9e11a7da02.61_#~oEe2a814f7-616f-43d8-8a28-8d9e11a7da02.57_#_</Text>
+          <ExplodedBodyText>~sO_~iIe2a814f7-616f-43d8-8a28-8d9e11a7da02.61_#~oE9593a922-11c8-464a-a192-adf8ff0bff00.17755_#_</ExplodedBodyText>
+          <Id>10001</Id>
+          <IsExploded>true</IsExploded>
+        </Entry>
+        <Entry>
+          <AssemblyVersionInfo>
+            <AssemblySavedVersion>2147483647</AssemblySavedVersion>
+            <AssemblySavedBuildDate>2147483647</AssemblySavedBuildDate>
+            <IsLegacyLabel>false</IsLegacyLabel>
+          </AssemblyVersionInfo>
+          <Text>~sE71019be9-a334-4334-935a-1ab3731501e7.2_#</Text>
+          <Id>10002</Id>
+          <IsExploded>false</IsExploded>
+        </Entry>
+      </Table>
+      <AssemblyVersionInfo>
+        <AssemblySavedVersion>2147483647</AssemblySavedVersion>
+        <AssemblySavedBuildDate>2147483647</AssemblySavedBuildDate>
+        <IsLegacyLabel>false</IsLegacyLabel>
+      </AssemblyVersionInfo>
+    </IdTable>'
+    length unit = [m]
+    processing part 'Volume' with ID 3
+    processing part 'Volume' with ID 5
+    processing part 'Nozzle_axial' with ID 7
+    processing named selection 'Inlet'
+    processing named selection 'Internal Wall'
+    processing named selection 'Outlet'
+    processing named selection 'Nozzle wall'
+    processing named selection 'Vacuum Boundaries'
+    processing data ...
+    removing named collections of entities ...
+    removing named collections of entities stopped, no named collections selected.
+    analyzing feature edges ...
+    detecting feature edges, feature angle = 40 [deg] ...
+        Data information
+            Meshing model
+                Attributes:
+                    'LengthUnit': '[mm]'
+                Entity summary:
+                    Collection: 5
+                    Component : 4
+                    Body      : 3
+                    Shell     : 3
+                    Face      : 19
+                    Loop      : 34
+                    Edge      : 17
+                    Surface   : 19
+                    Curve     : 17
+                Tessellation summary:
+                    Face facets  : 3135
+                    Edge segments: 1546
+                Bounding box:
+                    (0, -24.99573135375977, -25) x (128.5779418945312, 25, 24.99573135375977)
+                Assembly component hierarchy:
+                    'C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\Nozzle_axial.dsco'
+                      'Volume'
+                      'Volume'
+                      'Nozzle_axial'
+                NamedCollections:
+                    'Inlet'
+                    'Internal Wall'
+                    'Outlet'
+                    'Nozzle wall'
+                    'Vacuum Boundaries'
+    
+    
+    exporting FLTG data to file 'C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\FM_SimonAsusLaptop_50352\\out1783937265.95885950352.tgf' ...
+    writing face-based mesh file 'C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\FM_SimonAsusLaptop_50352\\out1783937265.95885950352.tgf' ...
+    ======== Exported Data ========
+    Entity summary:
+        Object       : 3
+        Object region: 8
+        Zone         : 16
+    
+    running conversion done.
+    running ANSYS TGrid CADToTGridConverter done.
+    ran ANSYS TGrid CADToTGridConverter in 75.365 [s]
+
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352/out1783937265.95885950352.tgf"...
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352/out1783937265.95885950352.tgf"...
+nodes: 2997
+edges: 1403
+faces: 3135
+cells: 0
+analyzing boundary connectivity...done.
+using plugIn session Discovery[6444]
+
+---------------- Import of Nozzle_axial, consisting of 3 parts/objects, complete. 
+ 
+
+---------------- Import complete in  2.14 minutes.
+(newline)
+
+
+Meshing> (cx-use-window-id 51)
+zone id: 9, name: origin-vacuum-boundaries, type: geometry, count: 549
+(cx-use-window-id 51)
+zone not found.
+(cx-use-window-id 51)
+(handle-key "control [")
+/bo mo deselect-last
+
+> (cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+
+---------------- The Global Min size was adjusted to 0.01 
+
+---- Warning--- Note that size controls based on edges cannot be used in a Size Control File
+
+---------------- A curvature angle of 12 was added to the edges of curvature_1
+
+---------------- A curvature angle of 12 was added to  curvature_1
+deleting edge-zone origin-internal-wall__20 (id 20) 
+deleting edge-zone origin-internal-wall__21 (id 21) 
+removed 285 nodes.
+Deleting curvature_1_edges
+Deleting curvature_1_faces
+
+---------------- A curvature angle of 12 was added to  curvature_1
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject3.msh.h5" ...
+writing 1 node zones
+writing 9 edge zones 
+writing 7 face zones 
+writing node curvature data
+done.    processing size functions/scoped sizing to create Size Field...
+
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\Nozzle_axial.sf"...
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\Nozzle_axial.sf"...
+Done.
+
+
+Importing one mesh object per program-controlled and one zone per body ...
+    C:\\Program Files\\ANSYS Inc\\ANSYS Student\\v261\\commonfiles\\CPython\\3_10\\winx64\\Release\\python\\..\\Ansys\\TGrid\\CADReaders.py started by Simon on SimonAsusLaptop winx64 on Mon Jul 13 12:44:58 2026
+    using Python 3.10.19 (remotes/origin/54ee32c922d15cece27c63aab31ba27b8fb8da4e-dirty:54ee32c9, Dec  2 2) [MSC v.1942 64 bit (AMD64)]
+    
+    using Ansys.Meshing.FieldMesher build Feb  3 2026 15:07:12
+    
+    running ANSYS TGrid CADToTGridConverter ...
+    setting up parameters ...
+    setting up parameters done.
+    running conversion ...
+    converting 1 file(s) from Workbench to FLTG using output path 'C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\FM_SimonAsusLaptop_50352/out1783939494.872550352.tgf'
+    converting file 'Nozzle_axial.dsco.pmdb' (1 of 1) from Workbench to FLTG using output path 'C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\FM_SimonAsusLaptop_50352'
+    importing data ...
+    importing meshing model from PartMgr from file 'C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\FM_SimonAsusLaptop_50352\\\\Nozzle_axial.dsco.pmdb' ...
+    setting enclosure and symmetry processing to False
+    setting transfer named selections to True
+    setting named selection prefixes to ''
+    setting mixed import resolution type to 'SolidAndSurface'
+    setting target application to 'FluentMeshing'
+    initializing part manager from file ...
+    processing assembly 'C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\Nozzle_axial.dsco' with ID 1 and reference key '<?xml version="1.0" encoding="utf-16"?>
+    <IdTable xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <Table>
+        <Entry>
+          <AssemblyVersionInfo>
+            <AssemblySavedVersion>2147483647</AssemblySavedVersion>
+            <AssemblySavedBuildDate>2147483647</AssemblySavedBuildDate>
+            <IsLegacyLabel>false</IsLegacyLabel>
+          </AssemblyVersionInfo>
+          <Text>~sO_~iIe2a814f7-616f-43d8-8a28-8d9e11a7da02.61_#~oEe2a814f7-616f-43d8-8a28-8d9e11a7da02.57_#_</Text>
+          <ExplodedBodyText>~sO_~iIe2a814f7-616f-43d8-8a28-8d9e11a7da02.61_#~oEe2a814f7-616f-43d8-8a28-8d9e11a7da02.64_#_</ExplodedBodyText>
+          <Id>10000</Id>
+          <IsExploded>true</IsExploded>
+        </Entry>
+        <Entry>
+          <AssemblyVersionInfo>
+            <AssemblySavedVersion>2147483647</AssemblySavedVersion>
+            <AssemblySavedBuildDate>2147483647</AssemblySavedBuildDate>
+            <IsLegacyLabel>false</IsLegacyLabel>
+          </AssemblyVersionInfo>
+          <Text>~sO_~iIe2a814f7-616f-43d8-8a28-8d9e11a7da02.61_#~oEe2a814f7-616f-43d8-8a28-8d9e11a7da02.57_#_</Text>
+          <ExplodedBodyText>~sO_~iIe2a814f7-616f-43d8-8a28-8d9e11a7da02.61_#~oE9593a922-11c8-464a-a192-adf8ff0bff00.17755_#_</ExplodedBodyText>
+          <Id>10001</Id>
+          <IsExploded>true</IsExploded>
+        </Entry>
+        <Entry>
+          <AssemblyVersionInfo>
+            <AssemblySavedVersion>2147483647</AssemblySavedVersion>
+            <AssemblySavedBuildDate>2147483647</AssemblySavedBuildDate>
+            <IsLegacyLabel>false</IsLegacyLabel>
+          </AssemblyVersionInfo>
+          <Text>~sE71019be9-a334-4334-935a-1ab3731501e7.2_#</Text>
+          <Id>10002</Id>
+          <IsExploded>false</IsExploded>
+        </Entry>
+      </Table>
+      <AssemblyVersionInfo>
+        <AssemblySavedVersion>2147483647</AssemblySavedVersion>
+        <AssemblySavedBuildDate>2147483647</AssemblySavedBuildDate>
+        <IsLegacyLabel>false</IsLegacyLabel>
+      </AssemblyVersionInfo>
+    </IdTable>'
+    length unit = [m]
+    processing part 'Volume' with ID 3
+    processing part 'Volume' with ID 5
+    processing part 'Nozzle_axial' with ID 7
+    processing named selection 'Inlet'
+    processing named selection 'Internal Wall'
+    processing named selection 'Outlet'
+    processing named selection 'Nozzle wall'
+    processing named selection 'Vacuum Boundaries'
+    processing data ...
+    loading size function background grid from file 'C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\FM_SimonAsusLaptop_50352\\\\Nozzle_axial.sf' ...
+    reading size function background grid file 'C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\FM_SimonAsusLaptop_50352\\\\Nozzle_axial.sf' ...
+     Read 5862648 vertices
+    initializing size function background grid done in 5.705 [s]
+    tessellating 19 faces done in 756.129 [s]
+    removing named collections of entities ...
+    removing named collections of entities stopped, no named collections selected.
+    analyzing feature edges ...
+    detecting feature edges, feature angle = 40 [deg], secondary feature angle = 5 [deg] ...
+    initializing projection on 9 entities done in 8.368 [s]
+    initializing projection on 5 entities done in 7.351 [s]
+    feature edge angle analysis for 17 edges done in 16.055 [s]
+        Data information
+            Meshing model
+                Attributes:
+                    'LengthUnit': '[mm]'
+                Entity summary:
+                    Collection: 5
+                    Component : 4
+                    Body      : 3
+                    Shell     : 3
+                    Face      : 19
+                    Loop      : 34
+                    Edge      : 17
+                    Surface   : 19
+                    Curve     : 17
+                Tessellation summary:
+                    Face facets  : 11150742
+                    Edge segments: 6412
+                Bounding box:
+                    (0, -25, -24.99990272521973) x (128.5779418945312, 24.99994087219238, 24.99990463256836)
+                Assembly component hierarchy:
+                    'C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\Nozzle_axial.dsco'
+                      'Volume'
+                      'Volume'
+                      'Nozzle_axial'
+                NamedCollections:
+                    'Inlet'
+                    'Internal Wall'
+                    'Outlet'
+                    'Nozzle wall'
+                    'Vacuum Boundaries'
+    
+    
+    exporting FLTG data to file 'C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\FM_SimonAsusLaptop_50352\\out1783939494.872550352.tgf' ...
+    zone setup for 20 zones done in 19.038 [s]
+    writing face-based mesh file 'C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\FM_SimonAsusLaptop_50352\\out1783939494.872550352.tgf' ...
+    ======== Exported Data ========
+    Entity summary:
+        Object       : 3
+        Object region: 8
+        Zone         : 19
+    
+    running conversion done.
+    running ANSYS TGrid CADToTGridConverter done.
+    ran ANSYS TGrid CADToTGridConverter in 811.434 [s]
+
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352/out1783939494.872550352.tgf"...
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352/out1783939494.872550352.tgf"...
+nodes: 5581804
+edges: 6412
+faces: 11150742
+cells: 0
+appending mesh...
+done.
+
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\\Nozzle_axial.sf"...
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\\Nozzle_axial.sf"...
+ Read 5862648 vertices
+0 faces marked.
+0 faces marked.
+0 faces marked.
+10873078 faces marked.
+
+---------------- Surface Meshing of Nozzle_axial complete in 22.54 minutes.
+
+---------------- After surface meshing, 3 objects/parts have been detected. Either the Share Topology task should be added, or the Non-Conformal option should be invoked.
+
+---- Warning--- Note that some operations, like auto-remesh, quality improvements and zone separation, will be executed after the Share Topology/Describe Geometry Tasks
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton1(All Faces)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton1(All Faces)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton1(All Faces)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton1(All Faces)")
+(cx-use-window-id 51)
+zone id: 9, name: origin-vacuum-boundaries, type: geometry, count: 549
+(cx-use-window-id 51)
+zone id: 13, name: origin-nozzle_axial-nozzle, type: geometry, count: 1170
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+zone id: 2, name: origin-inlet, type: geometry, count: 75
+(cx-use-window-id 51)
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton2(Free Faces)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton2(Free Faces)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton2(Free Faces)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton2(Free Faces)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton1(All Faces)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton1(All Faces)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton3(Multi Faces)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton3(Multi Faces)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton1(All Faces)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton1(All Faces)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton3(Multi Faces)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton3(Multi Faces)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton2(Free Faces)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton2(Free Faces)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton1(All Faces)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton1(All Faces)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton2(Free Faces)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton2(Free Faces)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton4(Face Edges)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton4(Face Edges)")
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton1(All Faces)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton1(All Faces)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton1(All Faces)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton1(All Faces)")
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton1(All Faces)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton1(All Faces)")
+(cx-use-window-id 51)
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton4(Face Edges)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton4(Face Edges)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton4(Face Edges)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton4(Face Edges)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton1(All Faces)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton1(All Faces)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton3(Multi Faces)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton3(Multi Faces)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton2(Free Faces)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton2(Free Faces)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton2(Free Faces)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton2(Free Faces)")
+(cx-use-window-id 51)
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton4(Face Edges)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton4(Face Edges)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton4(Face Edges)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton4(Face Edges)")
+(cx-use-window-id 51)
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton1(All Faces)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton1(All Faces)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton1(All Faces)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton1(All Faces)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton4(Face Edges)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton4(Face Edges)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton4(Face Edges)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton4(Face Edges)")
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject3.msh.h5" ...
+3D mesh
+nodes: 2997
+edges: 1403
+faces: 3135 
+cells: 0 
+reading 1 node zones
+reading 9 edge zones
+reading 7 face zones
+
+Read Mesh Summary:
+	nodes : 1 zone (1 boundary, 0 interior)
+	      : 2997 entities (2997 boundary, 0 interior)
+	edges : 9 zones (9 boundary, 0 interior)
+	      : 1403 entities (1403 boundary, 0 interior)
+	faces : 7 zones (7 boundary, 0 interior)
+	      : 3135 entities (3135 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject3.msh.h5" ...
+writing 1 node zones
+writing 9 edge zones 
+writing 7 face zones 
+writing node curvature data
+done.    processing size functions/scoped sizing to create Size Field...
+
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\Nozzle_axial.sf"...
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\Nozzle_axial.sf"...
+Done.
+
+
+Importing one mesh object per program-controlled and one zone per body ...
+    C:\\Program Files\\ANSYS Inc\\ANSYS Student\\v261\\commonfiles\\CPython\\3_10\\winx64\\Release\\python\\..\\Ansys\\TGrid\\CADReaders.py started by Simon on SimonAsusLaptop winx64 on Mon Jul 13 13:17:35 2026
+    using Python 3.10.19 (remotes/origin/54ee32c922d15cece27c63aab31ba27b8fb8da4e-dirty:54ee32c9, Dec  2 2) [MSC v.1942 64 bit (AMD64)]
+    
+    using Ansys.Meshing.FieldMesher build Feb  3 2026 15:07:12
+    
+    running ANSYS TGrid CADToTGridConverter ...
+    setting up parameters ...
+    setting up parameters done.
+    running conversion ...
+    converting 1 file(s) from Workbench to FLTG using output path 'C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\FM_SimonAsusLaptop_50352/out1783941453.09904150352.tgf'
+    converting file 'Nozzle_axial.dsco.pmdb' (1 of 1) from Workbench to FLTG using output path 'C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\FM_SimonAsusLaptop_50352'
+    importing data ...
+    importing meshing model from PartMgr from file 'C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\FM_SimonAsusLaptop_50352\\\\Nozzle_axial.dsco.pmdb' ...
+    setting enclosure and symmetry processing to False
+    setting transfer named selections to True
+    setting named selection prefixes to ''
+    setting mixed import resolution type to 'SolidAndSurface'
+    setting target application to 'FluentMeshing'
+    initializing part manager from file ...
+    processing assembly 'C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\Nozzle_axial.dsco' with ID 1 and reference key '<?xml version="1.0" encoding="utf-16"?>
+    <IdTable xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <Table>
+        <Entry>
+          <AssemblyVersionInfo>
+            <AssemblySavedVersion>2147483647</AssemblySavedVersion>
+            <AssemblySavedBuildDate>2147483647</AssemblySavedBuildDate>
+            <IsLegacyLabel>false</IsLegacyLabel>
+          </AssemblyVersionInfo>
+          <Text>~sO_~iIe2a814f7-616f-43d8-8a28-8d9e11a7da02.61_#~oEe2a814f7-616f-43d8-8a28-8d9e11a7da02.57_#_</Text>
+          <ExplodedBodyText>~sO_~iIe2a814f7-616f-43d8-8a28-8d9e11a7da02.61_#~oEe2a814f7-616f-43d8-8a28-8d9e11a7da02.64_#_</ExplodedBodyText>
+          <Id>10000</Id>
+          <IsExploded>true</IsExploded>
+        </Entry>
+        <Entry>
+          <AssemblyVersionInfo>
+            <AssemblySavedVersion>2147483647</AssemblySavedVersion>
+            <AssemblySavedBuildDate>2147483647</AssemblySavedBuildDate>
+            <IsLegacyLabel>false</IsLegacyLabel>
+          </AssemblyVersionInfo>
+          <Text>~sO_~iIe2a814f7-616f-43d8-8a28-8d9e11a7da02.61_#~oEe2a814f7-616f-43d8-8a28-8d9e11a7da02.57_#_</Text>
+          <ExplodedBodyText>~sO_~iIe2a814f7-616f-43d8-8a28-8d9e11a7da02.61_#~oE9593a922-11c8-464a-a192-adf8ff0bff00.17755_#_</ExplodedBodyText>
+          <Id>10001</Id>
+          <IsExploded>true</IsExploded>
+        </Entry>
+        <Entry>
+          <AssemblyVersionInfo>
+            <AssemblySavedVersion>2147483647</AssemblySavedVersion>
+            <AssemblySavedBuildDate>2147483647</AssemblySavedBuildDate>
+            <IsLegacyLabel>false</IsLegacyLabel>
+          </AssemblyVersionInfo>
+          <Text>~sE71019be9-a334-4334-935a-1ab3731501e7.2_#</Text>
+          <Id>10002</Id>
+          <IsExploded>false</IsExploded>
+        </Entry>
+      </Table>
+      <AssemblyVersionInfo>
+        <AssemblySavedVersion>2147483647</AssemblySavedVersion>
+        <AssemblySavedBuildDate>2147483647</AssemblySavedBuildDate>
+        <IsLegacyLabel>false</IsLegacyLabel>
+      </AssemblyVersionInfo>
+    </IdTable>'
+    length unit = [m]
+    processing part 'Volume' with ID 3
+    processing part 'Volume' with ID 5
+    processing part 'Nozzle_axial' with ID 7
+    processing named selection 'Inlet'
+    processing named selection 'Internal Wall'
+    processing named selection 'Outlet'
+    processing named selection 'Nozzle wall'
+    processing named selection 'Vacuum Boundaries'
+    processing data ...
+    loading size function background grid from file 'C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\FM_SimonAsusLaptop_50352\\\\Nozzle_axial.sf' ...
+    reading size function background grid file 'C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\FM_SimonAsusLaptop_50352\\\\Nozzle_axial.sf' ...
+     Read 292383 vertices
+    initializing size function background grid done in 0.288 [s]
+    tessellating 19 faces done in 1.896 [s]
+    removing named collections of entities ...
+    removing named collections of entities stopped, no named collections selected.
+    analyzing feature edges ...
+    detecting feature edges, feature angle = 40 [deg], secondary feature angle = 5 [deg] ...
+        Data information
+            Meshing model
+                Attributes:
+                    'LengthUnit': '[mm]'
+                Entity summary:
+                    Collection: 5
+                    Component : 4
+                    Body      : 3
+                    Shell     : 3
+                    Face      : 19
+                    Loop      : 34
+                    Edge      : 17
+                    Surface   : 19
+                    Curve     : 17
+                Tessellation summary:
+                    Face facets  : 77308
+                    Edge segments: 941
+                Bounding box:
+                    (0, -25, -24.99987030029297) x (128.5779418945312, 24.99999618530273, 24.99986839294434)
+                Assembly component hierarchy:
+                    'C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\Nozzle_axial.dsco'
+                      'Volume'
+                      'Volume'
+                      'Nozzle_axial'
+                NamedCollections:
+                    'Inlet'
+                    'Internal Wall'
+                    'Outlet'
+                    'Nozzle wall'
+                    'Vacuum Boundaries'
+    
+    
+    exporting FLTG data to file 'C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\FM_SimonAsusLaptop_50352\\out1783941453.09904150352.tgf' ...
+    writing face-based mesh file 'C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\FM_SimonAsusLaptop_50352\\out1783941453.09904150352.tgf' ...
+    ======== Exported Data ========
+    Entity summary:
+        Object       : 3
+        Object region: 8
+        Zone         : 19
+    
+    running conversion done.
+    running ANSYS TGrid CADToTGridConverter done.
+    ran ANSYS TGrid CADToTGridConverter in 2.601 [s]
+
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352/out1783941453.09904150352.tgf"...
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352/out1783941453.09904150352.tgf"...
+nodes: 39616
+edges: 941
+faces: 77308
+cells: 0
+appending mesh...
+done.
+
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\\Nozzle_axial.sf"...
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\\Nozzle_axial.sf"...
+ Read 292383 vertices
+0 faces marked.
+0 faces marked.
+0 faces marked.
+22557 faces marked.
+
+---------------- Surface Meshing of Nozzle_axial complete in  0.18 minutes.
+
+---------------- After surface meshing, 3 objects/parts have been detected. Either the Share Topology task should be added, or the Non-Conformal option should be invoked.
+
+---- Warning--- Note that some operations, like auto-remesh, quality improvements and zone separation, will be executed after the Share Topology/Describe Geometry Tasks
+(newline)
+
+
+Meshing> Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject3.msh.h5" ...
+3D mesh
+nodes: 2997
+edges: 1403
+faces: 3135 
+cells: 0 
+reading 1 node zones
+reading 9 edge zones
+reading 7 face zones
+
+Read Mesh Summary:
+	nodes : 1 zone (1 boundary, 0 interior)
+	      : 2997 entities (2997 boundary, 0 interior)
+	edges : 9 zones (9 boundary, 0 interior)
+	      : 1403 entities (1403 boundary, 0 interior)
+	faces : 7 zones (7 boundary, 0 interior)
+	      : 3135 entities (3135 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject3.msh.h5" ...
+writing 1 node zones
+writing 9 edge zones 
+writing 7 face zones 
+writing node curvature data
+done.    processing size functions/scoped sizing to create Size Field...
+
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\Nozzle_axial.sf"...
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\Nozzle_axial.sf"...
+Done.
+
+
+Importing one mesh object per program-controlled and one zone per body ...
+    C:\\Program Files\\ANSYS Inc\\ANSYS Student\\v261\\commonfiles\\CPython\\3_10\\winx64\\Release\\python\\..\\Ansys\\TGrid\\CADReaders.py started by Simon on SimonAsusLaptop winx64 on Mon Jul 13 13:18:23 2026
+    using Python 3.10.19 (remotes/origin/54ee32c922d15cece27c63aab31ba27b8fb8da4e-dirty:54ee32c9, Dec  2 2) [MSC v.1942 64 bit (AMD64)]
+    
+    using Ansys.Meshing.FieldMesher build Feb  3 2026 15:07:12
+    
+    running ANSYS TGrid CADToTGridConverter ...
+    setting up parameters ...
+    setting up parameters done.
+    running conversion ...
+    converting 1 file(s) from Workbench to FLTG using output path 'C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\FM_SimonAsusLaptop_50352/out1783941501.04885650352.tgf'
+    converting file 'Nozzle_axial.dsco.pmdb' (1 of 1) from Workbench to FLTG using output path 'C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\FM_SimonAsusLaptop_50352'
+    importing data ...
+    importing meshing model from PartMgr from file 'C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\FM_SimonAsusLaptop_50352\\\\Nozzle_axial.dsco.pmdb' ...
+    setting enclosure and symmetry processing to False
+    setting transfer named selections to True
+    setting named selection prefixes to ''
+    setting mixed import resolution type to 'SolidAndSurface'
+    setting target application to 'FluentMeshing'
+    initializing part manager from file ...
+    processing assembly 'C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\Nozzle_axial.dsco' with ID 1 and reference key '<?xml version="1.0" encoding="utf-16"?>
+    <IdTable xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <Table>
+        <Entry>
+          <AssemblyVersionInfo>
+            <AssemblySavedVersion>2147483647</AssemblySavedVersion>
+            <AssemblySavedBuildDate>2147483647</AssemblySavedBuildDate>
+            <IsLegacyLabel>false</IsLegacyLabel>
+          </AssemblyVersionInfo>
+          <Text>~sO_~iIe2a814f7-616f-43d8-8a28-8d9e11a7da02.61_#~oEe2a814f7-616f-43d8-8a28-8d9e11a7da02.57_#_</Text>
+          <ExplodedBodyText>~sO_~iIe2a814f7-616f-43d8-8a28-8d9e11a7da02.61_#~oEe2a814f7-616f-43d8-8a28-8d9e11a7da02.64_#_</ExplodedBodyText>
+          <Id>10000</Id>
+          <IsExploded>true</IsExploded>
+        </Entry>
+        <Entry>
+          <AssemblyVersionInfo>
+            <AssemblySavedVersion>2147483647</AssemblySavedVersion>
+            <AssemblySavedBuildDate>2147483647</AssemblySavedBuildDate>
+            <IsLegacyLabel>false</IsLegacyLabel>
+          </AssemblyVersionInfo>
+          <Text>~sO_~iIe2a814f7-616f-43d8-8a28-8d9e11a7da02.61_#~oEe2a814f7-616f-43d8-8a28-8d9e11a7da02.57_#_</Text>
+          <ExplodedBodyText>~sO_~iIe2a814f7-616f-43d8-8a28-8d9e11a7da02.61_#~oE9593a922-11c8-464a-a192-adf8ff0bff00.17755_#_</ExplodedBodyText>
+          <Id>10001</Id>
+          <IsExploded>true</IsExploded>
+        </Entry>
+        <Entry>
+          <AssemblyVersionInfo>
+            <AssemblySavedVersion>2147483647</AssemblySavedVersion>
+            <AssemblySavedBuildDate>2147483647</AssemblySavedBuildDate>
+            <IsLegacyLabel>false</IsLegacyLabel>
+          </AssemblyVersionInfo>
+          <Text>~sE71019be9-a334-4334-935a-1ab3731501e7.2_#</Text>
+          <Id>10002</Id>
+          <IsExploded>false</IsExploded>
+        </Entry>
+      </Table>
+      <AssemblyVersionInfo>
+        <AssemblySavedVersion>2147483647</AssemblySavedVersion>
+        <AssemblySavedBuildDate>2147483647</AssemblySavedBuildDate>
+        <IsLegacyLabel>false</IsLegacyLabel>
+      </AssemblyVersionInfo>
+    </IdTable>'
+    length unit = [m]
+    processing part 'Volume' with ID 3
+    processing part 'Volume' with ID 5
+    processing part 'Nozzle_axial' with ID 7
+    processing named selection 'Inlet'
+    processing named selection 'Internal Wall'
+    processing named selection 'Outlet'
+    processing named selection 'Nozzle wall'
+    processing named selection 'Vacuum Boundaries'
+    processing data ...
+    loading size function background grid from file 'C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\FM_SimonAsusLaptop_50352\\\\Nozzle_axial.sf' ...
+    reading size function background grid file 'C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\FM_SimonAsusLaptop_50352\\\\Nozzle_axial.sf' ...
+     Read 294944 vertices
+    initializing size function background grid done in 0.291 [s]
+    tessellating 19 faces done in 1.943 [s]
+    removing named collections of entities ...
+    removing named collections of entities stopped, no named collections selected.
+    analyzing feature edges ...
+    detecting feature edges, feature angle = 40 [deg], secondary feature angle = 5 [deg] ...
+        Data information
+            Meshing model
+                Attributes:
+                    'LengthUnit': '[mm]'
+                Entity summary:
+                    Collection: 5
+                    Component : 4
+                    Body      : 3
+                    Shell     : 3
+                    Face      : 19
+                    Loop      : 34
+                    Edge      : 17
+                    Surface   : 19
+                    Curve     : 17
+                Tessellation summary:
+                    Face facets  : 79908
+                    Edge segments: 1022
+                Bounding box:
+                    (0, -25, -24.99987030029297) x (128.5779418945312, 24.99999618530273, 24.99986839294434)
+                Assembly component hierarchy:
+                    'C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\Nozzle_axial.dsco'
+                      'Volume'
+                      'Volume'
+                      'Nozzle_axial'
+                NamedCollections:
+                    'Inlet'
+                    'Internal Wall'
+                    'Outlet'
+                    'Nozzle wall'
+                    'Vacuum Boundaries'
+    
+    
+    exporting FLTG data to file 'C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\FM_SimonAsusLaptop_50352\\out1783941501.04885650352.tgf' ...
+    writing face-based mesh file 'C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\FM_SimonAsusLaptop_50352\\out1783941501.04885650352.tgf' ...
+    ======== Exported Data ========
+    Entity summary:
+        Object       : 3
+        Object region: 8
+        Zone         : 19
+    
+    running conversion done.
+    running ANSYS TGrid CADToTGridConverter done.
+    ran ANSYS TGrid CADToTGridConverter in 2.610 [s]
+
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352/out1783941501.04885650352.tgf"...
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352/out1783941501.04885650352.tgf"...
+nodes: 40997
+edges: 1022
+faces: 79908
+cells: 0
+appending mesh...
+done.
+
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\\Nozzle_axial.sf"...
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\\Nozzle_axial.sf"...
+ Read 294944 vertices
+0 faces marked.
+0 faces marked.
+0 faces marked.
+24500 faces marked.
+
+---------------- Surface Meshing of Nozzle_axial complete in  0.18 minutes.
+
+---------------- After surface meshing, 3 objects/parts have been detected. Either the Share Topology task should be added, or the Non-Conformal option should be invoked.
+
+---- Warning--- Note that some operations, like auto-remesh, quality improvements and zone separation, will be executed after the Share Topology/Describe Geometry Tasks
+(newline)
+
+
+Meshing> (cx-use-window-id 51)
+(cx-use-window-id 51)
+zone id: 47, name: nozzle, type: wall, count: 10900
+(cx-use-window-id 51)
+zone id: 46, name: vacuum-boundaries, type: wall, count: 52431
+(cx-use-window-id 51)
+zone not found.
+(cx-use-window-id 51)
+(handle-key "control [")
+/bo mo deselect-last
+
+> 
+---- Warning--- It is not recommended to insert the Improve Surface Mesh task before Share Topology has been executed
+(cx-use-window-id 51)
+(cx-gui-do cx-activate-item "ToolBar*Filter*object")
+(cx-use-window-id 51)
+nozzle_axial-nozzle
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+nozzle_axial-nozzle
+(cx-use-window-id 51)
+volume-vacuum
+(cx-gui-do cx-activate-item "ToolBar*Context*hide")
+(cx-use-window-id 51)
+nozzle_axial-nozzle
+(cx-gui-do cx-activate-item "ToolBar*Context*showall")
+(cx-use-window-id 51)
+volume-vacuum
+(cx-gui-do cx-activate-item "ToolBar*Context*hide")
+(cx-use-window-id 51)
+nozzle_axial-nozzle
+(cx-gui-do cx-activate-item "ToolBar*Context*hide")
+(cx-use-window-id 51)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Mesh)*PushButton1(  Check)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Mesh)*PushButton1(  Check)")
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuCheck*Perform Mesh Check")
+
+----------------------------------------
+Mesh Check Scope   : 1 Objects, 3 Face Zones, 0 Cell Zones
+Objects            : (volume-fluid)
+----------------------------------------
+Domain extents.
+  x-coordinate: min = 0.000000e+00, max = 2.857795e+01.
+  y-coordinate: min = -5.000000e+00, max = 4.998477e+00.
+  z-coordinate: min = -4.999639e+00, max = 4.999637e+00.
+Volume statistics.
+Face area statistics.
+   minimum face area: 2.035231e-04.
+   maximum face area: 5.794550e-01.
+   average face area: 5.807378e-02.
+Checking number of nodes per edge.
+Checking number of nodes per face.
+Checking number of nodes per cell.
+Checking number of faces/neighbors per cell.
+Checking cell faces/neighbors.
+Checking isolated cells.
+Checking face handedness.
+Checking periodic face pairs.
+Checking face children.
+Checking face zone boundary conditions.
+Checking for invalid node coordinates.
+Checking poly cells.
+Checking zone types in parallel.
+Checking parallel neighborhood.
+Grid check success.
+Checking modified centroid.
+Done.
+----------------------------------------(newline)
+
+
+Meshing> (cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Mesh)*PushButton2(  Quality)")
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuQuality*Evaluate Surface Quality")
+
+----------------------------------------
+Surface Quality [Measure : Skewness]
+Minimum = 2.4838295e-08, Maximum = 0.41490108, Average = 0.014469778.
+
+Marking Face in Range (0.36490108 0.41490108)...
+--------------- ----------
+ Cluster Number Entity Count
+--------------- ----------
+              1          1
+(newline)
+
+
+Meshing> (cx-use-window-id 51)
+volume-fluid
+(cx-use-window-id 51)
+object not found.
+(cx-use-window-id 51)
+(handle-key "control [")
+/bo mo deselect-last
+
+> (cx-gui-do cx-activate-item "ToolBar*Tools*isolate-tb")
+(cx-gui-do cx-activate-item "ToolBar*Tools*isolate-tb")
+(cx-gui-do cx-activate-item "ToolBar*Visibility*ruler")
+(cx-use-window-id 51)
+(cx-gui-do cx-activate-item "ToolBar*Filter*object")
+(cx-gui-do cx-activate-item "ToolBar*Tools*isolate-tb")
+(cx-gui-do cx-activate-item "ToolBar*Tools*isolate-tb")
+(cx-gui-do cx-activate-item "ToolBar*Tools*nodeloop-tb")
+(cx-gui-do cx-activate-item "ToolBar*Tools*nodeloop-tb")
+(cx-use-window-id 51)
+object not found.
+(cx-use-window-id 51)
+object not found.
+(cx-use-window-id 51)
+volume-fluid
+(cx-gui-do cx-activate-item "ToolBar*Context*hide")
+(cx-gui-do cx-activate-item "ToolBar*Context*undo")
+(cx-use-window-id 51)
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton1(All Faces)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton1(All Faces)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton1(All Faces)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton1(All Faces)")
+(cx-use-window-id 51)
+object not found.
+(cx-gui-do cx-activate-item "ToolBar*Graphics Effects*reflection")
+(cx-gui-do cx-activate-item "ToolBar*Graphics Effects*reflection")
+(cx-gui-do cx-activate-item "ToolBar*Graphics Effects*reflection")
+(cx-gui-do cx-activate-item "ToolBar*Graphics Effects*shadow")
+(cx-gui-do cx-activate-item "ToolBar*Graphics Effects*shadow")
+(cx-gui-do cx-activate-item "ToolBar*Graphics Effects*gridplane")
+(cx-gui-do cx-activate-item "ToolBar*Graphics Effects*gridplane")
+(cx-use-window-id 51)
+selected 1 object(s).
+(cx-use-window-id 51)
+(handle-key "control [")
+/bo mo deselect-last
+
+Error: No Entity to deselect.
+Error Object: #f
+(cx-use-window-id 51)
+(handle-key "control [")
+/bo mo deselect-last
+
+Error: No Entity to deselect.
+Error Object: #f
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*PushButton12(edges)")
+
+Error: An error or interrupt occurred in the previous operation.
+       Details have been printed to the text console transcript.
+Error Object: #f
+(cx-gui-do cx-activate-item "Error*Cancel")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*PushButton9(transparency)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*PushButton9(transparency)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*PushButton11(ezmode)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*PushButton11(ezmode)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton4(Face Edges)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton4(Face Edges)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton1(All Faces)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton1(All Faces)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton1(All Faces)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton1(All Faces)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton4(Face Edges)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton4(Face Edges)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton3(Multi Faces)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton3(Multi Faces)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton2(Free Faces)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton2(Free Faces)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton2(Free Faces)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton2(Free Faces)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton3(Multi Faces)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Display)*CheckButton3(Multi Faces)")
+(cx-gui-do cx-activate-item "ToolBar*Tools*isolate-tb")
+(cx-gui-do cx-activate-item "ToolBar*Pointer*rotate")
+(cx-gui-do cx-activate-item "ToolBar*Pointer*boxselect")
+(cx-gui-do cx-activate-item "ToolBar*Mesh Display*frontfacestransparent")
+(cx-gui-do cx-activate-item "ToolBar*Mesh Display*frontfacestransparent")
+(cx-gui-do cx-activate-item "ToolBar*Mesh Display*fl_mesh_svg_graphics_toolbar")
+(cx-gui-do cx-activate-tab-index "Display Grid*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Display Grid*Frame1" 1)
+(cx-gui-do cx-activate-tab-index "Display Grid*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Display Grid*Frame1" 2)
+(cx-gui-do cx-activate-tab-index "Display Grid*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Display Grid*Frame1" 3)
+(cx-gui-do cx-activate-tab-index "Display Grid*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Display Grid*Frame1" 4)
+(cx-gui-do cx-activate-tab-index "Display Grid*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Display Grid*Frame1" 5)
+(cx-gui-do cx-activate-tab-index "Display Grid*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Display Grid*Frame1" 2)
+(cx-gui-do cx-set-list-selections "Display Grid*Frame1*Frame3(Faces)*Table1*Frame4*List1(Face Zones)" '( 0 1 2 3 4 5 6 7 8 9 10 11 12 13))
+(cx-gui-do cx-activate-item "Display Grid*Frame1*Frame3(Faces)*Table1*Frame4*List1(Face Zones)")
+(cx-gui-do cx-activate-item "Display Grid*PanelButtons*PushButton1(OK)")
+(cx-use-window-id 51)
+(cx-gui-do cx-activate-item "Display Grid*PanelButtons*PushButton2(Cancel)")
+(cx-use-window-id 51)
+volume-vacuum
+(cx-gui-do cx-activate-item "ToolBar*Context*hide")
+(cx-use-window-id 51)
+origin-volume-vacuum
+(cx-use-window-id 51)
+object not found.
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(handle-key "control [")
+/bo mo deselect-last
+
+> (cx-use-window-id 51)
+origin-volume-vacuum
+(cx-gui-do cx-activate-item "ToolBar*Context*showall")
+(cx-use-window-id 51)
+volume-vacuum
+(cx-gui-do cx-activate-item "ToolBar*Context*hide")
+(cx-use-window-id 51)
+origin-volume-vacuum
+(cx-gui-do cx-activate-item "ToolBar*Context*hide")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Mesh)*PushButton2(  Quality)")
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuQuality*Evaluate Surface Quality")
+
+----------------------------------------
+Surface Quality [Measure : Skewness]
+Minimum = 2.4838295e-08, Maximum = 0.41490108, Average = 0.014469778.
+
+Marking Face in Range (0.36490108 0.41490108)...
+--------------- ----------
+ Cluster Number Entity Count
+--------------- ----------
+              1          1
+(newline)
+
+
+Meshing> 
+---- Warning--- It is not recommended to insert the Improve Surface Mesh task before Share Topology has been executed
+
+---------------- Describe Geometry task complete in  0.00 minutes.
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject5.msh.h5" ...
+writing 2 node zones
+writing 21 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.Gaps removed between volume-fluid and nozzle_axial-nozzle 
+Gaps removed between nozzle_axial-nozzle and volume-vacuum 
+5 pair(s) found.
+Joining...
+ nozzle and inlet 
+ nozzle-wall and outlet 
+ volume-vacuum and outlet 
+ volume-vacuum and nozzle-wall 
+ nozzle and internal-wall 
+ Warning: Remeshing may alter the final dihedral angle.
+Done.
+0 pair(s) found.
+
+    computing regions...done
+
+---------------- Velocity-inlet zone type was automatically assigned to zones containing the string '*inlet*'.
+
+---------------- Pressure-outlet zone type was automatically assigned to zones containing the string '*outlet*'.
+
+---------------- Internal zone type was automatically assigned to interior zones containing the string 'internal' or 'interior'. 
+0 faces marked.
+Deleting import_curvature_0
+Deleting import_proximity_0origin-volume-fluid
+Deleting import_proximity_0origin-volume-vacuum
+Deleting import_proximity_0origin-nozzle_axial-nozzle
+Deleting curvature_1_faces
+    processing size functions/scoped sizing to create Size Field...
+
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\nozzle_axial.sf"...
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\nozzle_axial.sf"...
+Done.
+
+
+remeshing...
+
+
+------------------------- --------------------- -------------------- ---------------- ----------
+                     name skewed-cells (> 0.80)    averaged-skewness maximum-skewness face count
+------------------------- --------------------- -------------------- ---------------- ----------
+
+                   nozzle                     0          0.020633578       0.40137976      17124
+             volume-fluid                     0          0.024393107       0.35676365      11018
+            volume-vacuum                     0         0.0080014329       0.40283447      56632
+------------------------- --------------------- -------------------- ---------------- ----------
+                     name skewed-cells (> 0.80)    averaged-skewness maximum-skewness face count
+------------------------- --------------------- -------------------- ---------------- ----------
+
+             nozzle_axial                     0          0.012683485       0.40283447      70245
+
+---------------- Surface Quality improvement complete in :  0.01 minutes. The final maximum surface skewness is  0.40. 
+
+
+---------------- After Surface mesh, the model consists of 3 fluid/solid regions and 0 voids.
+
+---------------- Share Topology of nozzle_axial complete in  0.23 minutes with a maximum skewness of  0.40. 
+
+(cx-use-window-id 51)
+
+---------------- Boundary Conditions Updated
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject8.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+---------------- Region identification of nozzle_axial complete in  0.00 minutes. All Regions are displayed. 
+
+---------------- Regions Updated
+
+Created Scoped Prism: smooth-transition_1
+
+---------------- Inflation control added to nozzle_axial
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+    updating regions...
+    done.
+checking object "nozzle_axial"...
+    skipping validating regions of mesh object "nozzle_axial"...done.
+auto meshing object nozzle_axial...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+The octree hexcore cells will be refined using local surface mesh sizes and body of influence (boi) size controls, if there are any defined.
+Generating Prisms...
+
+---- Warning --- Prism stair-step has occured in 1 location(s).
+
+Generating initial mesh...
+
+Refining mesh...
+
+Create polyhedra ...
+
+delete virtual and dead zones.
+
+Merging zones...
+
+Cleaning up dead entities...
+
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+            volume-vacuum     2466                      0       0.27011474     293079
+                   nozzle     2461                      0       0.20612302      71153
+             volume-fluid     2456                      0       0.13647608     127830
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                      0       0.13647608     492062
+
+Total Number of Cell Zones : 3
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  0.67 minutes
+
+---------------- 492062 cells were created in :  0.69 minutes
+
+---------------- The mesh has a minimum Orthogonal Quality of:  0.14 
+
+---- Warning--- Stair-stepping of all boundary layers occurred at 1 locations 
+
+---------------- The volume meshing of nozzle_axial is complete.
+
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 74632
+edges: 3135
+faces: 73380 
+cells: 0 
+reading 13 node zones
+reading 29 edge zones
+reading 14 face zones
+
+Read Mesh Summary:
+	nodes : 13 zones (13 boundary, 0 interior)
+	      : 74632 entities (74632 boundary, 0 interior)
+	edges : 29 zones (26 boundary, 3 interior)
+	      : 3135 entities (2815 boundary, 320 interior)
+	faces : 14 zones (14 boundary, 0 interior)
+	      : 73380 entities (73380 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Deleting smooth-transition_1(newline)
+
+
+Meshing> 
+Created Scoped Prism: smooth-transition_1
+
+---------------- Inflation control added to nozzle_axial
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+    updating regions...
+    done.
+checking object "nozzle_axial"...
+    skipping validating regions of mesh object "nozzle_axial"...done.
+auto meshing object nozzle_axial...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+The octree hexcore cells will be refined using local surface mesh sizes and body of influence (boi) size controls, if there are any defined.
+Generating Prisms...
+
+---- Warning --- Prism stair-step has occured in 1 location(s).
+
+Generating initial mesh...
+
+Refining mesh...
+
+Create polyhedra ...
+
+delete virtual and dead zones.
+
+Merging zones...
+
+Cleaning up dead entities...
+
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+            volume-vacuum     2337                      0       0.41791045     292680
+                   nozzle     2332                      0       0.29738966      71432
+             volume-fluid     2327                    130      0.027166916     175231
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                    130      0.027166916     539343
+
+Total Number of Cell Zones : 3
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  0.89 minutes
+
+---------------- 539343 cells were created in :  0.91 minutes
+
+---------------- Poor quality cells are being displayed.
+
+---- Warning--- The mesh has a minimum Orthogonal Quality of: 0.027.
+
+---- Warning--- Insert the Improve Volume Mesh task to obtain a better quality.
+
+---- Warning--- Stair-stepping of all boundary layers occurred at 1 locations 
+
+---------------- The volume meshing of nozzle_axial is complete.
+
+(cx-use-window-id 51)
+face not found.
+(cx-use-window-id 51)
+bf1006132 = (47 (bn1334423 bn1333983 bn1333259 bn1333003 bn1333323 bn1333063) () (#f c1516095) 0.9985989 (2.7431302 -1.0266052 3.8525037) (0.0003825897 0.052582207 -0.19834038))
+(cx-use-window-id 51)
+bf1003104 = (47 (bn1229495 bn1339463 bn1339583 bn1339483 bn1229491) () (#f c2314579) 0.91252339 (3.8837658 -0.78371547 3.9055414) (-0.0036789995 0.0224683 -0.11198497))
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*CheckButton2(Insert Clipping Planes)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*CheckButton2(Insert Clipping Planes)")
+(cx-gui-do cx-set-scale "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Scale2" 73)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Scale2")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*ButtonBox1*Limit in Y" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*ButtonBox1*Limit in Y")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*ButtonBox1*Limit in X" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*ButtonBox1*Limit in X")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*ButtonBox1*Limit in Z" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*ButtonBox1*Limit in Z")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 74632
+edges: 3135
+faces: 73380 
+cells: 0 
+reading 13 node zones
+reading 29 edge zones
+reading 14 face zones
+
+Read Mesh Summary:
+	nodes : 13 zones (13 boundary, 0 interior)
+	      : 74632 entities (74632 boundary, 0 interior)
+	edges : 29 zones (26 boundary, 3 interior)
+	      : 3135 entities (2815 boundary, 320 interior)
+	faces : 14 zones (14 boundary, 0 interior)
+	      : 73380 entities (73380 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Deleting smooth-transition_1(newline)
+
+
+Meshing> 
+Created Scoped Prism: smooth-transition_1
+
+---------------- Inflation control added to nozzle_axial
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+    updating regions...
+    done.
+checking object "nozzle_axial"...
+    skipping validating regions of mesh object "nozzle_axial"...done.
+auto meshing object nozzle_axial...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+The octree hexcore cells will be refined using local surface mesh sizes and body of influence (boi) size controls, if there are any defined.
+Generating Prisms...
+
+---- Warning --- Prism stair-step has occured in 1 location(s).
+
+Generating initial mesh...
+
+Refining mesh...
+
+Create polyhedra ...
+
+delete virtual and dead zones.
+
+Merging zones...
+
+Cleaning up dead entities...
+
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+            volume-vacuum     2337                      0       0.33514452     293339
+                   nozzle     2332                      0       0.23331495      71275
+             volume-fluid     2327                     15      0.039433884     174499
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                     15      0.039433884     539113
+
+Total Number of Cell Zones : 3
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  0.84 minutes
+
+---------------- 539113 cells were created in :  0.86 minutes
+
+---------------- Poor quality cells are being displayed.
+
+---- Warning--- The mesh has a minimum Orthogonal Quality of: 0.039.
+
+---- Warning--- Insert the Improve Volume Mesh task to obtain a better quality.
+
+---- Warning--- Stair-stepping of all boundary layers occurred at 1 locations 
+
+---------------- The volume meshing of nozzle_axial is complete.
+
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 74632
+edges: 3135
+faces: 73380 
+cells: 0 
+reading 13 node zones
+reading 29 edge zones
+reading 14 face zones
+
+Read Mesh Summary:
+	nodes : 13 zones (13 boundary, 0 interior)
+	      : 74632 entities (74632 boundary, 0 interior)
+	edges : 29 zones (26 boundary, 3 interior)
+	      : 3135 entities (2815 boundary, 320 interior)
+	faces : 14 zones (14 boundary, 0 interior)
+	      : 73380 entities (73380 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Deleting smooth-transition_1(newline)
+
+
+Meshing> 
+Created Scoped Prism: smooth-transition_1
+
+---------------- Inflation control added to nozzle_axial
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+    updating regions...
+    done.
+checking object "nozzle_axial"...
+    skipping validating regions of mesh object "nozzle_axial"...done.
+auto meshing object nozzle_axial...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+The octree hexcore cells will be refined using local surface mesh sizes and body of influence (boi) size controls, if there are any defined.
+Generating Prisms...
+
+---- Warning --- Prism stair-step has occured in 1 location(s).
+
+Generating initial mesh...
+
+Refining mesh...
+
+Create polyhedra ...
+
+delete virtual and dead zones.
+
+Merging zones...
+
+Cleaning up dead entities...
+
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+            volume-vacuum     2257                      0       0.21623404     293469
+                   nozzle     2252                      0       0.23270942      71283
+             volume-fluid     2247                      0       0.29514017      80049
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                      0       0.21623404     444801
+
+Total Number of Cell Zones : 3
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  0.60 minutes
+
+---------------- 444801 cells were created in :  0.62 minutes
+
+---------------- The mesh has a minimum Orthogonal Quality of:  0.22 
+
+---- Warning--- Stair-stepping of all boundary layers occurred at 1 locations 
+
+---------------- The volume meshing of nozzle_axial is complete.
+
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 74632
+edges: 3135
+faces: 73380 
+cells: 0 
+reading 13 node zones
+reading 29 edge zones
+reading 14 face zones
+
+Read Mesh Summary:
+	nodes : 13 zones (13 boundary, 0 interior)
+	      : 74632 entities (74632 boundary, 0 interior)
+	edges : 29 zones (26 boundary, 3 interior)
+	      : 3135 entities (2815 boundary, 320 interior)
+	faces : 14 zones (14 boundary, 0 interior)
+	      : 73380 entities (73380 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Deleting smooth-transition_1(newline)
+
+
+Meshing> 
+Created Scoped Prism: smooth-transition_1
+
+---------------- Inflation control added to nozzle_axial
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+    updating regions...
+    done.
+checking object "nozzle_axial"...
+    skipping validating regions of mesh object "nozzle_axial"...done.
+auto meshing object nozzle_axial...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+The octree hexcore cells will be refined using local surface mesh sizes and body of influence (boi) size controls, if there are any defined.
+Generating Prisms...
+
+---- Warning --- Prism stair-step has occured in 1 location(s).
+
+Generating initial mesh...
+
+Refining mesh...
+
+Create polyhedra ...
+
+delete virtual and dead zones.
+
+Merging zones...
+
+Cleaning up dead entities...
+
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+            volume-vacuum     2297                      0       0.41447117     293151
+                   nozzle     2292                      0       0.32847357      71316
+             volume-fluid     2287                      0      0.099427307     127818
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                      0      0.099427307     492285
+
+Total Number of Cell Zones : 3
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  0.66 minutes
+
+---------------- 492285 cells were created in :  0.69 minutes
+
+---------------- The mesh has a minimum Orthogonal Quality of:  0.10 
+
+---- Warning--- Stair-stepping of all boundary layers occurred at 1 locations 
+
+---------------- The volume meshing of nozzle_axial is complete.
+
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 74632
+edges: 3135
+faces: 73380 
+cells: 0 
+reading 13 node zones
+reading 29 edge zones
+reading 14 face zones
+
+Read Mesh Summary:
+	nodes : 13 zones (13 boundary, 0 interior)
+	      : 74632 entities (74632 boundary, 0 interior)
+	edges : 29 zones (26 boundary, 3 interior)
+	      : 3135 entities (2815 boundary, 320 interior)
+	faces : 14 zones (14 boundary, 0 interior)
+	      : 73380 entities (73380 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Deleting smooth-transition_1(newline)
+
+
+Meshing> 
+Created Scoped Prism: smooth-transition_1
+
+---------------- Inflation control added to nozzle_axial
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+    updating regions...
+    done.
+checking object "nozzle_axial"...
+    skipping validating regions of mesh object "nozzle_axial"...done.
+auto meshing object nozzle_axial...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+The octree hexcore cells will be refined using local surface mesh sizes and body of influence (boi) size controls, if there are any defined.
+Generating Prisms...
+
+---- Warning --- Prism stair-step has occured in 1 location(s).
+
+Generating initial mesh...
+
+Refining mesh...
+
+Create polyhedra ...
+
+delete virtual and dead zones.
+
+Merging zones...
+
+Cleaning up dead entities...
+
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+            volume-vacuum     2297                      0        0.2991627     293547
+                   nozzle     2292                      0       0.26892462      71336
+             volume-fluid     2287                      0       0.20417546     124892
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                      0       0.20417546     489775
+
+Total Number of Cell Zones : 3
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  0.68 minutes
+
+---------------- 489775 cells were created in :  0.70 minutes
+
+---------------- The mesh has a minimum Orthogonal Quality of:  0.20 
+
+---- Warning--- Stair-stepping of all boundary layers occurred at 1 locations 
+
+---------------- The volume meshing of nozzle_axial is complete.
+
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 74632
+edges: 3135
+faces: 73380 
+cells: 0 
+reading 13 node zones
+reading 29 edge zones
+reading 14 face zones
+
+Read Mesh Summary:
+	nodes : 13 zones (13 boundary, 0 interior)
+	      : 74632 entities (74632 boundary, 0 interior)
+	edges : 29 zones (26 boundary, 3 interior)
+	      : 3135 entities (2815 boundary, 320 interior)
+	faces : 14 zones (14 boundary, 0 interior)
+	      : 73380 entities (73380 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Deleting smooth-transition_1(newline)
+
+
+Meshing> 
+Created Scoped Prism: smooth-transition_1
+
+---------------- Inflation control added to nozzle_axial
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+    updating regions...
+    done.
+checking object "nozzle_axial"...
+    skipping validating regions of mesh object "nozzle_axial"...done.
+auto meshing object nozzle_axial...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+The octree hexcore cells will be refined using local surface mesh sizes and body of influence (boi) size controls, if there are any defined.
+Generating Prisms...
+
+---- Warning --- Prism stair-step has occured in 1 location(s).
+
+Generating initial mesh...
+
+Refining mesh...
+
+Create polyhedra ...
+
+delete virtual and dead zones.
+
+Merging zones...
+
+Cleaning up dead entities...
+
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+            volume-vacuum     2297                      0       0.42059643     293206
+                   nozzle     2292                      0        0.3875703      71222
+             volume-fluid     2287                      0       0.25503768     123178
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                      0       0.25503768     487606
+
+Total Number of Cell Zones : 3
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  0.70 minutes
+
+---------------- 487606 cells were created in :  0.72 minutes
+
+---------------- The mesh has a minimum Orthogonal Quality of:  0.26 
+
+---- Warning--- Stair-stepping of all boundary layers occurred at 1 locations 
+
+---------------- The volume meshing of nozzle_axial is complete.
+
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 74632
+edges: 3135
+faces: 73380 
+cells: 0 
+reading 13 node zones
+reading 29 edge zones
+reading 14 face zones
+
+Read Mesh Summary:
+	nodes : 13 zones (13 boundary, 0 interior)
+	      : 74632 entities (74632 boundary, 0 interior)
+	edges : 29 zones (26 boundary, 3 interior)
+	      : 3135 entities (2815 boundary, 320 interior)
+	faces : 14 zones (14 boundary, 0 interior)
+	      : 73380 entities (73380 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Deleting smooth-transition_1(newline)
+
+
+Meshing> 
+Created Scoped Prism: smooth-transition_1
+
+---------------- Inflation control added to nozzle_axial
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+    updating regions...
+    done.
+checking object "nozzle_axial"...
+    skipping validating regions of mesh object "nozzle_axial"...done.
+auto meshing object nozzle_axial...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+The octree hexcore cells will be refined using local surface mesh sizes and body of influence (boi) size controls, if there are any defined.
+Generating Prisms...
+
+---- Warning --- Prism stair-step has occured in 1 location(s).
+
+Generating initial mesh...
+
+Refining mesh...
+
+Create polyhedra ...
+
+delete virtual and dead zones.
+
+Merging zones...
+
+Cleaning up dead entities...
+
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+            volume-vacuum     2297                      0       0.24617066     293169
+                   nozzle     2292                      0       0.28153544      71427
+             volume-fluid     2287                      0       0.20229996     120050
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                      0       0.20229996     484646
+
+Total Number of Cell Zones : 3
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  0.79 minutes
+
+---------------- 484646 cells were created in :  0.81 minutes
+
+---------------- The mesh has a minimum Orthogonal Quality of:  0.20 
+
+---- Warning--- Stair-stepping of all boundary layers occurred at 1 locations 
+
+---------------- The volume meshing of nozzle_axial is complete.
+
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 74632
+edges: 3135
+faces: 73380 
+cells: 0 
+reading 13 node zones
+reading 29 edge zones
+reading 14 face zones
+
+Read Mesh Summary:
+	nodes : 13 zones (13 boundary, 0 interior)
+	      : 74632 entities (74632 boundary, 0 interior)
+	edges : 29 zones (26 boundary, 3 interior)
+	      : 3135 entities (2815 boundary, 320 interior)
+	faces : 14 zones (14 boundary, 0 interior)
+	      : 73380 entities (73380 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Deleting smooth-transition_1(newline)
+
+
+Meshing> 
+Created Scoped Prism: smooth-transition_1
+
+---------------- Inflation control added to nozzle_axial
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+    updating regions...
+    done.
+checking object "nozzle_axial"...
+    skipping validating regions of mesh object "nozzle_axial"...done.
+auto meshing object nozzle_axial...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+The octree hexcore cells will be refined using local surface mesh sizes and body of influence (boi) size controls, if there are any defined.
+Generating Prisms...
+
+---- Warning --- Prism stair-step has occured in 1 location(s).
+
+Generating initial mesh...
+
+Refining mesh...
+
+Create polyhedra ...
+
+delete virtual and dead zones.
+
+Merging zones...
+
+Cleaning up dead entities...
+
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+            volume-vacuum     2297                      0       0.25922238     292628
+                   nozzle     2292                      0       0.30089188      71380
+             volume-fluid     2287                      0       0.20980522     122479
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                      0       0.20980522     486487
+
+Total Number of Cell Zones : 3
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  0.67 minutes
+
+---------------- 486487 cells were created in :  0.69 minutes
+
+---------------- The mesh has a minimum Orthogonal Quality of:  0.21 
+
+---- Warning--- Stair-stepping of all boundary layers occurred at 1 locations 
+
+---------------- The volume meshing of nozzle_axial is complete.
+
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 74632
+edges: 3135
+faces: 73380 
+cells: 0 
+reading 13 node zones
+reading 29 edge zones
+reading 14 face zones
+
+Read Mesh Summary:
+	nodes : 13 zones (13 boundary, 0 interior)
+	      : 74632 entities (74632 boundary, 0 interior)
+	edges : 29 zones (26 boundary, 3 interior)
+	      : 3135 entities (2815 boundary, 320 interior)
+	faces : 14 zones (14 boundary, 0 interior)
+	      : 73380 entities (73380 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Deleting smooth-transition_1(newline)
+
+
+Meshing> 
+Created Scoped Prism: smooth-transition_1
+
+---------------- Inflation control added to nozzle_axial
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+    updating regions...
+    done.
+checking object "nozzle_axial"...
+    skipping validating regions of mesh object "nozzle_axial"...done.
+auto meshing object nozzle_axial...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+The octree hexcore cells will be refined using local surface mesh sizes and body of influence (boi) size controls, if there are any defined.
+Generating Prisms...
+
+---- Warning --- Prism stair-step has occured in 1 location(s).
+
+Generating initial mesh...
+
+Refining mesh...
+
+Create polyhedra ...
+
+delete virtual and dead zones.
+
+Merging zones...
+
+Cleaning up dead entities...
+
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+            volume-vacuum     2297                      0       0.42059643     293206
+                   nozzle     2292                      0        0.3875703      71222
+             volume-fluid     2287                      0       0.25503768     123178
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                      0       0.25503768     487606
+
+Total Number of Cell Zones : 3
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  0.67 minutes
+
+---------------- 487606 cells were created in :  0.69 minutes
+
+---------------- The mesh has a minimum Orthogonal Quality of:  0.26 
+
+---- Warning--- Stair-stepping of all boundary layers occurred at 1 locations 
+
+---------------- The volume meshing of nozzle_axial is complete.
+
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 74632
+edges: 3135
+faces: 73380 
+cells: 0 
+reading 13 node zones
+reading 29 edge zones
+reading 14 face zones
+
+Read Mesh Summary:
+	nodes : 13 zones (13 boundary, 0 interior)
+	      : 74632 entities (74632 boundary, 0 interior)
+	edges : 29 zones (26 boundary, 3 interior)
+	      : 3135 entities (2815 boundary, 320 interior)
+	faces : 14 zones (14 boundary, 0 interior)
+	      : 73380 entities (73380 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Deleting smooth-transition_1(newline)
+
+
+Meshing> 
+Created Scoped Prism: smooth-transition_1
+
+---------------- Inflation control added to nozzle_axial
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 74632
+edges: 3135
+faces: 73380 
+cells: 0 
+reading 13 node zones
+reading 29 edge zones
+reading 14 face zones
+
+Read Mesh Summary:
+	nodes : 13 zones (13 boundary, 0 interior)
+	      : 74632 entities (74632 boundary, 0 interior)
+	edges : 29 zones (26 boundary, 3 interior)
+	      : 3135 entities (2815 boundary, 320 interior)
+	faces : 14 zones (14 boundary, 0 interior)
+	      : 73380 entities (73380 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+    updating regions...
+    done.
+checking object "nozzle_axial"...
+    skipping validating regions of mesh object "nozzle_axial"...done.
+auto meshing object nozzle_axial...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+The octree hexcore cells will be refined using local surface mesh sizes and body of influence (boi) size controls, if there are any defined.
+Generating Prisms...
+
+---- Warning --- Prism stair-step has occured in 1 location(s).
+
+Generating initial mesh...
+
+Refining mesh...
+
+Create polyhedra ...
+
+delete virtual and dead zones.
+
+Merging zones...
+
+Cleaning up dead entities...
+
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+            volume-vacuum     2297                      0       0.42059643     293206
+                   nozzle     2292                      0        0.3875703      71222
+             volume-fluid     2287                      0       0.25503768     123178
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                      0       0.25503768     487606
+
+Total Number of Cell Zones : 3
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  0.66 minutes
+
+---------------- 487606 cells were created in :  0.68 minutes
+
+---------------- The mesh has a minimum Orthogonal Quality of:  0.26 
+
+---- Warning--- Stair-stepping of all boundary layers occurred at 1 locations 
+
+---------------- The volume meshing of nozzle_axial is complete.
+
+(newline)
+
+
+Meshing> Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 74632
+edges: 3135
+faces: 73380 
+cells: 0 
+reading 13 node zones
+reading 29 edge zones
+reading 14 face zones
+
+Read Mesh Summary:
+	nodes : 13 zones (13 boundary, 0 interior)
+	      : 74632 entities (74632 boundary, 0 interior)
+	edges : 29 zones (26 boundary, 3 interior)
+	      : 3135 entities (2815 boundary, 320 interior)
+	faces : 14 zones (14 boundary, 0 interior)
+	      : 73380 entities (73380 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Deleting smooth-transition_1(newline)
+
+
+Meshing> (cx-use-window-id 51)
+
+Created Scoped Prism: smooth-transition_1
+
+---------------- Inflation control added to nozzle_axial
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+    updating regions...
+    done.
+checking object "nozzle_axial"...
+    skipping validating regions of mesh object "nozzle_axial"...done.
+auto meshing object nozzle_axial...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+The octree hexcore cells will be refined using local surface mesh sizes and body of influence (boi) size controls, if there are any defined.
+Generating Prisms...
+
+---- Warning --- Prism stair-step has occured in 1 location(s).
+
+Generating initial mesh...
+
+Refining mesh...
+
+Create polyhedra ...
+
+delete virtual and dead zones.
+
+Merging zones...
+
+Cleaning up dead entities...
+
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+            volume-vacuum     2297                      0       0.24151704     293702
+                   nozzle     2292                      0       0.23806845      71387
+             volume-fluid     2287                      0       0.17419575     116442
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                      0       0.17419575     481531
+
+Total Number of Cell Zones : 3
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  2.06 minutes
+
+---------------- 481531 cells were created in :  2.08 minutes
+
+---------------- The mesh has a minimum Orthogonal Quality of:  0.17 
+
+---- Warning--- Stair-stepping of all boundary layers occurred at 1 locations 
+
+---------------- The volume meshing of nozzle_axial is complete.
+
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 74632
+edges: 3135
+faces: 73380 
+cells: 0 
+reading 13 node zones
+reading 29 edge zones
+reading 14 face zones
+
+Read Mesh Summary:
+	nodes : 13 zones (13 boundary, 0 interior)
+	      : 74632 entities (74632 boundary, 0 interior)
+	edges : 29 zones (26 boundary, 3 interior)
+	      : 3135 entities (2815 boundary, 320 interior)
+	faces : 14 zones (14 boundary, 0 interior)
+	      : 73380 entities (73380 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Deleting smooth-transition_1(newline)
+
+
+Meshing> 
+Created Scoped Prism: smooth-transition_1
+
+---------------- Inflation control added to nozzle_axial
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+    updating regions...
+    done.
+checking object "nozzle_axial"...
+    skipping validating regions of mesh object "nozzle_axial"...done.
+auto meshing object nozzle_axial...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+The octree hexcore cells will be refined using local surface mesh sizes and body of influence (boi) size controls, if there are any defined.
+Generating Prisms...
+
+---- Warning --- Prism stair-step has occured in 1 location(s).
+
+Generating initial mesh...
+
+Refining mesh...
+
+Create polyhedra ...
+
+delete virtual and dead zones.
+
+Merging zones...
+
+Cleaning up dead entities...
+
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+            volume-vacuum     2297                      0       0.26393319     293121
+                   nozzle     2292                      0       0.33142119      71247
+             volume-fluid     2287                      0        0.2002333     120582
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                      0        0.2002333     484950
+
+Total Number of Cell Zones : 3
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  0.71 minutes
+
+---------------- 484950 cells were created in :  0.73 minutes
+
+---------------- The mesh has a minimum Orthogonal Quality of:  0.20 
+
+---- Warning--- Stair-stepping of all boundary layers occurred at 1 locations 
+
+---------------- The volume meshing of nozzle_axial is complete.
+
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 74632
+edges: 3135
+faces: 73380 
+cells: 0 
+reading 13 node zones
+reading 29 edge zones
+reading 14 face zones
+
+Read Mesh Summary:
+	nodes : 13 zones (13 boundary, 0 interior)
+	      : 74632 entities (74632 boundary, 0 interior)
+	edges : 29 zones (26 boundary, 3 interior)
+	      : 3135 entities (2815 boundary, 320 interior)
+	faces : 14 zones (14 boundary, 0 interior)
+	      : 73380 entities (73380 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Deleting smooth-transition_1(newline)
+
+
+Meshing> 
+Created Scoped Prism: smooth-transition_1
+
+---------------- Inflation control added to nozzle_axial
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+    updating regions...
+    done.
+checking object "nozzle_axial"...
+    skipping validating regions of mesh object "nozzle_axial"...done.
+auto meshing object nozzle_axial...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+The octree hexcore cells will be refined using local surface mesh sizes and body of influence (boi) size controls, if there are any defined.
+Generating Prisms...
+
+---- Warning --- Prism stair-step has occured in 1 location(s).
+
+Generating initial mesh...
+
+Refining mesh...
+
+Create polyhedra ...
+
+delete virtual and dead zones.
+
+Merging zones...
+
+Cleaning up dead entities...
+
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+            volume-vacuum     2297                      0       0.21040795     293014
+                   nozzle     2292                      0       0.21240044      71333
+             volume-fluid     2287                      0       0.22013362     121841
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                      0       0.21040795     486188
+
+Total Number of Cell Zones : 3
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  0.69 minutes
+
+---------------- 486188 cells were created in :  0.71 minutes
+
+---------------- The mesh has a minimum Orthogonal Quality of:  0.21 
+
+---- Warning--- Stair-stepping of all boundary layers occurred at 1 locations 
+
+---------------- The volume meshing of nozzle_axial is complete.
+
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 74632
+edges: 3135
+faces: 73380 
+cells: 0 
+reading 13 node zones
+reading 29 edge zones
+reading 14 face zones
+
+Read Mesh Summary:
+	nodes : 13 zones (13 boundary, 0 interior)
+	      : 74632 entities (74632 boundary, 0 interior)
+	edges : 29 zones (26 boundary, 3 interior)
+	      : 3135 entities (2815 boundary, 320 interior)
+	faces : 14 zones (14 boundary, 0 interior)
+	      : 73380 entities (73380 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Deleting smooth-transition_1(newline)
+
+
+Meshing> 
+Created Scoped Prism: smooth-transition_1
+
+---------------- Inflation control added to nozzle_axial
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+    updating regions...
+    done.
+checking object "nozzle_axial"...
+    skipping validating regions of mesh object "nozzle_axial"...done.
+auto meshing object nozzle_axial...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+The octree hexcore cells will be refined using local surface mesh sizes and body of influence (boi) size controls, if there are any defined.
+Generating Prisms...
+
+---- Warning --- Prism stair-step has occured in 1 location(s).
+
+Generating initial mesh...
+
+Refining mesh...
+
+Create polyhedra ...
+
+delete virtual and dead zones.
+
+Merging zones...
+
+Cleaning up dead entities...
+
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+            volume-vacuum     2297                      0       0.23352064     293385
+                   nozzle     2292                      0       0.21252335      71403
+             volume-fluid     2287                      0       0.23861436     125004
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                      0       0.21252335     489792
+
+Total Number of Cell Zones : 3
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  0.64 minutes
+
+---------------- 489792 cells were created in :  0.67 minutes
+
+---------------- The mesh has a minimum Orthogonal Quality of:  0.21 
+
+---- Warning--- Stair-stepping of all boundary layers occurred at 1 locations 
+
+---------------- The volume meshing of nozzle_axial is complete.
+
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 74632
+edges: 3135
+faces: 73380 
+cells: 0 
+reading 13 node zones
+reading 29 edge zones
+reading 14 face zones
+
+Read Mesh Summary:
+	nodes : 13 zones (13 boundary, 0 interior)
+	      : 74632 entities (74632 boundary, 0 interior)
+	edges : 29 zones (26 boundary, 3 interior)
+	      : 3135 entities (2815 boundary, 320 interior)
+	faces : 14 zones (14 boundary, 0 interior)
+	      : 73380 entities (73380 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Deleting smooth-transition_1(newline)
+
+
+Meshing> 
+Created Scoped Prism: smooth-transition_1
+
+---------------- Inflation control added to nozzle_axial
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+    updating regions...
+    done.
+checking object "nozzle_axial"...
+    skipping validating regions of mesh object "nozzle_axial"...done.
+auto meshing object nozzle_axial...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+The octree hexcore cells will be refined using local surface mesh sizes and body of influence (boi) size controls, if there are any defined.
+Generating Prisms...
+
+---- Warning --- Prism stair-step has occured in 1 location(s).
+
+Generating initial mesh...
+
+Refining mesh...
+
+Create polyhedra ...
+
+delete virtual and dead zones.
+
+Merging zones...
+
+Cleaning up dead entities...
+
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+            volume-vacuum     2297                      0       0.33313166     293798
+                   nozzle     2292                      0       0.23020893      71403
+             volume-fluid     2287                      0       0.20093371     123936
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                      0       0.20093371     489137
+
+Total Number of Cell Zones : 3
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  0.65 minutes
+
+---------------- 489137 cells were created in :  0.68 minutes
+
+---------------- The mesh has a minimum Orthogonal Quality of:  0.20 
+
+---- Warning--- Stair-stepping of all boundary layers occurred at 1 locations 
+
+---------------- The volume meshing of nozzle_axial is complete.
+
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 74632
+edges: 3135
+faces: 73380 
+cells: 0 
+reading 13 node zones
+reading 29 edge zones
+reading 14 face zones
+
+Read Mesh Summary:
+	nodes : 13 zones (13 boundary, 0 interior)
+	      : 74632 entities (74632 boundary, 0 interior)
+	edges : 29 zones (26 boundary, 3 interior)
+	      : 3135 entities (2815 boundary, 320 interior)
+	faces : 14 zones (14 boundary, 0 interior)
+	      : 73380 entities (73380 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Deleting smooth-transition_1(newline)
+
+
+Meshing> 
+Created Scoped Prism: smooth-transition_1
+
+---------------- Inflation control added to nozzle_axial
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+    updating regions...
+    done.
+checking object "nozzle_axial"...
+    skipping validating regions of mesh object "nozzle_axial"...done.
+auto meshing object nozzle_axial...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+The octree hexcore cells will be refined using local surface mesh sizes and body of influence (boi) size controls, if there are any defined.
+Generating Prisms...
+
+---- Warning --- Prism stair-step has occured in 1 location(s).
+
+Generating initial mesh...
+
+Refining mesh...
+
+Create polyhedra ...
+
+delete virtual and dead zones.
+
+Merging zones...
+
+Cleaning up dead entities...
+
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+            volume-vacuum     2297                      0       0.46840625     293154
+                   nozzle     2292                      0        0.2962512      71167
+             volume-fluid     2287                      0       0.15064391     126643
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                      0       0.15064391     490964
+
+Total Number of Cell Zones : 3
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  0.64 minutes
+
+---------------- 490964 cells were created in :  0.67 minutes
+
+---------------- The mesh has a minimum Orthogonal Quality of:  0.15 
+
+---- Warning--- Stair-stepping of all boundary layers occurred at 1 locations 
+
+---------------- The volume meshing of nozzle_axial is complete.
+
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 74632
+edges: 3135
+faces: 73380 
+cells: 0 
+reading 13 node zones
+reading 29 edge zones
+reading 14 face zones
+
+Read Mesh Summary:
+	nodes : 13 zones (13 boundary, 0 interior)
+	      : 74632 entities (74632 boundary, 0 interior)
+	edges : 29 zones (26 boundary, 3 interior)
+	      : 3135 entities (2815 boundary, 320 interior)
+	faces : 14 zones (14 boundary, 0 interior)
+	      : 73380 entities (73380 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Deleting smooth-transition_1(newline)
+
+
+Meshing> 
+Created Scoped Prism: smooth-transition_1
+
+---------------- Inflation control added to nozzle_axial
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+    updating regions...
+    done.
+checking object "nozzle_axial"...
+    skipping validating regions of mesh object "nozzle_axial"...done.
+auto meshing object nozzle_axial...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+The octree hexcore cells will be refined using local surface mesh sizes and body of influence (boi) size controls, if there are any defined.
+Generating Prisms...
+
+---- Warning --- Prism stair-step has occured in 1 location(s).
+
+Generating initial mesh...
+
+Refining mesh...
+
+Create polyhedra ...
+
+delete virtual and dead zones.
+
+Merging zones...
+
+Cleaning up dead entities...
+
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+            volume-vacuum     2297                      0       0.39614151     292973
+                   nozzle     2292                      0       0.29001076      71222
+             volume-fluid     2287                      0      0.091145243     128177
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                      0      0.091145243     492372
+
+Total Number of Cell Zones : 3
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  0.63 minutes
+
+---------------- 492372 cells were created in :  0.65 minutes
+
+---------------- The mesh has a minimum Orthogonal Quality of:  0.09 
+
+---- Warning--- Stair-stepping of all boundary layers occurred at 1 locations 
+
+---------------- The volume meshing of nozzle_axial is complete.
+
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 74632
+edges: 3135
+faces: 73380 
+cells: 0 
+reading 13 node zones
+reading 29 edge zones
+reading 14 face zones
+
+Read Mesh Summary:
+	nodes : 13 zones (13 boundary, 0 interior)
+	      : 74632 entities (74632 boundary, 0 interior)
+	edges : 29 zones (26 boundary, 3 interior)
+	      : 3135 entities (2815 boundary, 320 interior)
+	faces : 14 zones (14 boundary, 0 interior)
+	      : 73380 entities (73380 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Deleting smooth-transition_1(newline)
+
+
+Meshing> 
+Created Scoped Prism: smooth-transition_1
+
+---------------- Inflation control added to nozzle_axial
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+    updating regions...
+    done.
+checking object "nozzle_axial"...
+    skipping validating regions of mesh object "nozzle_axial"...done.
+auto meshing object nozzle_axial...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+The octree hexcore cells will be refined using local surface mesh sizes and body of influence (boi) size controls, if there are any defined.
+Generating Prisms...
+
+---- Warning --- Prism stair-step has occured in 1 location(s).
+
+Generating initial mesh...
+
+Refining mesh...
+
+Create polyhedra ...
+
+delete virtual and dead zones.
+
+Merging zones...
+
+Cleaning up dead entities...
+
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+                   nozzle     2297                      0        0.3455194      71208
+             volume-fluid     2292                      0      0.066220327     129601
+            volume-vacuum     2287                      0       0.40080327     293686
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                      0      0.066220327     494495
+
+Total Number of Cell Zones : 3
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  0.78 minutes
+
+---------------- 494495 cells were created in :  0.80 minutes
+
+---------------- The mesh has a minimum Orthogonal Quality of:  0.07 
+
+---- Warning--- Stair-stepping of all boundary layers occurred at 1 locations 
+
+---------------- The volume meshing of nozzle_axial is complete.
+
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 74632
+edges: 3135
+faces: 73380 
+cells: 0 
+reading 13 node zones
+reading 29 edge zones
+reading 14 face zones
+
+Read Mesh Summary:
+	nodes : 13 zones (13 boundary, 0 interior)
+	      : 74632 entities (74632 boundary, 0 interior)
+	edges : 29 zones (26 boundary, 3 interior)
+	      : 3135 entities (2815 boundary, 320 interior)
+	faces : 14 zones (14 boundary, 0 interior)
+	      : 73380 entities (73380 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Deleting smooth-transition_1(newline)
+
+
+Meshing> 
+Created Scoped Prism: smooth-transition_1
+
+---------------- Inflation control added to nozzle_axial
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+    updating regions...
+    done.
+checking object "nozzle_axial"...
+    skipping validating regions of mesh object "nozzle_axial"...done.
+auto meshing object nozzle_axial...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+The octree hexcore cells will be refined using local surface mesh sizes and body of influence (boi) size controls, if there are any defined.
+Generating Prisms...
+
+---- Warning --- Prism stair-step has occured in 1 location(s).
+
+Generating initial mesh...
+
+Refining mesh...
+
+Create polyhedra ...
+
+delete virtual and dead zones.
+
+Merging zones...
+
+Cleaning up dead entities...
+
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+            volume-vacuum     2297                      0       0.42059643     293206
+                   nozzle     2292                      0        0.3875703      71222
+             volume-fluid     2287                      0       0.25503768     123178
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                      0       0.25503768     487606
+
+Total Number of Cell Zones : 3
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  0.67 minutes
+
+---------------- 487606 cells were created in :  0.69 minutes
+
+---------------- The mesh has a minimum Orthogonal Quality of:  0.26 
+
+---- Warning--- Stair-stepping of all boundary layers occurred at 1 locations 
+
+---------------- The volume meshing of nozzle_axial is complete.
+
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*CheckButton2(Insert Clipping Planes)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*CheckButton2(Insert Clipping Planes)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*CheckButton2(Insert Clipping Planes)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*CheckButton2(Insert Clipping Planes)")
+(cx-gui-do cx-set-scale "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Scale2" 67)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Scale2")
+(cx-gui-do cx-set-scale "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Scale2" 68)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Scale2")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*ButtonBox1*Limit in Y" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*ButtonBox1*Limit in Y")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*ButtonBox1*Limit in Z" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*ButtonBox1*Limit in Z")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton4(Show Cut Edges)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton4(Show Cut Edges)")
+
+---- Warning--- The Max Cell Length is updated to reflect the actual max size in the octree hexcore.
+
+---- Warning--- The Max Cell Length is updated to reflect the actual max size in the octree hexcore.
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 74632
+edges: 3135
+faces: 73380 
+cells: 0 
+reading 13 node zones
+reading 29 edge zones
+reading 14 face zones
+
+Read Mesh Summary:
+	nodes : 13 zones (13 boundary, 0 interior)
+	      : 74632 entities (74632 boundary, 0 interior)
+	edges : 29 zones (26 boundary, 3 interior)
+	      : 3135 entities (2815 boundary, 320 interior)
+	faces : 14 zones (14 boundary, 0 interior)
+	      : 73380 entities (73380 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+    updating regions...
+    done.
+checking object "nozzle_axial"...
+    skipping validating regions of mesh object "nozzle_axial"...done.
+auto meshing object nozzle_axial...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+The octree hexcore cells will be refined using local surface mesh sizes and body of influence (boi) size controls, if there are any defined.
+Generating Prisms...
+
+---- Warning --- Prism stair-step has occured in 1 location(s).
+
+Generating initial mesh...
+
+Refining mesh...
+
+Create polyhedra ...
+
+delete virtual and dead zones.
+
+Merging zones...
+
+Cleaning up dead entities...
+
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+            volume-vacuum     2297                      0       0.23967392     874133
+                   nozzle     2292                      0       0.34380122      73780
+             volume-fluid     2287                      0       0.20279665     123224
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                      0       0.20279665    1071137
+
+Total Number of Cell Zones : 3
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  0.83 minutes
+
+---------------- 1071137 cells were created in :  0.86 minutes
+
+---------------- The mesh has a minimum Orthogonal Quality of:  0.20 
+
+---- Warning--- Stair-stepping of all boundary layers occurred at 1 locations 
+
+---------------- The volume meshing of nozzle_axial is complete.
+
+(newline)
+
+
+Meshing> (cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+
+---------------- The Global Max size was adjusted to 1.28 
+
+---- Warning--- The Max Cell Length is updated to reflect the actual max size in the octree hexcore.
+
+---------------- The Global Min size was adjusted to 0.005 
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 74632
+edges: 3135
+faces: 73380 
+cells: 0 
+reading 13 node zones
+reading 29 edge zones
+reading 14 face zones
+
+Read Mesh Summary:
+	nodes : 13 zones (13 boundary, 0 interior)
+	      : 74632 entities (74632 boundary, 0 interior)
+	edges : 29 zones (26 boundary, 3 interior)
+	      : 3135 entities (2815 boundary, 320 interior)
+	faces : 14 zones (14 boundary, 0 interior)
+	      : 73380 entities (73380 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+    updating regions...
+    done.
+checking object "nozzle_axial"...
+    skipping validating regions of mesh object "nozzle_axial"...done.
+auto meshing object nozzle_axial...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+The octree hexcore cells will be refined using local surface mesh sizes and body of influence (boi) size controls, if there are any defined.
+Generating Prisms...
+
+---- Warning --- Prism stair-step has occured in 1 location(s).
+
+Generating initial mesh...
+
+Refining mesh...
+
+Create polyhedra ...
+
+delete virtual and dead zones.
+
+Merging zones...
+
+Cleaning up dead entities...
+
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+            volume-vacuum     2297                      0          0.25921     293153
+                   nozzle     2292                      0       0.20188213      71397
+             volume-fluid     2287                      0       0.21267791     124379
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                      0       0.20188213     488929
+
+Total Number of Cell Zones : 3
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  0.68 minutes
+
+---------------- 488929 cells were created in :  0.71 minutes
+
+---------------- The mesh has a minimum Orthogonal Quality of:  0.20 
+
+---- Warning--- Stair-stepping of all boundary layers occurred at 1 locations 
+
+---------------- The volume meshing of nozzle_axial is complete.
+
+(newline)
+
+
+Meshing> Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 74632
+edges: 3135
+faces: 73380 
+cells: 0 
+reading 13 node zones
+reading 29 edge zones
+reading 14 face zones
+
+Read Mesh Summary:
+	nodes : 13 zones (13 boundary, 0 interior)
+	      : 74632 entities (74632 boundary, 0 interior)
+	edges : 29 zones (26 boundary, 3 interior)
+	      : 3135 entities (2815 boundary, 320 interior)
+	faces : 14 zones (14 boundary, 0 interior)
+	      : 73380 entities (73380 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+    updating regions...
+    done.
+checking object "nozzle_axial"...
+    skipping validating regions of mesh object "nozzle_axial"...done.
+auto meshing object nozzle_axial...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+The octree hexcore cells will be refined using local surface mesh sizes and body of influence (boi) size controls, if there are any defined.
+Generating Prisms...
+
+---- Warning --- Prism stair-step has occured in 1 location(s).
+
+Generating initial mesh...
+
+Refining mesh...
+
+Create polyhedra ...
+
+delete virtual and dead zones.
+
+Merging zones...
+
+Cleaning up dead entities...
+
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+            volume-vacuum     2297                      0       0.41687559     292750
+                   nozzle     2292                      0       0.31109101      66979
+             volume-fluid     2287                      0        0.2090896     121158
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                      0        0.2090896     480887
+
+Total Number of Cell Zones : 3
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  0.67 minutes
+
+---------------- 480887 cells were created in :  0.69 minutes
+
+---------------- The mesh has a minimum Orthogonal Quality of:  0.21 
+
+---- Warning--- Stair-stepping of all boundary layers occurred at 1 locations 
+
+---------------- The volume meshing of nozzle_axial is complete.
+
+(newline)
+
+
+Meshing> 
+---------------- The Global Min size was adjusted to 0.015 
+
+---- Warning--- The Max Cell Length is updated to reflect the actual max size in the octree hexcore.
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 74632
+edges: 3135
+faces: 73380 
+cells: 0 
+reading 13 node zones
+reading 29 edge zones
+reading 14 face zones
+
+Read Mesh Summary:
+	nodes : 13 zones (13 boundary, 0 interior)
+	      : 74632 entities (74632 boundary, 0 interior)
+	edges : 29 zones (26 boundary, 3 interior)
+	      : 3135 entities (2815 boundary, 320 interior)
+	faces : 14 zones (14 boundary, 0 interior)
+	      : 73380 entities (73380 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+    updating regions...
+    done.
+checking object "nozzle_axial"...
+    skipping validating regions of mesh object "nozzle_axial"...done.
+auto meshing object nozzle_axial...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+The octree hexcore cells will be refined using local surface mesh sizes and body of influence (boi) size controls, if there are any defined.
+Generating Prisms...
+
+---- Warning --- Prism stair-step has occured in 1 location(s).
+
+Generating initial mesh...
+
+Refining mesh...
+
+Create polyhedra ...
+
+delete virtual and dead zones.
+
+Merging zones...
+
+Cleaning up dead entities...
+
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+                   nozzle     2297                      0       0.33485317      69379
+             volume-fluid     2292                      0        0.2092335     121509
+            volume-vacuum     2287                      0        0.4491239     295295
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                      0        0.2092335     486183
+
+Total Number of Cell Zones : 3
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  0.64 minutes
+
+---------------- 486183 cells were created in :  0.65 minutes
+
+---------------- The mesh has a minimum Orthogonal Quality of:  0.21 
+
+---- Warning--- Stair-stepping of all boundary layers occurred at 1 locations 
+
+---------------- The volume meshing of nozzle_axial is complete.
+
+(newline)
+
+
+Meshing> 
+---------------- The Global Min size was adjusted to 0.01 
+
+---- Warning--- The Max Cell Length is updated to reflect the actual max size in the octree hexcore.
+
+---------------- The Global Max size was adjusted to 1.28 
+
+---- Warning--- The Max Cell Length is updated to reflect the actual max size in the octree hexcore.
+
+---- Warning--- The Max Cell Length is updated to reflect the actual max size in the octree hexcore.
+
+---------------- The Global Max size was adjusted to 1.92 
+
+---- Warning--- The Max Cell Length is updated to reflect the actual max size in the octree hexcore.
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 74632
+edges: 3135
+faces: 73380 
+cells: 0 
+reading 13 node zones
+reading 29 edge zones
+reading 14 face zones
+
+Read Mesh Summary:
+	nodes : 13 zones (13 boundary, 0 interior)
+	      : 74632 entities (74632 boundary, 0 interior)
+	edges : 29 zones (26 boundary, 3 interior)
+	      : 3135 entities (2815 boundary, 320 interior)
+	faces : 14 zones (14 boundary, 0 interior)
+	      : 73380 entities (73380 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+    updating regions...
+    done.
+checking object "nozzle_axial"...
+    skipping validating regions of mesh object "nozzle_axial"...done.
+auto meshing object nozzle_axial...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+The octree hexcore cells will be refined using local surface mesh sizes and body of influence (boi) size controls, if there are any defined.
+Generating Prisms...
+
+---- Warning --- Prism stair-step has occured in 1 location(s).
+
+Generating initial mesh...
+
+Refining mesh...
+
+Create polyhedra ...
+
+delete virtual and dead zones.
+
+Merging zones...
+
+Cleaning up dead entities...
+
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+                   nozzle     2297                      0       0.43061068      69392
+             volume-fluid     2292                      0       0.20054324     121501
+            volume-vacuum     2287                      0       0.40328331     138100
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                      0       0.20054324     328993
+
+Total Number of Cell Zones : 3
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  0.54 minutes
+
+---------------- 328993 cells were created in :  0.56 minutes
+
+---------------- The mesh has a minimum Orthogonal Quality of:  0.20 
+
+---- Warning--- Stair-stepping of all boundary layers occurred at 1 locations 
+
+---------------- The volume meshing of nozzle_axial is complete.
+
+(newline)
+
+
+Meshing> 
+---------------- The Global Min size was adjusted to 0.01 
+
+---- Warning--- The Max Cell Length is updated to reflect the actual max size in the octree hexcore.
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 74632
+edges: 3135
+faces: 73380 
+cells: 0 
+reading 13 node zones
+reading 29 edge zones
+reading 14 face zones
+
+Read Mesh Summary:
+	nodes : 13 zones (13 boundary, 0 interior)
+	      : 74632 entities (74632 boundary, 0 interior)
+	edges : 29 zones (26 boundary, 3 interior)
+	      : 3135 entities (2815 boundary, 320 interior)
+	faces : 14 zones (14 boundary, 0 interior)
+	      : 73380 entities (73380 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+    updating regions...
+    done.
+checking object "nozzle_axial"...
+    skipping validating regions of mesh object "nozzle_axial"...done.
+auto meshing object nozzle_axial...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+The octree hexcore cells will be refined using local surface mesh sizes and body of influence (boi) size controls, if there are any defined.
+Generating Prisms...
+
+---- Warning --- Prism stair-step has occured in 1 location(s).
+
+Generating initial mesh...
+
+Refining mesh...
+
+Create polyhedra ...
+
+delete virtual and dead zones.
+
+Merging zones...
+
+Cleaning up dead entities...
+
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+            volume-vacuum     2297                      0       0.42059643     293206
+                   nozzle     2292                      0        0.3875703      71222
+             volume-fluid     2287                      0       0.25503768     123178
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                      0       0.25503768     487606
+
+Total Number of Cell Zones : 3
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  0.81 minutes
+
+---------------- 487606 cells were created in :  0.83 minutes
+
+---------------- The mesh has a minimum Orthogonal Quality of:  0.26 
+
+---- Warning--- Stair-stepping of all boundary layers occurred at 1 locations 
+
+---------------- The volume meshing of nozzle_axial is complete.
+
+(newline)
+
+
+Meshing> (cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton4(Show Cut Edges)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton4(Show Cut Edges)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton4(Show Cut Edges)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton4(Show Cut Edges)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton4(Show Cut Edges)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton4(Show Cut Edges)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton4(Show Cut Edges)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton4(Show Cut Edges)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton4(Show Cut Edges)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton4(Show Cut Edges)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton4(Show Cut Edges)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton4(Show Cut Edges)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton7(Freeze Cell Layer)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton7(Freeze Cell Layer)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton7(Freeze Cell Layer)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton7(Freeze Cell Layer)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*PushButton1(draw_cross_section)")
+(cx-gui-do cx-set-scale "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Scale2" 50)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Scale2")
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)")
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 74632
+edges: 3135
+faces: 73380 
+cells: 0 
+reading 13 node zones
+reading 29 edge zones
+reading 14 face zones
+
+Read Mesh Summary:
+	nodes : 13 zones (13 boundary, 0 interior)
+	      : 74632 entities (74632 boundary, 0 interior)
+	edges : 29 zones (26 boundary, 3 interior)
+	      : 3135 entities (2815 boundary, 320 interior)
+	faces : 14 zones (14 boundary, 0 interior)
+	      : 73380 entities (73380 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+    updating regions...
+    done.
+checking object "nozzle_axial"...
+    skipping validating regions of mesh object "nozzle_axial"...done.
+auto meshing object nozzle_axial...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+Generating Prisms...
+
+---- Warning --- Prism stair-step has occured in 1 location(s).
+
+Generating initial mesh...
+
+Refining mesh...
+
+Create polyhedra ...
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+                   nozzle     2334                      0       0.36029683      36293
+             volume-fluid     2331                      0       0.29339032     109762
+            volume-vacuum     2328                      0       0.20559465     176251
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                      0       0.20559465     322306
+
+Total Number of Cell Zones : 3
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  0.54 minutes
+
+---------------- 322306 cells were created in :  0.56 minutes
+
+---------------- The mesh has a minimum Orthogonal Quality of:  0.21 
+
+---- Warning--- Stair-stepping of all boundary layers occurred at 1 locations 
+
+---------------- The volume meshing of nozzle_axial is complete.
+
+(newline)
+
+
+Meshing> (cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*ButtonBox1*Limit in Z" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*ButtonBox1*Limit in Z")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 74632
+edges: 3135
+faces: 73380 
+cells: 0 
+reading 13 node zones
+reading 29 edge zones
+reading 14 face zones
+
+Read Mesh Summary:
+	nodes : 13 zones (13 boundary, 0 interior)
+	      : 74632 entities (74632 boundary, 0 interior)
+	edges : 29 zones (26 boundary, 3 interior)
+	      : 3135 entities (2815 boundary, 320 interior)
+	faces : 14 zones (14 boundary, 0 interior)
+	      : 73380 entities (73380 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+    updating regions...
+    done.
+checking object "nozzle_axial"...
+    skipping validating regions of mesh object "nozzle_axial"...done.
+auto meshing object nozzle_axial...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+The octree hexcore cells will be refined using local surface mesh sizes and body of influence (boi) size controls, if there are any defined.
+Generating Prisms...
+
+---- Warning --- Prism stair-step has occured in 1 location(s).
+
+Generating Pyramids...
+    split boundary faces = (2301 2302 2303)
+
+Generating initial mesh...
+
+Refining mesh...
+removed 0 interface slivers
+
+delete virtual and dead zones.
+
+Merging zones...
+
+Cleaning up dead entities...
+
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+             volume-fluid     2319                      7      0.047344249     288365
+            volume-vacuum     2314                      0      0.092308463     667722
+                   nozzle     2313                      0       0.10567987     193546
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                      7      0.047344249    1149633
+
+Total Number of Cell Zones : 3
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  0.49 minutes
+
+---------------- 1149633 cells were created in :  0.51 minutes
+(cx-gui-do cx-set-scale "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Scale2" 50)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Scale2")
+
+---------------- Poor quality cells are being displayed.
+
+---- Warning--- The mesh has a minimum Orthogonal Quality of: 0.047.
+
+---- Warning--- Insert the Improve Volume Mesh task to obtain a better quality.
+
+---- Warning--- Stair-stepping of all boundary layers occurred at 1 locations 
+
+---------------- The volume meshing of nozzle_axial is complete.
+
+(newline)
+
+
+Meshing> (cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*CheckButton2(Insert Clipping Planes)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*CheckButton2(Insert Clipping Planes)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 74632
+edges: 3135
+faces: 73380 
+cells: 0 
+reading 13 node zones
+reading 29 edge zones
+reading 14 face zones
+
+Read Mesh Summary:
+	nodes : 13 zones (13 boundary, 0 interior)
+	      : 74632 entities (74632 boundary, 0 interior)
+	edges : 29 zones (26 boundary, 3 interior)
+	      : 3135 entities (2815 boundary, 320 interior)
+	faces : 14 zones (14 boundary, 0 interior)
+	      : 73380 entities (73380 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+---- Warning--- Only prisms are generated in parallel mode. Tetrahedrons are generated in serial mode.
+
+    updating regions...
+    done.
+checking object "nozzle_axial"...
+    skipping validating regions of mesh object "nozzle_axial"...done.
+auto meshing object nozzle_axial...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+Generating Prisms...
+
+Generating Pyramids...
+
+Creating pyramids
+
+Generating initial mesh...
+delete dead zones.
+
+Refining mesh...
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+             volume-fluid     2318                      0       0.10230476     255335
+                   nozzle     2317                      0       0.19624851     188924
+            volume-vacuum     2316                      0      0.054744914     983722
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                      0      0.054744914    1427981
+
+Total Number of Cell Zones : 3
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  0.57 minutes
+
+---------------- 1427981 cells were created in :  0.59 minutes
+
+---------------- The mesh has a minimum Orthogonal Quality of:  0.05 
+
+---------------- The volume meshing of nozzle_axial is complete.
+
+(newline)
+
+
+Meshing> Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 74632
+edges: 3135
+faces: 73380 
+cells: 0 
+reading 13 node zones
+reading 29 edge zones
+reading 14 face zones
+
+Read Mesh Summary:
+	nodes : 13 zones (13 boundary, 0 interior)
+	      : 74632 entities (74632 boundary, 0 interior)
+	edges : 29 zones (26 boundary, 3 interior)
+	      : 3135 entities (2815 boundary, 320 interior)
+	faces : 14 zones (14 boundary, 0 interior)
+	      : 73380 entities (73380 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+    updating regions...
+    done.
+checking object "nozzle_axial"...
+    skipping validating regions of mesh object "nozzle_axial"...done.
+auto meshing object nozzle_axial...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+The octree hexcore cells will be refined using local surface mesh sizes and body of influence (boi) size controls, if there are any defined.
+Generating Prisms...
+
+---- Warning --- Prism stair-step has occured in 1 location(s).
+
+Generating initial mesh...
+
+Refining mesh...
+
+Create polyhedra ...
+
+delete virtual and dead zones.
+
+Merging zones...
+
+Cleaning up dead entities...
+
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+            volume-vacuum     2297                      0       0.42059643     293206
+                   nozzle     2292                      0        0.3875703      71222
+             volume-fluid     2287                      0       0.25503768     123178
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                      0       0.25503768     487606
+
+Total Number of Cell Zones : 3
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  0.75 minutes
+
+---------------- 487606 cells were created in :  0.77 minutes
+
+---------------- The mesh has a minimum Orthogonal Quality of:  0.26 
+
+---- Warning--- Stair-stepping of all boundary layers occurred at 1 locations 
+
+---------------- The volume meshing of nozzle_axial is complete.
+
+(newline)
+
+
+Meshing> (cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*PushButton1(draw_cross_section)")
+(cx-gui-do cx-set-scale "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Scale2" 50)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Scale2")
+(cx-use-window-id 51)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*PushButton1(draw_cross_section)")
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*PushButton1(draw_cross_section)")
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)")
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 74632
+edges: 3135
+faces: 73380 
+cells: 0 
+reading 13 node zones
+reading 29 edge zones
+reading 14 face zones
+
+Read Mesh Summary:
+	nodes : 13 zones (13 boundary, 0 interior)
+	      : 74632 entities (74632 boundary, 0 interior)
+	edges : 29 zones (26 boundary, 3 interior)
+	      : 3135 entities (2815 boundary, 320 interior)
+	faces : 14 zones (14 boundary, 0 interior)
+	      : 73380 entities (73380 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+    updating regions...
+    done.
+checking object "nozzle_axial"...
+    skipping validating regions of mesh object "nozzle_axial"...done.
+auto meshing object nozzle_axial...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+The octree hexcore cells will be refined using local surface mesh sizes and body of influence (boi) size controls, if there are any defined.
+Generating Prisms...
+
+---- Warning --- Prism stair-step has occured in 1 location(s).
+
+Generating initial mesh...
+
+Refining mesh...
+
+Create polyhedra ...
+
+delete virtual and dead zones.
+
+Merging zones...
+
+Cleaning up dead entities...
+
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+            volume-vacuum     2297                      0       0.32953185     410636
+                   nozzle     2292                      0       0.20136776     128244
+             volume-fluid     2287                      0       0.20474195     133627
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                      0       0.20136776     672507
+
+Total Number of Cell Zones : 3
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  0.72 minutes
+
+---------------- 672507 cells were created in :  0.75 minutes
+
+---------------- The mesh has a minimum Orthogonal Quality of:  0.20 
+
+---- Warning--- Stair-stepping of all boundary layers occurred at 1 locations 
+
+---------------- The volume meshing of nozzle_axial is complete.
+
+(newline)
+
+
+Meshing> (cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)")
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-set-scale "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Scale2" 15)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Scale2")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-use-window-id 51)
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 74632
+edges: 3135
+faces: 73380 
+cells: 0 
+reading 13 node zones
+reading 29 edge zones
+reading 14 face zones
+
+Read Mesh Summary:
+	nodes : 13 zones (13 boundary, 0 interior)
+	      : 74632 entities (74632 boundary, 0 interior)
+	edges : 29 zones (26 boundary, 3 interior)
+	      : 3135 entities (2815 boundary, 320 interior)
+	faces : 14 zones (14 boundary, 0 interior)
+	      : 73380 entities (73380 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+    updating regions...
+    done.
+checking object "nozzle_axial"...
+    skipping validating regions of mesh object "nozzle_axial"...done.
+auto meshing object nozzle_axial...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+The octree hexcore cells will be refined using local surface mesh sizes and body of influence (boi) size controls, if there are any defined.
+Generating Prisms...
+
+---- Warning --- Prism stair-step has occured in 1 location(s).
+
+Generating initial mesh...
+
+Refining mesh...
+
+Create polyhedra ...
+
+delete virtual and dead zones.
+
+Merging zones...
+
+Cleaning up dead entities...
+
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+            volume-vacuum     2297                      0        0.2581031     232689
+                   nozzle     2292                      0       0.31494251      45718
+             volume-fluid     2287                      0       0.21838743     116204
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                      0       0.21838743     394611
+
+Total Number of Cell Zones : 3
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  0.59 minutes
+
+---------------- 394611 cells were created in :  0.61 minutes
+
+---------------- The mesh has a minimum Orthogonal Quality of:  0.22 
+
+---- Warning--- Stair-stepping of all boundary layers occurred at 1 locations 
+
+---------------- The volume meshing of nozzle_axial is complete.
+
+(newline)
+
+
+Meshing> (cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 74632
+edges: 3135
+faces: 73380 
+cells: 0 
+reading 13 node zones
+reading 29 edge zones
+reading 14 face zones
+
+Read Mesh Summary:
+	nodes : 13 zones (13 boundary, 0 interior)
+	      : 74632 entities (74632 boundary, 0 interior)
+	edges : 29 zones (26 boundary, 3 interior)
+	      : 3135 entities (2815 boundary, 320 interior)
+	faces : 14 zones (14 boundary, 0 interior)
+	      : 73380 entities (73380 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+    updating regions...
+    done.
+checking object "nozzle_axial"...
+    skipping validating regions of mesh object "nozzle_axial"...done.
+auto meshing object nozzle_axial...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+The octree hexcore cells will be refined using local surface mesh sizes and body of influence (boi) size controls, if there are any defined.
+Generating Prisms...
+
+---- Warning --- Prism stair-step has occured in 1 location(s).
+
+Generating initial mesh...
+
+Refining mesh...
+
+Create polyhedra ...
+
+delete virtual and dead zones.
+
+Merging zones...
+
+Cleaning up dead entities...
+
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+            volume-vacuum     2297                      0       0.30085785     287499
+                   nozzle     2292                      0       0.24130098      68718
+             volume-fluid     2287                      0       0.20264941     123594
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                      0       0.20264941     479811
+
+Total Number of Cell Zones : 3
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  0.66 minutes
+
+---------------- 479811 cells were created in :  0.68 minutes
+
+---------------- The mesh has a minimum Orthogonal Quality of:  0.20 
+
+---- Warning--- Stair-stepping of all boundary layers occurred at 1 locations 
+
+---------------- The volume meshing of nozzle_axial is complete.
+
+(newline)
+
+
+Meshing> Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 74632
+edges: 3135
+faces: 73380 
+cells: 0 
+reading 13 node zones
+reading 29 edge zones
+reading 14 face zones
+
+Read Mesh Summary:
+	nodes : 13 zones (13 boundary, 0 interior)
+	      : 74632 entities (74632 boundary, 0 interior)
+	edges : 29 zones (26 boundary, 3 interior)
+	      : 3135 entities (2815 boundary, 320 interior)
+	faces : 14 zones (14 boundary, 0 interior)
+	      : 73380 entities (73380 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+    updating regions...
+    done.
+checking object "nozzle_axial"...
+    skipping validating regions of mesh object "nozzle_axial"...done.
+auto meshing object nozzle_axial...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+The octree hexcore cells will be refined using local surface mesh sizes and body of influence (boi) size controls, if there are any defined.
+Generating Prisms...
+
+---- Warning --- Prism stair-step has occured in 1 location(s).
+
+Generating initial mesh...
+
+Refining mesh...
+
+Create polyhedra ...
+
+delete virtual and dead zones.
+
+Merging zones...
+
+Cleaning up dead entities...
+
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+            volume-vacuum     2297                      0       0.33556907     309999
+                   nozzle     2292                      0       0.24288002      76132
+             volume-fluid     2287                      0       0.21705578     117460
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                      0       0.21705578     503591
+
+Total Number of Cell Zones : 3
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  0.74 minutes
+
+---------------- 503591 cells were created in :  0.76 minutes
+
+---------------- The mesh has a minimum Orthogonal Quality of:  0.22 
+
+---- Warning--- Stair-stepping of all boundary layers occurred at 1 locations 
+
+---------------- The volume meshing of nozzle_axial is complete.
+
+(newline)
+
+
+Meshing> (cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-gui-do cx-set-scale "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Scale2" 12)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Scale2")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+Reading "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+3D mesh
+nodes: 74632
+edges: 3135
+faces: 73380 
+cells: 0 
+reading 13 node zones
+reading 29 edge zones
+reading 14 face zones
+
+Read Mesh Summary:
+	nodes : 13 zones (13 boundary, 0 interior)
+	      : 74632 entities (74632 boundary, 0 interior)
+	edges : 29 zones (26 boundary, 3 interior)
+	      : 3135 entities (2815 boundary, 320 interior)
+	faces : 14 zones (14 boundary, 0 interior)
+	      : 73380 entities (73380 boundary, 0 interior)
+	cells : 0 zones (0 boundary, 0 interior)
+	      : 0 entities (0 boundary, 0 interior)
+analyzing boundary connectivity...done.
+Writing "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD\FM_SimonAsusLaptop_50352\TaskObject11.msh.h5" ...
+writing 13 node zones
+writing 29 edge zones 
+writing 14 face zones 
+writing node curvature data
+done.
+    updating regions...
+    done.
+checking object "nozzle_axial"...
+    skipping validating regions of mesh object "nozzle_axial"...done.
+auto meshing object nozzle_axial...
+
+processing scoped prisms...
+    starting orientation...
+done.
+    setting prism growth...done.
+done.
+Identifying Topology...
+
+The octree hexcore cells will be refined using local surface mesh sizes and body of influence (boi) size controls, if there are any defined.
+Generating Prisms...
+
+---- Warning --- Prism stair-step has occured in 1 location(s).
+
+Generating initial mesh...
+
+Refining mesh...
+
+Create polyhedra ...
+
+delete virtual and dead zones.
+
+Merging zones...
+
+Cleaning up dead entities...
+
+
+Merging Domains...
+done.
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+            volume-vacuum     2297                      0       0.42059643     293206
+                   nozzle     2292                      0        0.3875703      71222
+             volume-fluid     2287                      0       0.25503768     123178
+
+                     name       id cells (quality < 0.05)  minimum quality cell count
+------------------------- -------- ---------------------- ---------------- ----------
+          Overall Summary     none                      0       0.25503768     487606
+
+Total Number of Cell Zones : 3
+
+[Quality Measure : Orthogonal Quality]
+
+---------------- Volume mesh creation completed in :  0.65 minutes
+
+---------------- 487606 cells were created in :  0.67 minutes
+
+---------------- The mesh has a minimum Orthogonal Quality of:  0.26 
+
+---- Warning--- Stair-stepping of all boundary layers occurred at 1 locations 
+
+---------------- The volume meshing of nozzle_axial is complete.
+
+(newline)
+
+
+Meshing> (cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-use-window-id 51)
+(cx-gui-do cx-activate-item "ToolBar*Filter*face")
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*PushButton1(draw_cross_section)")
+(cx-gui-do cx-set-scale "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Scale2" 8)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Scale2")
+(cx-use-window-id 51)
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)")
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)")
+(cx-use-window-id 51)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*PushButton1(draw_cross_section)")
+(cx-use-window-id 51)
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*PushButton1(draw_cross_section)")
+(cx-use-window-id 51)
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*CheckButton2(Insert Clipping Planes)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*CheckButton2(Insert Clipping Planes)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*CheckButton2(Insert Clipping Planes)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*CheckButton2(Insert Clipping Planes)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*PushButton1(draw_cross_section)")
+(cx-use-window-id 51)
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*PushButton1(draw_cross_section)")
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(handle-key "control [")
+/bo mo deselect-last
+
+Error: No Entity to deselect.
+Error Object: #f
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)")
+
+Error: An error or interrupt occurred in the previous operation.
+       Details have been printed to the text console transcript.
+Error Object: #f
+(cx-gui-do cx-activate-item "Error*OK")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*PushButton1(draw_cross_section)")
+(cx-use-window-id 51)
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*PushButton1(draw_cross_section)")
+(cx-use-window-id 51)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*PushButton1(draw_cross_section)")
+(cx-use-window-id 51)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*PushButton1(draw_cross_section)")
+(cx-use-window-id 51)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*PushButton1(draw_cross_section)")
+(cx-use-window-id 51)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*PushButton1(draw_cross_section)")
+(cx-use-window-id 51)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*PushButton1(draw_cross_section)")
+(cx-use-window-id 51)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*PushButton1(draw_cross_section)")
+(cx-use-window-id 51)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*PushButton1(draw_cross_section)")
+(cx-use-window-id 51)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*PushButton1(draw_cross_section)")
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)")
+(cx-use-window-id 51)
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*CheckButton2(Insert Clipping Planes)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*CheckButton2(Insert Clipping Planes)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*CheckButton2(Insert Clipping Planes)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*CheckButton2(Insert Clipping Planes)")
+(cx-use-window-id 51)
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-use-window-id 51)
+(cx-gui-do cx-activate-item "MenuBar*WriteSubMenu*Mesh...")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "Nozzle_axial.msh.h5") "CFF Mesh Files (*.msh.h5 )")
+Writing "C:/Users/Simon/Projects/MEng Electronics/Development of a Resistojet Thruster/2) Simulations/CFD/Nozzle_axial.msh.h5" ...
+writing 10 node zones
+writing 20 edge zones 
+writing 10 face zones 
+writing 3 cell zones 
+writing boundary layer flags
+writing node curvature data
+done.Copying the required intermediate mesh files into C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\Nozzle_axial_workflow_files
+Done.
+/exit y
+
+Posting ANSYS Product Improvement Program performance data 
+Done.
+Auto-Transcript Stop Time:  16:44:58, 13 Jul 2026 South Africa Standard Time 
+Total Transcript Time: 4 Hour 38 Minute 7 Second.

@@ -1,0 +1,9 @@
+../Core/Src/pwm.c:20:20:gpio_set	1
+../Core/Src/pwm.c:25:20:gpio_reset	1
+../Core/Src/pwm.c:30:6:SoftPWM_Init	1
+../Core/Src/pwm.c:40:6:SoftPWM_Start	1
+../Core/Src/pwm.c:45:6:SoftPWM_SetHeaterDuty	2
+../Core/Src/pwm.c:51:6:SoftPWM_SetValveDuty	2
+../Core/Src/pwm.c:57:9:SoftPWM_GetHeaterDuty	1
+../Core/Src/pwm.c:62:9:SoftPWM_GetValveDuty	1
+../Core/Src/pwm.c:67:6:SoftPWM_Tick	8

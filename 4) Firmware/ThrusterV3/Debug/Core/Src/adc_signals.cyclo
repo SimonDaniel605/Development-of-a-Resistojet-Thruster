@@ -1,0 +1,7 @@
+../Core/Src/adc_signals.c:238:14:interpolateTempFromResistance	6
+../Core/Src/adc_signals.c:267:7:ADC_CountsToVolts	1
+../Core/Src/adc_signals.c:272:7:ADC_GetThermistorVoltage	1
+../Core/Src/adc_signals.c:277:7:ADC_GetLoadCellVoltage	1
+../Core/Src/adc_signals.c:282:7:ADC_GetThermistorResistanceOhms	3
+../Core/Src/adc_signals.c:308:7:ADC_GetThermistorTempC	1
+../Core/Src/adc_signals.c:314:7:ADC_GetLoadCellForceN	1

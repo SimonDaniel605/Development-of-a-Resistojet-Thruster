@@ -1,0 +1,230 @@
+12:13:12 **** Incremental Build of configuration Debug for project ThrusterV3 ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ThrusterV3.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\4) Firmware\ThrusterV3\STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ThrusterV3.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ThrusterV3.elf
+ 
+arm-none-eabi-size  ThrusterV3.elf 
+arm-none-eabi-objdump -h -S ThrusterV3.elf  > "ThrusterV3.list"
+   text	   data	    bss	    dec	    hex	filename
+  44560	    468	   2332	  47360	   b900	ThrusterV3.elf
+Finished building: default.size.stdout
+ 
+Finished building: ThrusterV3.list
+ 
+13:08:22 **** Incremental Build of configuration Debug for project ThrusterV3 ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ThrusterV3.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\4) Firmware\ThrusterV3\STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ThrusterV3.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ThrusterV3.elf
+ 
+arm-none-eabi-size  ThrusterV3.elf 
+arm-none-eabi-objdump -h -S ThrusterV3.elf  > "ThrusterV3.list"
+   text	   data	    bss	    dec	    hex	filename
+  44576	    468	   2332	  47376	   b910	ThrusterV3.elf
+Finished building: default.size.stdout
+ 
+Finished building: ThrusterV3.list
+ 
+13:30:16 **** Incremental Build of configuration Debug for project ThrusterV3 ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/adc_signals.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/adc_signals.d" -MT"Core/Src/adc_signals.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/adc_signals.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:148:15: error: redefinition of 'len'
+  148 |           int len = snprintf(msg, sizeof(msg),
+      |               ^~~
+../Core/Src/main.c:143:15: note: previous definition of 'len' with type 'int'
+  143 |           int len = snprintf(msg, sizeof(msg),
+      |               ^~~
+../Core/Src/main.c:150:30: error: 'loadcellV' undeclared (first use in this function)
+  150 |                              loadcellV, thermistorV);
+      |                              ^~~~~~~~~
+../Core/Src/main.c:150:30: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:150:41: error: 'thermistorV' undeclared (first use in this function)
+  150 |                              loadcellV, thermistorV);
+      |                                         ^~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+13:32:05 **** Incremental Build of configuration Debug for project ThrusterV3 ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ThrusterV3.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\4) Firmware\ThrusterV3\STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ThrusterV3.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ThrusterV3.elf
+ 
+arm-none-eabi-size  ThrusterV3.elf 
+arm-none-eabi-objdump -h -S ThrusterV3.elf  > "ThrusterV3.list"
+   text	   data	    bss	    dec	    hex	filename
+  48844	    468	   2332	  51644	   c9bc	ThrusterV3.elf
+Finished building: default.size.stdout
+ 
+Finished building: ThrusterV3.list
+ 
+13:51:52 **** Incremental Build of configuration Debug for project ThrusterV3 ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/adc_signals.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/adc_signals.d" -MT"Core/Src/adc_signals.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/adc_signals.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/adc_signals.c:314:7: error: conflicting types for 'ADC_GetLoadCellForceN'; have 'float(const volatile uint16_t *)' {aka 'float(const volatile short unsigned int *)'}
+  314 | float ADC_GetLoadCellForceN(const volatile uint16_t *buf)
+      |       ^~~~~~~~~~~~~~~~~~~~~
+In file included from ../Core/Src/adc_signals.c:9:
+../Core/Inc/adc_signals.h:48:7: note: previous declaration of 'ADC_GetLoadCellForceN' with type 'float(const volatile uint16_t *, float)' {aka 'float(const volatile short unsigned int *, float)'}
+   48 | float ADC_GetLoadCellForceN(const volatile uint16_t *buf, float vref);
+      |       ^~~~~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:40: Core/Src/adc_signals.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+13:52:24 **** Incremental Build of configuration Debug for project ThrusterV3 ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/adc_signals.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/adc_signals.d" -MT"Core/Src/adc_signals.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/adc_signals.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/adc_signals.c:314:7: error: conflicting types for 'ADC_GetLoadCellForceN'; have 'float(const volatile uint16_t *)' {aka 'float(const volatile short unsigned int *)'}
+  314 | float ADC_GetLoadCellForceN(const volatile uint16_t *buf)
+      |       ^~~~~~~~~~~~~~~~~~~~~
+In file included from ../Core/Src/adc_signals.c:9:
+../Core/Inc/adc_signals.h:48:7: note: previous declaration of 'ADC_GetLoadCellForceN' with type 'float(const volatile uint16_t *, float)' {aka 'float(const volatile short unsigned int *, float)'}
+   48 | float ADC_GetLoadCellForceN(const volatile uint16_t *buf, float vref);
+      |       ^~~~~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:40: Core/Src/adc_signals.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:141:30: error: too few arguments to function 'ADC_GetLoadCellForceN'
+  141 |           float loadForceN = ADC_GetLoadCellForceN(adc_buf);
+      |                              ^~~~~~~~~~~~~~~~~~~~~
+In file included from ../Core/Src/main.c:26:
+../Core/Inc/adc_signals.h:48:7: note: declared here
+   48 | float ADC_GetLoadCellForceN(const volatile uint16_t *buf, float vref);
+      |       ^~~~~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+13:53:11 **** Incremental Build of configuration Debug for project ThrusterV3 ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/adc_signals.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/adc_signals.d" -MT"Core/Src/adc_signals.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/adc_signals.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ThrusterV3.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\4) Firmware\ThrusterV3\STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ThrusterV3.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ThrusterV3.elf
+ 
+arm-none-eabi-size  ThrusterV3.elf 
+arm-none-eabi-objdump -h -S ThrusterV3.elf  > "ThrusterV3.list"
+   text	   data	    bss	    dec	    hex	filename
+  48844	    468	   2332	  51644	   c9bc	ThrusterV3.elf
+Finished building: default.size.stdout
+ 
+Finished building: ThrusterV3.list
+ 
+13:57:19 **** Incremental Build of configuration Debug for project ThrusterV3 ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/adc_signals.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/adc_signals.d" -MT"Core/Src/adc_signals.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/adc_signals.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ThrusterV3.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\4) Firmware\ThrusterV3\STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ThrusterV3.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ThrusterV3.elf
+ 
+arm-none-eabi-size  ThrusterV3.elf 
+arm-none-eabi-objdump -h -S ThrusterV3.elf  > "ThrusterV3.list"
+   text	   data	    bss	    dec	    hex	filename
+  48844	    468	   2332	  51644	   c9bc	ThrusterV3.elf
+Finished building: default.size.stdout
+ 
+Finished building: ThrusterV3.list
+ 
+14:38:07 **** Incremental Build of configuration Debug for project ThrusterV3 ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ThrusterV3.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\4) Firmware\ThrusterV3\STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ThrusterV3.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ThrusterV3.elf
+ 
+arm-none-eabi-size  ThrusterV3.elf 
+arm-none-eabi-objdump -h -S ThrusterV3.elf  > "ThrusterV3.list"
+   text	   data	    bss	    dec	    hex	filename
+  48844	    468	   2332	  51644	   c9bc	ThrusterV3.elf
+Finished building: default.size.stdout
+ 
+Finished building: ThrusterV3.list
+ 
+15:05:37 **** Incremental Build of configuration Debug for project ThrusterV3 ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/pwm.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pwm.d" -MT"Core/Src/pwm.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/pwm.o"
+arm-none-eabi-gcc -o "ThrusterV3.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\4) Firmware\ThrusterV3\STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ThrusterV3.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ThrusterV3.elf
+ 
+arm-none-eabi-size  ThrusterV3.elf 
+arm-none-eabi-objdump -h -S ThrusterV3.elf  > "ThrusterV3.list"
+   text	   data	    bss	    dec	    hex	filename
+  48832	    468	   2332	  51632	   c9b0	ThrusterV3.elf
+Finished building: default.size.stdout
+ 
+Finished building: ThrusterV3.list
+ 
+15:06:49 **** Incremental Build of configuration Debug for project ThrusterV3 ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/pwm.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pwm.d" -MT"Core/Src/pwm.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/pwm.o"
+arm-none-eabi-gcc -o "ThrusterV3.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\4) Firmware\ThrusterV3\STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ThrusterV3.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ThrusterV3.elf
+ 
+arm-none-eabi-size  ThrusterV3.elf 
+arm-none-eabi-objdump -h -S ThrusterV3.elf  > "ThrusterV3.list"
+   text	   data	    bss	    dec	    hex	filename
+  48832	    468	   2332	  51632	   c9b0	ThrusterV3.elf
+Finished building: default.size.stdout
+ 
+Finished building: ThrusterV3.list
+ 
+15:08:22 **** Incremental Build of configuration Debug for project ThrusterV3 ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/pwm.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pwm.d" -MT"Core/Src/pwm.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/pwm.o"
+arm-none-eabi-gcc -o "ThrusterV3.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\4) Firmware\ThrusterV3\STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ThrusterV3.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ThrusterV3.elf
+ 
+arm-none-eabi-size  ThrusterV3.elf 
+arm-none-eabi-objdump -h -S ThrusterV3.elf  > "ThrusterV3.list"
+   text	   data	    bss	    dec	    hex	filename
+  48856	    468	   2332	  51656	   c9c8	ThrusterV3.elf
+Finished building: default.size.stdout
+ 
+Finished building: ThrusterV3.list
+ 
+15:10:55 **** Incremental Build of configuration Debug for project ThrusterV3 ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/pwm.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pwm.d" -MT"Core/Src/pwm.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/pwm.o"
+arm-none-eabi-gcc -o "ThrusterV3.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\4) Firmware\ThrusterV3\STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ThrusterV3.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ThrusterV3.elf
+ 
+arm-none-eabi-size  ThrusterV3.elf 
+arm-none-eabi-objdump -h -S ThrusterV3.elf  > "ThrusterV3.list"
+   text	   data	    bss	    dec	    hex	filename
+  48844	    468	   2340	  51652	   c9c4	ThrusterV3.elf
+Finished building: default.size.stdout
+ 
+Finished building: ThrusterV3.list
+ 
+15:15:39 **** Incremental Build of configuration Debug for project ThrusterV3 ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/pwm.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/pwm.d" -MT"Core/Src/pwm.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/pwm.o"
+arm-none-eabi-gcc -o "ThrusterV3.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\4) Firmware\ThrusterV3\STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ThrusterV3.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ThrusterV3.elf
+ 
+arm-none-eabi-size  ThrusterV3.elf 
+arm-none-eabi-objdump -h -S ThrusterV3.elf  > "ThrusterV3.list"
+   text	   data	    bss	    dec	    hex	filename
+  48888	    468	   2340	  51696	   c9f0	ThrusterV3.elf
+Finished building: default.size.stdout
+ 
+Finished building: ThrusterV3.list
+ 
+13:25:51 **** Build of configuration Debug for project ThrusterV3 ****
+make -j20 all 
+arm-none-eabi-size  ThrusterV3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  48888	    468	   2340	  51696	   c9f0	ThrusterV3.elf
+Finished building: default.size.stdout
+ 
+13:02:35 **** Build of configuration Debug for project ThrusterV3 ****
+make -j20 all 
+arm-none-eabi-size  ThrusterV3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  48888	    468	   2340	  51696	   c9f0	ThrusterV3.elf
+Finished building: default.size.stdout
+ 

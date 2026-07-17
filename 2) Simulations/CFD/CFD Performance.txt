@@ -1,0 +1,28 @@
+CFD performance for difference viscous models:
+
+Baseline Ideal Nozzle Equations (MATLAB Simulation):
+Me    = 5.21
+Ve    = 862.09 m/s
+Pe    = 16.754 Pa
+Pspace= 1e-7 Pa
+m_dot = 4.413e-05 kg/s
+F     = 39.36 mN
+Isp   = 90.95 s
+
+Laminar:
+Me    = 3.96       (mass weighted average)
+Ve    = 650.35 m/s (mass weighted average)
+Pe    = 28.976 Pa  (area weighted average)
+Pspace= 1 Pa
+m_dot = 4.458e-05 kg/s
+F     = 31.16 mN
+Isp   = 71.25 s
+
+SST K-Omega:
+Me    = 3.96       (mass weighted average)
+Ve    = 655.69 m/s (mass weighted average)
+Pe    = 28.850 Pa  (area weighted average)
+Pspace= 1 Pa
+m_dot = 4.420e-05 kg/s
+F     = 31.14 mN
+Isp   = 71.81 s

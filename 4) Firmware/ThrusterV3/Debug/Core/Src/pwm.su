@@ -1,0 +1,9 @@
+../Core/Src/pwm.c:20:20:gpio_set	16	static
+../Core/Src/pwm.c:25:20:gpio_reset	16	static
+../Core/Src/pwm.c:30:6:SoftPWM_Init	8	static
+../Core/Src/pwm.c:40:6:SoftPWM_Start	8	static
+../Core/Src/pwm.c:45:6:SoftPWM_SetHeaterDuty	16	static
+../Core/Src/pwm.c:51:6:SoftPWM_SetValveDuty	16	static
+../Core/Src/pwm.c:57:9:SoftPWM_GetHeaterDuty	8	static
+../Core/Src/pwm.c:62:9:SoftPWM_GetValveDuty	8	static
+../Core/Src/pwm.c:67:6:SoftPWM_Tick	16	static

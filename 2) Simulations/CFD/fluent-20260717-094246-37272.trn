@@ -1,0 +1,232 @@
+Auto-Transcript Start Time:  09:42:46, 17 Jul 2026 South Africa Standard Time 
+Current Directory: "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD"
+
+              Welcome to ANSYS Fluent 2026 R1
+
+              Copyright 2026 Synopsys, Inc. and ANSYS, Inc. All rights reserved.
+              Unauthorized use, distribution or duplication is prohibited.
+              This product is subject to U.S. laws governing export and re-export.
+              For full Legal Notice, see documentation.
+
+Build Time: Feb  2 2026 16:32:00 EST  Build Id: 10262  
+ 
+Connected License Server List:	<Non FlexNet Publisher License Server (FNPLS)>
+
+     --------------------------------------------------------------
+     This is a student version of ANSYS FLUENT. Usage of this product
+     license is limited to the terms and conditions specified in your ANSYS
+     license form, additional terms section.
+     --------------------------------------------------------------
+Host spawning Node 0 on machine "SimonAsusLaptop" (win64).
+Host waiting for connection from Node 0 at 127.0.0.1:52791 
+
+Node 0 connecting to the Host ... connection established.
+
+------------------------------------------------------------------------------------------
+ID    Hostname         Core  O.S.         PID    CPU Model Name                          
+------------------------------------------------------------------------------------------
+n3    SimonAsusLaptop  4/20  Windows-x64  524    12th Gen Intel(R) Core(TM) i7-12700H    
+n2    SimonAsusLaptop  3/20  Windows-x64  25104  12th Gen Intel(R) Core(TM) i7-12700H    
+n1    SimonAsusLaptop  2/20  Windows-x64  28156  12th Gen Intel(R) Core(TM) i7-12700H    
+n0*   SimonAsusLaptop  1/20  Windows-x64  22516  12th Gen Intel(R) Core(TM) i7-12700H    
+host  SimonAsusLaptop        Windows-x64  23752  12th Gen Intel(R) Core(TM) i7-12700H    
+
+MPI Option Selected: intel
+Selected system interconnect: default
+------------------------------------------------------------------------------------------
+
+Cleanup script file is C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\cleanup-fluent-SimonAsusLaptop-23752.bat
+Note: Rank = 0: Process affinity not being set (6).
+Note: Rank = 1: Process affinity not being set (6).
+Note: Rank = 2: Process affinity not being set (6).
+Note: Rank = 3: Process affinity not being set (6).
+
+Graphics driver currently in use: dx11
+
+
+Posting ANSYS Product Improvement Program startup data
+Done.
+
+> (cx-gui-do cx-activate-item "MenuBar*ReadSubMenu*Case & Data...")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "C:/Users/Simon/Projects/MEng Electronics/Development of a Resistojet Thruster/2) Simulations/CFD/3D Nozzle Simulation/Nozzle_axial_KOmega_2000iterationsXY.cas.h5") "CFF Case Files (*.cas.h5 )")
+Fast-loading "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v261\fluent\fluent26.1.0\\addons\afd\lib\hdfio.bin"
+Done.
+
+Reading from SimonAsusLaptop:"C:/Users/Simon/Projects/MEng Electronics/Development of a Resistojet Thruster/2) Simulations/CFD/3D Nozzle Simulation/Nozzle_axial_KOmega_2000iterationsXY.cas.h5" in NODE0 mode ...
+  Reading mesh ...
+      487606 cells,     3 cell zones ...
+         123178 mixed cells,  zone id: 2287
+          71222 mixed cells,  zone id: 2292
+         293206 mixed cells,  zone id: 2297
+     2290794 faces,    12 face zones ...
+           5376 polygonal wall faces,  zone id: 1969
+           5376 polygonal wall faces,  zone id: 2
+           1951 polygonal wall faces,  zone id: 1882
+           1951 polygonal wall faces,  zone id: 1
+            190 polygonal interior faces,  zone id: 999
+            190 polygonal wall faces,  zone id: 48
+           1543 polygonal wall faces,  zone id: 47
+          26672 polygonal pressure-outlet faces,  zone id: 46
+            618 polygonal pressure-inlet faces,  zone id: 42
+        1345918 mixed interior faces,  zone id: 2299
+         365279 mixed interior faces,  zone id: 2294
+         535730 mixed interior faces,  zone id: 2289
+     1431185 nodes,     1 node zone  ...
+  Done.
+
+
+Building...
+     mesh
+	distributing mesh
+		pairs....,
+		parts....,
+		faces....,
+		nodes....,
+		shadow nodes....,
+		cells....,
+        bandwidth reduction using Reverse Cuthill-McKee: 79338/2335 = 33.9777
+  Reading boundary layer flags ...
+  Done.
+
+     materials,
+     interface,
+     domains,
+	mixture
+     zones,
+	internal-wall:1969-shadow
+	nozzle-volume-vacuum-shadow
+	internal-wall:1969
+	nozzle-volume-vacuum
+	outlet:999
+	nozzle-wall
+	nozzle:1
+	vacuum-boundaries
+	inlet
+	interior--volume-vacuum
+	interior--nozzle
+	interior--volume-fluid
+	volume-fluid
+	volume-vacuum
+	nozzle
+     parallel,
+Done.
+
+Reading from SimonAsusLaptop:"C:/Users/Simon/Projects/MEng Electronics/Development of a Resistojet Thruster/2) Simulations/CFD/3D Nozzle Simulation/Nozzle_axial_KOmega_2000iterationsXY.dat.h5" in NODE0 mode ...
+
+
+  Reading results.
+Parallel variables...
+Done.
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Fluid|r134a-approx"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Fluid|r134a-approx"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Fluid|r134a-approx"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Fluid|r134a-approx"))
+(cx-gui-do cx-activate-item "Create/Edit Materials*PanelButtons*PushButton1(Close)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Fluid|r134a-approx"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )
+(cx-use-window-id 51)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame3(Physics)*Table1*Table3(Materials)*PushButton1(Create/Edit)")
+(cx-gui-do cx-activate-item "Create/Edit Materials*Table1*Frame1*Frame2*ButtonBox2*PushButton3(User-Defined Database)")
+(cx-gui-do cx-activate-item "Open Database*PushButton2(Browse)")
+(cx-gui-do cx-activate-item "Open Database*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-real-entry-list "Create/Edit Materials*RealEntry14" '( 0.013))
+(cx-gui-do cx-activate-item "Create/Edit Materials*PanelButtons*PushButton3(Change/Create)")
+(cx-gui-do cx-activate-item "Create/Edit Materials*PanelButtons*PushButton1(Close)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Fluid|r134a-approx"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-r134a-approx*Make a Copy...")
+(cx-gui-do cx-activate-item "Create/Edit Materials*PanelButtons*PushButton1(Close)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list ))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Fluid|r134a-approx-1"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Fluid|r134a-approx-1"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-r134a-approx-1*Delete")
+(cx-gui-do cx-activate-item "Question*OK")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list ))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Fluid|r134a-approx"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Fluid|r134a-approx"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Fluid|r134a-approx"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Fluid|r134a-approx"))
+(cx-gui-do cx-activate-item "Create/Edit Materials*Table1*Frame1*Frame2*ButtonBox2*PushButton3(User-Defined Database)")
+(cx-gui-do cx-activate-item "Open Database*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "Create/Edit Materials*Table1*Frame1*Frame2*ButtonBox2*PushButton1(Fluent Database)")
+(cx-gui-do cx-activate-item "Fluent Database Materials*PanelButtons*PushButton1(Close)")
+(cx-gui-do cx-activate-item "Create/Edit Materials*PanelButtons*PushButton1(Close)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Fluid"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Fluid|r134a-approx"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*Frame2*Table1*List_Tree2" )
+(cx-gui-do cx-activate-item "MenuBar*WriteSubMenu*Case & Data...")
+(cx-gui-do cx-activate-item "MenuBar*WriteSubMenu*Data...")
+(cx-gui-do cx-activate-item "MenuBar*WriteSubMenu*Profile...")
+(cx-gui-do cx-activate-item "Write Profile*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list ))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list ))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Fluid|r134a-approx"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Fluid|r134a-approx"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Fluid|r134a-approx"))
+(cx-gui-do cx-activate-item "Create/Edit Materials*Table1*Frame1*Frame2*ButtonBox2*PushButton3(User-Defined Database)")
+(cx-gui-do cx-activate-item "Open Database*PushButton2(Browse)")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "C:/Users/Simon/Projects/MEng Electronics/Development of a Resistojet Thruster/2) Simulations/CFD/R134a_approximation") "Database Files (*.scm)")
+(cx-gui-do cx-activate-item "Open Database*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Question*OK")
+
+Reading materials database file 'R134a_approximation' from directory:
+"C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD"
+
+(cx-gui-do cx-activate-item "User-Defined Database Materials*PanelButtons*PushButton1(Close)")
+(cx-gui-do cx-activate-item "Create/Edit Materials*Table1*Frame1*Frame2*ButtonBox2*PushButton3(User-Defined Database)")
+(cx-gui-do cx-set-text-entry "Open Database*TextEntry1(Database Name)" "C:/Users/Simon/Projects/MEng Electronics/Development of a Resistojet Thruster/2) Simulations/CFD/R134a_approximation.scm")
+(cx-gui-do cx-activate-item "Open Database*PushButton2(Browse)")
+(cx-gui-do cx-activate-item "Open Database*PushButton2(Browse)")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "R134a_approximation.scm") "Database Files (*.scm)")
+(cx-gui-do cx-activate-item "Open Database*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Question*OK")
+
+Reading materials database file 'R134a_approximation.scm' from directory:
+"C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD"
+
+(cx-gui-do cx-activate-item "User-Defined Database Materials*Table1*Frame1*Frame2*PushButton1(Copy Materials from Case)")
+(cx-gui-do cx-set-list-selections "Copy Case Material*List1(Case Materials)" '( 0))
+(cx-gui-do cx-activate-item "Copy Case Material*List1(Case Materials)")
+(cx-gui-do cx-activate-item "Copy Case Material*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Copy Case Material*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "User-Defined Database Materials*PanelButtons*PushButton1(Close)")
+(cx-gui-do cx-activate-item "Question*OK")
+(cx-gui-do cx-activate-item "Create/Edit Materials*PanelButtons*PushButton1(Close)")
+/exit y
+(cx-gui-do cx-activate-item "Question*Cancel")
+(cx-gui-do cx-activate-item "MenuBar*WriteSubMenu*Case & Data...")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "C:/Users/Simon/Projects/MEng Electronics/Development of a Resistojet Thruster/2) Simulations/CFD/3D Nozzle Simulation/Nozzle_axial_KOmega_2000iterationsXY.cas.h5") "CFF Case/Data Files (*.cas.h5 *.dat.h5 )")
+(cx-gui-do cx-activate-item "Question*OK")
+
+Writing to SimonAsusLaptop:"C:/Users/Simon/Projects/MEng Electronics/Development of a Resistojet Thruster/2) Simulations/CFD/3D Nozzle Simulation/Nozzle_axial_KOmega_2000iterationsXY.cas.h5" in NODE0 mode and compression level 1 ...
+Grouping cells for Laplace smoothing ...
+      487606 cells,     3 zones ...
+     2290794 faces,    12 zones ...
+     1431185 nodes,     1 zone  ...
+  Done.
+
+  Writing boundary layer flags ...
+  Done.
+Done.
+
+Additional data file quantities are not supported when writing in the default CFF format (.dat.h5 files).
+
+
+Writing to SimonAsusLaptop:"C:/Users/Simon/Projects/MEng Electronics/Development of a Resistojet Thruster/2) Simulations/CFD/3D Nozzle Simulation/Nozzle_axial_KOmega_2000iterationsXY.dat.h5" in NODE0 mode and compression level 1 ...
+  Writing results.
+Done.
+(cx-gui-do cx-activate-item "Information*OK")
+/exit y
+
+Posting ANSYS Product Improvement Program performance data 
+Done.
+Auto-Transcript Stop Time:  09:57:56, 17 Jul 2026 South Africa Standard Time 
+Total Transcript Time: 15 Minute 10 Second.

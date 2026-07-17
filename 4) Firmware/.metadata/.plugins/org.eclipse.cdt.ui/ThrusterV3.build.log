@@ -1,0 +1,10 @@
+13:02:35 **** Build of configuration Debug for project ThrusterV3 ****
+make -j20 all 
+arm-none-eabi-size  ThrusterV3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  48888	    468	   2340	  51696	   c9f0	ThrusterV3.elf
+Finished building: default.size.stdout
+ 
+
+13:02:36 Build Finished. 0 errors, 0 warnings. (took 769ms)
+

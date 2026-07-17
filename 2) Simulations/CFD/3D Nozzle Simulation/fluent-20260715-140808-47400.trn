@@ -1,0 +1,317 @@
+Auto-Transcript Start Time:  14:08:08, 15 Jul 2026 South Africa Standard Time 
+Current Directory: "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD"
+
+              Welcome to ANSYS Fluent 2026 R1
+
+              Copyright 2026 Synopsys, Inc. and ANSYS, Inc. All rights reserved.
+              Unauthorized use, distribution or duplication is prohibited.
+              This product is subject to U.S. laws governing export and re-export.
+              For full Legal Notice, see documentation.
+
+Build Time: Feb  2 2026 16:32:00 EST  Build Id: 10262  
+ 
+Connected License Server List:	<Non FlexNet Publisher License Server (FNPLS)>
+
+     --------------------------------------------------------------
+     This is a student version of ANSYS FLUENT. Usage of this product
+     license is limited to the terms and conditions specified in your ANSYS
+     license form, additional terms section.
+     --------------------------------------------------------------
+Host spawning Node 0 on machine "SimonAsusLaptop" (win64).
+Host waiting for connection from Node 0 at 127.0.0.1:57189 
+
+Node 0 connecting to the Host ... connection established.
+
+------------------------------------------------------------------------------------------
+ID    Hostname         Core  O.S.         PID    CPU Model Name                          
+------------------------------------------------------------------------------------------
+n3    SimonAsusLaptop  4/20  Windows-x64  59612  12th Gen Intel(R) Core(TM) i7-12700H    
+n2    SimonAsusLaptop  3/20  Windows-x64  54916  12th Gen Intel(R) Core(TM) i7-12700H    
+n1    SimonAsusLaptop  2/20  Windows-x64  78620  12th Gen Intel(R) Core(TM) i7-12700H    
+n0*   SimonAsusLaptop  1/20  Windows-x64  69024  12th Gen Intel(R) Core(TM) i7-12700H    
+host  SimonAsusLaptop        Windows-x64  71420  12th Gen Intel(R) Core(TM) i7-12700H    
+
+MPI Option Selected: intel
+Selected system interconnect: default
+------------------------------------------------------------------------------------------
+
+Cleanup script file is C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\cleanup-fluent-SimonAsusLaptop-71420.bat
+Note: Rank = 0: Process affinity not being set (6).
+Note: Rank = 1: Process affinity not being set (6).
+Note: Rank = 2: Process affinity not being set (6).
+Note: Rank = 3: Process affinity not being set (6).
+
+Graphics driver currently in use: dx11
+
+
+Posting ANSYS Product Improvement Program startup data
+Done.
+
+> (cx-gui-do cx-activate-item "MenuBar*ReadSubMenu*Case & Data...")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "Nozzle_axial_1500iterations.cas.h5") "CFF Case Files (*.cas.h5 )")
+Fast-loading "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v261\fluent\fluent26.1.0\\addons\afd\lib\hdfio.bin"
+Done.
+
+Reading from SimonAsusLaptop:"C:/Users/Simon/Projects/MEng Electronics/Development of a Resistojet Thruster/2) Simulations/CFD/Nozzle_axial_1500iterations.cas.h5" in NODE0 mode ...
+  Reading mesh ...
+      487606 cells,     3 cell zones ...
+         123178 mixed cells,  zone id: 2287
+          71222 mixed cells,  zone id: 2292
+         293206 mixed cells,  zone id: 2297
+     2290794 faces,    12 face zones ...
+           5376 polygonal wall faces,  zone id: 1969
+           5376 polygonal wall faces,  zone id: 2
+           1951 polygonal wall faces,  zone id: 1882
+           1951 polygonal wall faces,  zone id: 1
+            190 polygonal interior faces,  zone id: 999
+            190 polygonal wall faces,  zone id: 48
+           1543 polygonal wall faces,  zone id: 47
+          26672 polygonal pressure-outlet faces,  zone id: 46
+            618 polygonal pressure-inlet faces,  zone id: 42
+        1345918 mixed interior faces,  zone id: 2299
+         365279 mixed interior faces,  zone id: 2294
+         535730 mixed interior faces,  zone id: 2289
+     1431185 nodes,     1 node zone  ...
+  Done.
+
+
+Building...
+     mesh
+	distributing mesh
+		pairs....,
+		parts....,
+		faces....,
+		nodes....,
+		shadow nodes....,
+		cells....,
+        bandwidth reduction using Reverse Cuthill-McKee: 114227/3134 = 36.4477
+  Reading boundary layer flags ...
+  Done.
+
+     materials,
+     interface,
+     domains,
+	mixture
+     zones,
+	internal-wall:1969-shadow
+	nozzle-volume-vacuum-shadow
+	internal-wall:1969
+	nozzle-volume-vacuum
+	outlet:999
+	nozzle-wall
+	nozzle:1
+	vacuum-boundaries
+	inlet
+	interior--volume-vacuum
+	interior--nozzle
+	interior--volume-fluid
+	volume-fluid
+	volume-vacuum
+	nozzle
+     parallel,
+Done.
+
+Reading from SimonAsusLaptop:"C:/Users/Simon/Projects/MEng Electronics/Development of a Resistojet Thruster/2) Simulations/CFD/Nozzle_axial_1500iterations.dat.h5" in NODE0 mode ...
+
+
+  Reading results.
+Parallel variables...
+Done.
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*Table3(Reports)*PushButton2(Definitions)")
+(cx-gui-do cx-activate-item "MenuBar*Surface ReportSubMenu*Area...")
+(cx-gui-do cx-set-list-selections "Surface Report Definition*Table1*Table2*Table6*List1(Surfaces)" '( 7))
+(cx-gui-do cx-activate-item "Surface Report Definition*Table1*Table2*Table6*List1(Surfaces)")
+(cx-gui-do cx-activate-item "Surface Report Definition*PanelButtons*PushButton4(Compute)")
+
+                            Area               [m^2]
+-------------------------------- -------------------
+                      outlet:999       7.7396412e-05
+(cx-gui-do cx-set-list-selections "Surface Report Definition*Table1*Table2*DropDownList1(Report Type)" '( 4))
+(cx-gui-do cx-activate-item "Surface Report Definition*Table1*Table2*DropDownList1(Report Type)")
+(cx-gui-do cx-activate-item "Surface Report Definition*PanelButtons*PushButton4(Compute)")
+
+                  Mass Flow Rate              [kg/s]
+-------------------------------- -------------------
+                      outlet:999       4.4584007e-05
+(cx-gui-do cx-activate-item "Surface Report Definition*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*Table3(Reports)*PushButton2(Definitions)")
+(cx-gui-do cx-activate-item "MenuBar*Surface ReportSubMenu*Area-Weighted Average...")
+(cx-gui-do cx-set-list-selections "Surface Report Definition*Table1*Table2*Table6*List1(Surfaces)" '( 0))
+(cx-gui-do cx-activate-item "Surface Report Definition*Table1*Table2*Table6*List1(Surfaces)")
+(cx-gui-do cx-set-list-selections "Surface Report Definition*Table1*Table2*DropDownList1(Report Type)" '( 4))
+(cx-gui-do cx-activate-item "Surface Report Definition*Table1*Table2*DropDownList1(Report Type)")
+(cx-gui-do cx-activate-item "Surface Report Definition*PanelButtons*PushButton4(Compute)")
+
+                  Mass Flow Rate              [kg/s]
+-------------------------------- -------------------
+                           inlet                   0
+(cx-gui-do cx-set-list-selections "Surface Report Definition*Table1*Table2*Table6*List1(Surfaces)" '( 0 7))
+(cx-gui-do cx-activate-item "Surface Report Definition*Table1*Table2*Table6*List1(Surfaces)")
+(cx-gui-do cx-set-list-selections "Surface Report Definition*Table1*Table2*Table6*List1(Surfaces)" '( 7))
+(cx-gui-do cx-activate-item "Surface Report Definition*Table1*Table2*Table6*List1(Surfaces)")
+(cx-gui-do cx-activate-item "Surface Report Definition*PanelButtons*PushButton4(Compute)")
+
+                  Mass Flow Rate              [kg/s]
+-------------------------------- -------------------
+                      outlet:999       4.4584007e-05
+(cx-gui-do cx-set-list-selections "Surface Report Definition*Table1*Table2*DropDownList1(Report Type)" '( 6))
+(cx-gui-do cx-activate-item "Surface Report Definition*Table1*Table2*DropDownList1(Report Type)")
+(cx-gui-do cx-activate-item "Surface Report Definition*PanelButtons*PushButton4(Compute)")
+
+           Area-Weighted Average                [Pa]
+-------------------------------- -------------------
+                      outlet:999           28.976342
+(cx-gui-do cx-set-list-selections "Surface Report Definition*Table1*Table2*DropDownList3(Field Variable)" '( 2))
+(cx-gui-do cx-activate-item "Surface Report Definition*Table1*Table2*DropDownList3(Field Variable)")
+(cx-gui-do cx-activate-item "Surface Report Definition*PanelButtons*PushButton4(Compute)")
+
+           Area-Weighted Average               [m/s]
+-------------------------------- -------------------
+                      outlet:999           511.07279
+(cx-gui-do cx-activate-item "Surface Report Definition*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Viscous (Laminar)"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Viscous (Laminar)"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Models|Viscous (Laminar)"))
+(cx-gui-do cx-activate-item "Viscous Model*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "MenuBar*ReadSubMenu*Case & Data...")
+(cx-gui-do cx-activate-item "Question*OK")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "Nozzle_axial_KOmega_2000iterations.cas.h5") "CFF Case Files (*.cas.h5 )")
+
+       Clearing partially read grid.
+
+Reading from SimonAsusLaptop:"C:/Users/Simon/Projects/MEng Electronics/Development of a Resistojet Thruster/2) Simulations/CFD/Nozzle_axial_KOmega_2000iterations.cas.h5" in NODE0 mode ...
+  Reading mesh ...
+      487606 cells,     3 cell zones ...
+         123178 mixed cells,  zone id: 2287
+          71222 mixed cells,  zone id: 2292
+         293206 mixed cells,  zone id: 2297
+     2290794 faces,    12 face zones ...
+           5376 polygonal wall faces,  zone id: 1969
+           5376 polygonal wall faces,  zone id: 2
+           1951 polygonal wall faces,  zone id: 1882
+           1951 polygonal wall faces,  zone id: 1
+            190 polygonal interior faces,  zone id: 999
+            190 polygonal wall faces,  zone id: 48
+           1543 polygonal wall faces,  zone id: 47
+          26672 polygonal pressure-outlet faces,  zone id: 46
+            618 polygonal pressure-inlet faces,  zone id: 42
+        1345918 mixed interior faces,  zone id: 2299
+         365279 mixed interior faces,  zone id: 2294
+         535730 mixed interior faces,  zone id: 2289
+     1431185 nodes,     1 node zone  ...
+  Done.
+
+
+Building...
+     mesh
+	distributing mesh
+		pairs....,
+		parts....,
+		faces....,
+		nodes....,
+		shadow nodes....,
+		cells....,
+        bandwidth reduction using Reverse Cuthill-McKee: 79338/2335 = 33.9777
+  Reading boundary layer flags ...
+  Done.
+
+     materials,
+     interface,
+     domains,
+	mixture
+     zones,
+	internal-wall:1969-shadow
+	nozzle-volume-vacuum-shadow
+	internal-wall:1969
+	nozzle-volume-vacuum
+	outlet:999
+	nozzle-wall
+	nozzle:1
+	vacuum-boundaries
+	inlet
+	interior--volume-vacuum
+	interior--nozzle
+	interior--volume-fluid
+	volume-fluid
+	volume-vacuum
+	nozzle
+     parallel,
+Done.
+
+Reading from SimonAsusLaptop:"C:/Users/Simon/Projects/MEng Electronics/Development of a Resistojet Thruster/2) Simulations/CFD/Nozzle_axial_KOmega_2000iterations.dat.h5" in NODE0 mode ...
+
+
+  Reading results.
+Parallel variables...
+Done.
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(build-popup-menu)
+(cx-gui-do cx-activate-item "MenuBar*GraphicsSubMenu*Pathline...")
+(cx-gui-do cx-set-list-selections "Pathlines*Frame4*Table1*DropDownList1(Color by)" '( 3))
+(cx-gui-do cx-activate-item "Pathlines*Frame4*Table1*DropDownList1(Color by)")
+(cx-gui-do cx-set-list-selections "Pathlines*Frame4*List3(Release from Surfaces)" '( 0))
+(cx-gui-do cx-activate-item "Pathlines*Frame4*List3(Release from Surfaces)")
+(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton1(OK)")
+
+number tracked = 618, escaped = 106, incomplete = 512
+(cx-gui-do cx-set-list-selections "Pathlines*Frame4*List3(Release from Surfaces)" '( 0 1))
+(cx-gui-do cx-activate-item "Pathlines*Frame4*List3(Release from Surfaces)")
+(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton1(OK)")
+
+number tracked = 5994, escaped = 4048, aborted = 1, incomplete = 1945
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-gui-do cx-set-list-selections "Pathlines*Frame4*List3(Release from Surfaces)" '( 0))
+(cx-gui-do cx-activate-item "Pathlines*Frame4*List3(Release from Surfaces)")
+(cx-gui-do cx-set-list-selections "Pathlines*Frame4*List3(Release from Surfaces)" '( 0 8))
+(cx-gui-do cx-activate-item "Pathlines*Frame4*List3(Release from Surfaces)")
+(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton1(OK)")
+
+number tracked = 27290, escaped = 26778, incomplete = 512
+(cx-use-window-id 51)
+(cx-gui-do cx-set-list-selections "Pathlines*Frame4*List3(Release from Surfaces)" '( 8))
+(cx-gui-do cx-activate-item "Pathlines*Frame4*List3(Release from Surfaces)")
+(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton1(OK)")
+
+number tracked = 26672, escaped = 26672
+(cx-gui-do cx-set-list-selections "Pathlines*Frame4*List3(Release from Surfaces)" '())
+(cx-gui-do cx-activate-item "Pathlines*Frame4*List3(Release from Surfaces)")
+(cx-gui-do cx-set-list-selections "Pathlines*Frame4*List3(Release from Surfaces)" '( 7))
+(cx-gui-do cx-activate-item "Pathlines*Frame4*List3(Release from Surfaces)")
+(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton1(OK)")
+
+number tracked = 190, escaped = 190
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-gui-do cx-set-list-selections "Pathlines*Frame4*List3(Release from Surfaces)" '())
+(cx-gui-do cx-activate-item "Pathlines*Frame4*List3(Release from Surfaces)")
+(cx-gui-do cx-set-list-selections "Pathlines*Frame4*List3(Release from Surfaces)" '( 0))
+(cx-gui-do cx-activate-item "Pathlines*Frame4*List3(Release from Surfaces)")
+(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton1(OK)")
+
+number tracked = 618, escaped = 106, incomplete = 512
+(cx-gui-do cx-set-list-selections "Pathlines*Frame4*List3(Release from Surfaces)" '())
+(cx-gui-do cx-activate-item "Pathlines*Frame4*List3(Release from Surfaces)")
+(cx-gui-do cx-set-list-selections "Pathlines*Frame4*List3(Release from Surfaces)" '( 7))
+(cx-gui-do cx-activate-item "Pathlines*Frame4*List3(Release from Surfaces)")
+(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton1(OK)")
+
+number tracked = 190, escaped = 190
+(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton1(OK)")
+
+number tracked = 190, escaped = 190
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+/exit y
+(cx-gui-do cx-activate-item "Question*OK")
+
+Posting ANSYS Product Improvement Program performance data 
+Done.
+Auto-Transcript Stop Time:  14:37:40, 15 Jul 2026 South Africa Standard Time 
+Total Transcript Time: 29 Minute 31 Second.

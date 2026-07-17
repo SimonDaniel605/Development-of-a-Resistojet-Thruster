@@ -1,0 +1,517 @@
+Auto-Transcript Start Time:  16:45:52, 13 Jul 2026 South Africa Standard Time 
+Current Directory: "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD"
+
+              Welcome to ANSYS Fluent 2026 R1
+
+              Copyright 2026 Synopsys, Inc. and ANSYS, Inc. All rights reserved.
+              Unauthorized use, distribution or duplication is prohibited.
+              This product is subject to U.S. laws governing export and re-export.
+              For full Legal Notice, see documentation.
+
+Build Time: Feb  2 2026 16:32:00 EST  Build Id: 10262  
+ 
+Connected License Server List:	<Non FlexNet Publisher License Server (FNPLS)>
+
+     --------------------------------------------------------------
+     This is a student version of ANSYS FLUENT. Usage of this product
+     license is limited to the terms and conditions specified in your ANSYS
+     license form, additional terms section.
+     --------------------------------------------------------------
+Host spawning Node 0 on machine "SimonAsusLaptop" (win64).
+Host waiting for connection from Node 0 at 127.0.0.1:57805 
+
+Node 0 connecting to the Host ... connection established.
+
+------------------------------------------------------------------------------------------
+ID    Hostname         Core  O.S.         PID    CPU Model Name                          
+------------------------------------------------------------------------------------------
+n3    SimonAsusLaptop  4/20  Windows-x64  48504  12th Gen Intel(R) Core(TM) i7-12700H    
+n2    SimonAsusLaptop  3/20  Windows-x64  45528  12th Gen Intel(R) Core(TM) i7-12700H    
+n1    SimonAsusLaptop  2/20  Windows-x64  52908  12th Gen Intel(R) Core(TM) i7-12700H    
+n0*   SimonAsusLaptop  1/20  Windows-x64  65100  12th Gen Intel(R) Core(TM) i7-12700H    
+host  SimonAsusLaptop        Windows-x64  31876  12th Gen Intel(R) Core(TM) i7-12700H    
+
+MPI Option Selected: intel
+Selected system interconnect: default
+------------------------------------------------------------------------------------------
+
+Cleanup script file is C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\cleanup-fluent-SimonAsusLaptop-31876.bat
+Note: Rank = 0: Process affinity not being set (6).
+Note: Rank = 1: Process affinity not being set (6).
+Note: Rank = 2: Process affinity not being set (6).
+Note: Rank = 3: Process affinity not being set (6).
+
+Graphics driver currently in use: dx11
+
+(cx-gui-do cx-activate-tab-index "NavigationPane*Frame1(TreeTab)" 0)
+
+Posting ANSYS Product Improvement Program startup data
+Done.
+
+Meshing> (cx-gui-do cx-activate-item "MenuBar*ReadSubMenu*Mesh...")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "Nozzle_axial.msh.h5") "CFF Mesh Files (*.msh.h5 *.cas.h5 )")
+Reading "C:/Users/Simon/Projects/MEng Electronics/Development of a Resistojet Thruster/2) Simulations/CFD/Nozzle_axial.msh.h5" ...
+3D mesh
+nodes: 1418602
+edges: 1732
+faces: 2283467 
+cells: 487606 
+reading 10 node zones
+reading 20 edge zones
+reading 10 face zones
+reading 3 cell zones
+reading boundary layer flags...
+updating sub-domains...
+done.
+
+Read Mesh Summary:
+	nodes : 10 zones (7 boundary, 3 interior)
+	      : 1418602 entities (73289 boundary, 1345313 interior)
+	edges : 20 zones (17 boundary, 3 interior)
+	      : 1732 entities (1412 boundary, 320 interior)
+	faces : 10 zones (7 boundary, 3 interior)
+	      : 2283467 entities (36540 boundary, 2246927 interior)
+	cells : 3 zones (0 boundary, 3 interior)
+	      : 487606 entities (0 boundary, 487606 interior)
+analyzing boundary connectivity...done.
+(cx-use-window-id 51)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Mesh)*PushButton1(  Check)")
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuCheck*Perform Mesh Check")
+
+----------------------------------------
+Mesh Check Scope   : 1 Objects, 7 Face Zones, 3 Cell Zones
+Objects            : (nozzle_axial)
+----------------------------------------
+Domain extents.
+  x-coordinate: min = -2.204052e-39, max = 1.285779e+02.
+  y-coordinate: min = -2.499652e+01, max = 2.499636e+01.
+  z-coordinate: min = -2.499591e+01, max = 2.499646e+01.
+Volume statistics.
+  minimum volume: 1.816667e-08.
+  maximum volume: 2.175236e+00.
+    total volume: 2.371161e+05.
+Face area statistics.
+   minimum face area: 1.020526e-08.
+   maximum face area: 1.638400e+00.
+   average face area: 3.110498e-01.
+Checking number of nodes per edge.
+Checking number of nodes per face.
+Checking number of nodes per cell.
+Checking number of faces/neighbors per cell.
+Checking cell faces/neighbors.
+Checking isolated cells.
+Checking face handedness.
+Checking periodic face pairs.
+Checking face children.
+Checking face zone boundary conditions.
+Checking for invalid node coordinates.
+Checking poly cells.
+Checking zone types in parallel.
+Checking parallel neighborhood.
+Grid check success.
+Checking modified centroid.
+Checking non-positive or too small area.
+Checking face zones thread type.
+Done.
+----------------------------------------(newline)
+
+
+Meshing> (cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Mesh)*PushButton2(  Quality)")
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuQuality*Evaluate Surface Quality")
+
+----------------------------------------
+Surface Quality [Measure : Skewness]
+Minimum = 3.2316664e-07, Maximum = 0.24922824, Average = 0.006660725.
+
+Marking Face in Range (0.19922824 0.24922824)...
+--------------- ----------
+ Cluster Number Entity Count
+--------------- ----------
+              1          1
+              2          1
+              3          1
+              4          1
+(newline)
+
+
+Meshing> (cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Mesh)*PushButton2(  Quality)")
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuQuality*Evaluate Volume Quality")
+
+----------------------------------------
+Cell Quality [Measure : Orthogonal]
+Minimum = 0.25503768, Maximum =    1, Average = 0.93491743.
+
+Marking Cells in Range (0.25503768 0.30503768)...
+--------------- ----------
+ Cluster Number Entity Count
+--------------- ----------
+              1          1
+              2          1
+              3          1
+(newline)
+
+
+Meshing> (cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*CheckButton2(Insert Clipping Planes)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*CheckButton2(Insert Clipping Planes)")
+(cx-use-window-id 51)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*PushButton1(draw_cross_section)")
+
+Info : Switching to Orthographic Projection for better alignment with clip plane.
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)")
+(cx-use-window-id 51)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Solution)*PushButton1(Switch to Solution)")
+(cx-gui-do cx-activate-item "Question*OK")
+
+
+deleting exterior entities...done.
+unused zone boundary-node-32 removed
+unused zone boundary-node-60 removed
+unused zone boundary-node-63 removed
+unused zone boundary-node-65 removed
+unused zone boundary-node-76 removed
+unused zone boundary-node-79 removed
+
+Transferring mesh
+	creating threads... done
+	transferring nodes... done
+	transferring cells... done
+	transferring faces... done
+	post mesh transfer operations... done
+done
+
+Building...
+     mesh
+	auto partitioning mesh by Metis (fast),
+	distributing mesh
+		parts....,
+		faces....,
+		nodes....,
+		cells....,
+        bandwidth reduction using Reverse Cuthill-McKee: 102461/3358 = 30.5125
+     materials,
+     interface,
+     domains,
+     zones,
+	internal-wall:1969-shadow
+	nozzle-volume-vacuum-shadow
+	interior--volume-vacuum
+	interior--nozzle
+	interior--volume-fluid
+	internal-wall:1969
+	nozzle-volume-vacuum
+	outlet:999
+	nozzle-wall
+	nozzle:1
+	vacuum-boundaries
+	inlet
+	volume-fluid
+	volume-vacuum
+	nozzle
+     surfaces,
+     parallel,
+Done.
+Mesh is now scaled to meters.
+(cx-gui-do cx-activate-tab-index "NavigationPane*Frame1(TreeTab)" 1)
+(newline)
+
+
+> (cx-gui-do cx-set-toggle-button2 "General*Table1*Table2(Solver)*ButtonBox1(Type)*Density-Based" #t)
+(cx-gui-do cx-activate-item "General*Table1*Table2(Solver)*ButtonBox1(Type)*Density-Based")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame4(Physics)*Table1*Table3(Models)*CheckButton1(Energy)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame4(Physics)*Table1*Table3(Models)*CheckButton1(Energy)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame4(Physics)*Table1*Table3(Models)*PushButton4(Viscous)")
+(cx-gui-do cx-set-toggle-button2 "Viscous Model*Table1*ToggleBox1(Model)*Inviscid" #t)
+(cx-gui-do cx-activate-item "Viscous Model*Table1*ToggleBox1(Model)*Inviscid")
+(cx-gui-do cx-set-toggle-button2 "Viscous Model*Table1*ToggleBox1(Model)*Laminar" #t)
+(cx-gui-do cx-activate-item "Viscous Model*Table1*ToggleBox1(Model)*Laminar")
+(cx-gui-do cx-set-toggle-button2 "Viscous Model*Table1*ToggleBox1(Model)*Inviscid" #t)
+(cx-gui-do cx-activate-item "Viscous Model*Table1*ToggleBox1(Model)*Inviscid")
+(cx-gui-do cx-activate-item "Viscous Model*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Fluid|air"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Fluid|air"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Fluid|air"))
+(cx-gui-do cx-set-list-selections "Create/Edit Materials*Table2*Table1(Properties)*DropDownList4(Density)" '( 1))
+(cx-gui-do cx-activate-item "Create/Edit Materials*Table2*Table1(Properties)*DropDownList4(Density)")
+(cx-gui-do cx-activate-item "Create/Edit Materials*PanelButtons*PushButton3(Change/Create)")
+(cx-gui-do cx-activate-item "Create/Edit Materials*PanelButtons*PushButton1(Close)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Fluid|air"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Fluid|air"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Materials|Fluid|air"))
+(cx-gui-do cx-set-text-entry "Create/Edit Materials*Table1*Frame1*Table1*TextEntry1(Name)" "r134a-approx")
+(cx-gui-do cx-set-real-entry-list "Create/Edit Materials*RealEntry12" '( 1305.84))
+(cx-gui-do cx-set-real-entry-list "Create/Edit Materials*RealEntry18" '( 102.03))
+(cx-gui-do cx-activate-item "Create/Edit Materials*PanelButtons*PushButton3(Change/Create)")
+(cx-gui-do cx-activate-item "Question*OK")
+(cx-gui-do cx-activate-item "Create/Edit Materials*PanelButtons*PushButton1(Close)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list ))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Cell Zone Conditions|Fluid|volume-fluid (fluid, id=2287)"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Cell Zone Conditions|Fluid|volume-fluid (fluid, id=2287)"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Cell Zone Conditions|Fluid|volume-fluid (fluid, id=2287)"))
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 1)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 2)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 2)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 3)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 4)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 5)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 6)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 7)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 8)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 9)
+(cx-gui-do cx-activate-tab-index "Fluid*Frame2*Table3*Frame1" 0)
+(cx-gui-do cx-activate-item "Fluid*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Inlet|inlet (pressure-inlet, id=42)"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Inlet|inlet (pressure-inlet, id=42)"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Inlet|inlet (pressure-inlet, id=42)"))
+(cx-gui-do cx-activate-tab-index "Pressure Inlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Pressure Inlet*Frame2*Frame2" 1)
+(cx-gui-do cx-activate-tab-index "Pressure Inlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Pressure Inlet*Frame2*Frame2" 2)
+(cx-gui-do cx-activate-tab-index "Pressure Inlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Pressure Inlet*Frame2*Frame2" 3)
+(cx-gui-do cx-activate-tab-index "Pressure Inlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Pressure Inlet*Frame2*Frame2" 4)
+(cx-gui-do cx-activate-tab-index "Pressure Inlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Pressure Inlet*Frame2*Frame2" 5)
+(cx-gui-do cx-activate-tab-index "Pressure Inlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Pressure Inlet*Frame2*Frame2" 6)
+(cx-gui-do cx-activate-tab-index "Pressure Inlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Pressure Inlet*Frame2*Frame2" 7)
+(cx-gui-do cx-activate-tab-index "Pressure Inlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Pressure Inlet*Frame2*Frame2" 8)
+(cx-gui-do cx-activate-tab-index "Pressure Inlet*Frame2*Frame2" 0)
+(cx-gui-do cx-set-expression-entry "Pressure Inlet*Frame2*Frame2*Frame1(Momentum)*Table1*Table7*ExpressionEntry1(Gauge Total Pressure)" '("0" . 0))
+(cx-gui-do cx-set-expression-entry "Pressure Inlet*Frame2*Frame2*Frame1(Momentum)*Table1*Table7*ExpressionEntry1(Gauge Total Pressure)" '("0" . 0))
+(cx-gui-do cx-enable-apply-button "Pressure Inlet")
+(cx-gui-do cx-set-expression-entry "Pressure Inlet*Frame2*Frame2*Frame1(Momentum)*Table1*Table7*ExpressionEntry1(Gauge Total Pressure)" '("500000" . 0))
+(cx-gui-do cx-set-expression-entry "Pressure Inlet*Frame2*Frame2*Frame1(Momentum)*Table1*Table8*ExpressionEntry1(Supersonic/Initial Gauge Pressure)" '("500000" . 0))
+(cx-gui-do cx-activate-tab-index "Pressure Inlet*Frame2*Frame2" 1)
+(cx-gui-do cx-set-expression-entry "Pressure Inlet*Frame2*Frame2*Frame2(Thermal)*Table1*Table1*ExpressionEntry1(Total Temperature)" '("600" . 0))
+(cx-gui-do cx-activate-item "Pressure Inlet*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-tab-index "Pressure Inlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-item "Pressure Inlet*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Pressure Inlet*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Inlet|inlet (pressure-inlet, id=42)"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Wall|internal-wall:1969 (wall, id=1969)"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Wall|internal-wall:1969 (wall, id=1969)"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Wall|internal-wall:1969 (wall, id=1969)"))
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 1)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 2)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 3)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 4)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 5)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 6)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 7)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 8)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 9)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 10)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 1)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 2)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 3)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 4)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 5)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 6)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 0)
+(cx-gui-do cx-activate-item "Wall*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Wall|internal-wall:1969-shadow (wall, id=3)"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Wall|internal-wall:1969-shadow (wall, id=3)"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Wall|internal-wall:1969-shadow (wall, id=3)"))
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 1)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 2)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 3)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 4)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 5)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 6)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 7)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 8)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 9)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 10)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 1)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 2)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 3)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 4)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 5)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 6)
+(cx-gui-do cx-activate-tab-index "Wall*Frame4*Frame8(Wall Film)*Frame1*Frame2" 0)
+(cx-gui-do cx-activate-item "Wall*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Wall"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Outlet|vacuum-boundaries (pressure-outlet, id=46)"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Outlet|vacuum-boundaries (pressure-outlet, id=46)"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Outlet|vacuum-boundaries (pressure-outlet, id=46)"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Outlet|vacuum-boundaries (pressure-outlet, id=46)"))
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 1)
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 2)
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 3)
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 4)
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 5)
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 6)
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 7)
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 8)
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 0)
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 1)
+(cx-gui-do cx-activate-tab-index "Pressure Outlet*Frame2*Frame2" 0)
+(cx-gui-do cx-enable-apply-button "Pressure Outlet")
+(cx-gui-do cx-set-expression-entry "Pressure Outlet*Frame2*Frame2*Frame1(Momentum)*Table1*Table7*ExpressionEntry1(Gauge Pressure)" '("70" . 0))
+(cx-gui-do cx-activate-item "Pressure Outlet*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Pressure Outlet*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "Boundary Conditions*Table1*Table3*Table4*Table2*PushButton2(Operating Conditions)")
+(cx-gui-do cx-set-expression-entry "Operating Conditions*Frame1*Table1(Pressure)*ExpressionEntry2(Operating Pressure)" '("0" . 0))
+(cx-gui-do cx-activate-item "Operating Conditions*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Internal|outlet:999 (interior, id=999)"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Internal|outlet:999 (interior, id=999)"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Internal|outlet:999 (interior, id=999)"))
+(cx-gui-do cx-activate-item "Interior*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Outlet|vacuum-boundaries (pressure-outlet, id=46)"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Outlet|vacuum-boundaries (pressure-outlet, id=46)"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Outlet|vacuum-boundaries (pressure-outlet, id=46)"))
+(cx-gui-do cx-activate-item "Pressure Outlet*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Methods"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Outlet|vacuum-boundaries (pressure-outlet, id=46)"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Outlet|vacuum-boundaries (pressure-outlet, id=46)"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Boundary Conditions|Outlet|vacuum-boundaries (pressure-outlet, id=46)"))
+(cx-gui-do cx-activate-item "Pressure Outlet*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Pressure Outlet*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame6(Solution)*Table1*Table3(Initialization)*PushButton6(Initialize)")
+
+Initialize using the hybrid initialization method.
+
+Checking case topology... 
+-This case has both inlets & outlets 
+-Pressure information is available at the boundaries
+
+	iter		scalar-0		scalar-1
+
+	1		1.000000e+00	1.000000e+00
+	2		1.174617e-05	1.438094e-05
+	3		1.837413e-06	2.142323e-06
+	4		5.094374e-07	4.433971e-07
+	5		1.395122e-07	1.064581e-07
+	6		4.194859e-08	2.883758e-08
+	7		1.271818e-08	8.426999e-09
+	8		4.121573e-09	2.644401e-09
+	9		1.379637e-09	8.854571e-10
+	10		4.868141e-10	3.117968e-10
+
+Hybrid initialization is done.
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Calculation Activities"))
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame6(Solution)*Table1*PushButton1(Run Calculation)")
+(cx-gui-do cx-set-integer-entry "Ribbon*Frame1*Frame6(Solution)*Table1*Table3(Run Calculation)*Table6*IntegerEntry16(No  of Iterations)" 500)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame6(Solution)*Table1*Table3(Run Calculation)*Table6*IntegerEntry16(No  of Iterations)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame6(Solution)*Table1*Table3(Run Calculation)*PushButton9(Calculate)")
+
+
+  iter  continuity  x-velocity  y-velocity  z-velocity      energy     time/iter
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 0 PID 65100 RUNNING AT SimonAsusLaptop
+=   EXIT STATUS: -1 (ffffffff)
+===================================================================================
+ Error in the fluent (fluent) process : ended abnormally
+
+Operation stopped.
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 1 PID 52908 RUNNING AT SimonAsusLaptop
+=   EXIT STATUS: -1073741819 (c0000005)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 2 PID 45528 RUNNING AT SimonAsusLaptop
+=   EXIT STATUS: -1 (ffffffff)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 3 PID 48504 RUNNING AT SimonAsusLaptop
+=   EXIT STATUS: -1 (ffffffff)
+===================================================================================
+(cx-gui-do cx-activate-item "Question*Cancel")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame6(Solution)*Table1*PushButton1(Run Calculation)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame6(Solution)*Table1*Table3(Run Calculation)*PushButton9(Calculate)")
+(cx-use-window-id 51)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame6(Solution)*Table1*PushButton1(Run Calculation)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame6(Solution)*Table1*Table3(Run Calculation)*PushButton9(Calculate)")
+/exit y
+Auto-Transcript Stop Time:  17:11:11, 13 Jul 2026 South Africa Standard Time 
+Total Transcript Time: 25 Minute 18 Second.

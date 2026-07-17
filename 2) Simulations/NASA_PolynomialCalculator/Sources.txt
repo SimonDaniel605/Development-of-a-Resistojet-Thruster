@@ -1,0 +1,2 @@
+The MATLAB helper file (poly_cp.m) used to generate these NASA-7 polynomials can be found at:
+https://shepherd.caltech.edu/EDL/PublicResources/sdt/thermo.html

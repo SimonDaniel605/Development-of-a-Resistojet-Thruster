@@ -1,0 +1,207 @@
+Auto-Transcript Start Time:  23:41:39, 14 Jul 2026 South Africa Standard Time 
+Current Directory: "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD"
+
+              Welcome to ANSYS Fluent 2026 R1
+
+              Copyright 2026 Synopsys, Inc. and ANSYS, Inc. All rights reserved.
+              Unauthorized use, distribution or duplication is prohibited.
+              This product is subject to U.S. laws governing export and re-export.
+              For full Legal Notice, see documentation.
+
+Build Time: Feb  2 2026 16:32:00 EST  Build Id: 10262  
+ 
+Connected License Server List:	<Non FlexNet Publisher License Server (FNPLS)>
+
+     --------------------------------------------------------------
+     This is a student version of ANSYS FLUENT. Usage of this product
+     license is limited to the terms and conditions specified in your ANSYS
+     license form, additional terms section.
+     --------------------------------------------------------------
+Host spawning Node 0 on machine "SimonAsusLaptop" (win64).
+Host waiting for connection from Node 0 at 127.0.0.1:62755 
+
+Node 0 connecting to the Host ... connection established.
+
+------------------------------------------------------------------------------------------
+ID    Hostname         Core  O.S.         PID    CPU Model Name                          
+------------------------------------------------------------------------------------------
+n3    SimonAsusLaptop  4/20  Windows-x64  75460  12th Gen Intel(R) Core(TM) i7-12700H    
+n2    SimonAsusLaptop  3/20  Windows-x64  61980  12th Gen Intel(R) Core(TM) i7-12700H    
+n1    SimonAsusLaptop  2/20  Windows-x64  43028  12th Gen Intel(R) Core(TM) i7-12700H    
+n0*   SimonAsusLaptop  1/20  Windows-x64  78516  12th Gen Intel(R) Core(TM) i7-12700H    
+host  SimonAsusLaptop        Windows-x64  10064  12th Gen Intel(R) Core(TM) i7-12700H    
+
+MPI Option Selected: intel
+Selected system interconnect: default
+------------------------------------------------------------------------------------------
+
+Cleanup script file is C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\cleanup-fluent-SimonAsusLaptop-10064.bat
+Note: Rank = 0: Process affinity not being set (6).
+Note: Rank = 1: Process affinity not being set (6).
+Note: Rank = 2: Process affinity not being set (6).
+Note: Rank = 3: Process affinity not being set (6).
+
+Graphics driver currently in use: dx11
+
+(cx-gui-do cx-activate-tab-index "NavigationPane*Frame1(TreeTab)" 0)
+
+Posting ANSYS Product Improvement Program startup data
+Done.
+
+Meshing> (cx-gui-do cx-activate-item "MenuBar*ReadSubMenu*Mesh...")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "Nozzle_axial.msh.h5") "CFF Mesh Files (*.msh.h5 *.cas.h5 )")
+Reading "C:/Users/Simon/Projects/MEng Electronics/Development of a Resistojet Thruster/2) Simulations/CFD/Nozzle_axial.msh.h5" ...
+3D mesh
+nodes: 1418602
+edges: 1732
+faces: 2283467 
+cells: 487606 
+reading 10 node zones
+reading 20 edge zones
+reading 10 face zones
+reading 3 cell zones
+reading boundary layer flags...
+updating sub-domains...
+done.
+
+Read Mesh Summary:
+	nodes : 10 zones (7 boundary, 3 interior)
+	      : 1418602 entities (73289 boundary, 1345313 interior)
+	edges : 20 zones (17 boundary, 3 interior)
+	      : 1732 entities (1412 boundary, 320 interior)
+	faces : 10 zones (7 boundary, 3 interior)
+	      : 2283467 entities (36540 boundary, 2246927 interior)
+	cells : 3 zones (0 boundary, 3 interior)
+	      : 487606 entities (0 boundary, 487606 interior)
+analyzing boundary connectivity...done.
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Bounds)*ButtonBox1*CheckButton1(X Range)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Bounds)*ButtonBox1*CheckButton1(X Range)")
+
+Empty selection. Bounds cannot be set up.
+(cx-gui-do cx-activate-item "Information*OK")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Bounds)*ButtonBox1*CheckButton3(Z Range)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Bounds)*ButtonBox1*CheckButton3(Z Range)")
+
+Empty selection. Bounds cannot be set up.
+(cx-gui-do cx-activate-item "Information*OK")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*CheckButton2(Insert Clipping Planes)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*CheckButton2(Insert Clipping Planes)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Bounds)*ButtonBox1*CheckButton3(Z Range)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Bounds)*ButtonBox1*CheckButton3(Z Range)")
+
+Empty selection. Bounds cannot be set up.
+(cx-gui-do cx-activate-item "Information*OK")
+(cx-use-window-id 51)
+selected 7 zone(s).
+zone id: 42, name: inlet, type: pressure-inlet, count: 618
+zone id: 47, name: nozzle:1, type: wall, count: 1543
+zone id: 48, name: nozzle-wall, type: wall, count: 190
+zone id: 1969, name: internal-wall:1969, type: wall, count: 5376
+zone id: 999, name: outlet:999, type: internal, count: 190
+zone id: 1882, name: nozzle-volume-vacuum, type: wall, count: 1951
+zone id: 46, name: vacuum-boundaries, type: pressure-outlet, count: 26672
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Bounds)*ButtonBox1*CheckButton3(Z Range)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Bounds)*ButtonBox1*CheckButton3(Z Range)")
+(cx-gui-do cx-set-real-entry-list "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Bounds)*RealEntry3(+/- Delta)" '( 0.0001))
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Bounds)*RealEntry3(+/- Delta)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*ButtonBox1*Limit in Z" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*ButtonBox1*Limit in Z")
+(cx-use-window-id 51)
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)" #f)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton3(Flip)")
+(cx-use-window-id 51)
+zone not found.
+(cx-use-window-id 51)
+(handle-key "control [")
+/bo mo deselect-last
+
+> (cx-use-window-id 51)
+(handle-key "control [")
+/bo mo deselect-last
+
+> (cx-use-window-id 51)
+zone id: 1969, name: internal-wall:1969, type: wall, count: 5376
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-use-window-id 51)
+zone id: 47, name: nozzle:1, type: wall, count: 1543
+(cx-use-window-id 51)
+zone not found.
+(cx-use-window-id 51)
+(handle-key "control [")
+/bo mo deselect-last
+
+> (cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)")
+(cx-use-window-id 51)
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(forward)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "PushButton(reverse)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Mesh)*PushButton2(  Quality)")
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuQuality*Evaluate Volume Quality")
+
+----------------------------------------
+Cell Quality [Measure : Orthogonal]
+Minimum = 0.25503768, Maximum =    1, Average = 0.93491743.
+
+Marking Cells in Range (0.25503768 0.30503768)...
+--------------- ----------
+ Cluster Number Entity Count
+--------------- ----------
+              1          1
+              2          1
+              3          1
+(newline)
+
+
+Meshing> (cx-use-window-id 51)
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Bounds)*ButtonBox1*CheckButton3(Z Range)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Bounds)*ButtonBox1*CheckButton3(Z Range)")
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*CheckButton2(Insert Clipping Planes)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*Table5*CheckButton2(Insert Clipping Planes)")
+(cx-use-window-id 51)
+(cx-gui-do cx-set-toggle-button2 "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)" #t)
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Clipping Planes)*CheckButton6(Draw Cell Layer)")
+(cx-use-window-id 51)
+zone id: 2292, name: nozzle, type: solid, count: 71222
+(cx-use-window-id 51)
+zone not found.
+(cx-use-window-id 51)
+(handle-key "control [")
+/bo mo deselect-last
+
+> /exit y
+
+Posting ANSYS Product Improvement Program performance data 
+Done.
+Auto-Transcript Stop Time:  23:53:02, 14 Jul 2026 South Africa Standard Time 
+Total Transcript Time: 11 Minute 23 Second.
