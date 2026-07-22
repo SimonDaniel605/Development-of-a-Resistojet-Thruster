@@ -1,0 +1,403 @@
+Auto-Transcript Start Time:  13:33:29, 20 Jul 2026 South Africa Standard Time 
+Current Directory: "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD"
+
+              Welcome to ANSYS Fluent 2026 R1
+
+              Copyright 2026 Synopsys, Inc. and ANSYS, Inc. All rights reserved.
+              Unauthorized use, distribution or duplication is prohibited.
+              This product is subject to U.S. laws governing export and re-export.
+              For full Legal Notice, see documentation.
+
+Build Time: Feb  2 2026 16:27:16 EST  Build Id: 10262  
+ 
+Connected License Server List:	<Non FlexNet Publisher License Server (FNPLS)>
+
+     --------------------------------------------------------------
+     This is a student version of ANSYS FLUENT. Usage of this product
+     license is limited to the terms and conditions specified in your ANSYS
+     license form, additional terms section.
+     --------------------------------------------------------------
+Host spawning Node 0 on machine "SimonAsusLaptop" (win64).
+Host waiting for connection from Node 0 at 127.0.0.1:58555 
+
+Node 0 connecting to the Host ... connection established.
+
+------------------------------------------------------------------------------------------
+ID    Hostname         Core  O.S.         PID    CPU Model Name                          
+------------------------------------------------------------------------------------------
+n3    SimonAsusLaptop  4/20  Windows-x64  12336  12th Gen Intel(R) Core(TM) i7-12700H    
+n2    SimonAsusLaptop  3/20  Windows-x64  11592  12th Gen Intel(R) Core(TM) i7-12700H    
+n1    SimonAsusLaptop  2/20  Windows-x64  20496  12th Gen Intel(R) Core(TM) i7-12700H    
+n0*   SimonAsusLaptop  1/20  Windows-x64  27972  12th Gen Intel(R) Core(TM) i7-12700H    
+host  SimonAsusLaptop        Windows-x64  30304  12th Gen Intel(R) Core(TM) i7-12700H    
+
+MPI Option Selected: intel
+Selected system interconnect: default
+------------------------------------------------------------------------------------------
+
+Cleanup script file is C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\cleanup-fluent-SimonAsusLaptop-30304.bat
+Note: Rank = 0: Process affinity not being set (6).
+Note: Rank = 1: Process affinity not being set (6).
+Note: Rank = 2: Process affinity not being set (6).
+Note: Rank = 3: Process affinity not being set (6).
+
+Graphics driver currently in use: dx11
+
+
+Posting ANSYS Product Improvement Program startup data
+Done.
+
+> (cx-gui-do cx-activate-item "MenuBar*ReadSubMenu*Case & Data...")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "C:/Users/Simon/Projects/MEng Electronics/Development of a Resistojet Thruster/2) Simulations/CFD/2D Nozzle Simulation/2DNozzle_2_35000.cas.h5") "CFF Case Files (*.cas.h5 )")
+Fast-loading "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v261\fluent\fluent26.1.0\\addons\afd\lib\hdfio.bin"
+Done.
+
+Reading from SimonAsusLaptop:"C:/Users/Simon/Projects/MEng Electronics/Development of a Resistojet Thruster/2) Simulations/CFD/2D Nozzle Simulation/2DNozzle_2_35000.cas.h5" in NODE0 mode ...
+  Reading mesh ...
+      234568 cells,     2 cell zones ...
+         187566 mixed cells,  zone id: 94
+          47002 mixed cells,  zone id: 100
+      470119 faces,    10 face zones ...
+            400 2D axis faces,  zone id: 1
+             63 2D pressure-inlet faces,  zone id: 41
+             62 2D interior faces,  zone id: 43
+           3775 2D wall faces,  zone id: 44
+           2149 2D wall faces,  zone id: 46
+            431 2D axis faces,  zone id: 47
+            641 2D pressure-outlet faces,  zone id: 50
+            144 2D wall faces,  zone id: 52
+         369151 2D interior faces,  zone id: 501
+          93303 2D interior faces,  zone id: 502
+      235552 nodes,     1 node zone  ...
+  Done.
+
+
+Building...
+     mesh
+	distributing mesh
+		parts....,
+		faces....,
+		nodes....,
+		cells....,
+        bandwidth reduction using Reverse Cuthill-McKee: 59174/950 = 62.2884
+     materials,
+     interface,
+     domains,
+	mixture
+     zones,
+	axis-1
+	interior:fluid
+	interior:vacuum
+	inlet
+	outlet
+	divergingside
+	convergingside
+	axis
+	vacuumboundaries
+	outsidewall
+	fluid
+	vacuum(cx-use-window-id 51)
+(cx-use-window-id 51)
+
+     parallel,
+Done.
+
+Reading from SimonAsusLaptop:"C:/Users/Simon/Projects/MEng Electronics/Development of a Resistojet Thruster/2) Simulations/CFD/2D Nozzle Simulation/2DNozzle_2_35000.dat.h5" in NODE0 mode ...
+
+
+  Reading results.
+Parallel variables...
+Done.
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(build-popup-menu)
+(cx-gui-do cx-activate-item "MenuBar*DisplaySubMenu*velocity-contour")
+(cx-use-window-id 51)
+(build-popup-menu)
+(cx-use-window-id 51)
+(build-popup-menu)
+(cx-gui-do cx-activate-item "MenuBar*DisplaySubMenu*contour-temperature")
+(cx-use-window-id 51)
+(build-popup-menu)
+(cx-use-window-id 51)
+(build-popup-menu)
+(cx-gui-do cx-activate-item "MenuBar*DisplaySubMenu*contour-pressure")
+(cx-gui-do cx-activate-item "MenuBar*ReadSubMenu*Case & Data...")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "2DNozzle_3_invicid_10000.cas.h5") "CFF Case Files (*.cas.h5 )")
+
+       Clearing partially read grid.
+
+Reading from SimonAsusLaptop:"C:/Users/Simon/Projects/MEng Electronics/Development of a Resistojet Thruster/2) Simulations/CFD/2D Nozzle Simulation/2DNozzle_3_invicid_10000.cas.h5" in NODE0 mode ...
+  Reading mesh ...
+      234568 cells,     2 cell zones ...
+         187566 mixed cells,  zone id: 94
+          47002 mixed cells,  zone id: 100
+      470119 faces,    10 face zones ...
+            400 2D axis faces,  zone id: 1
+             63 2D pressure-inlet faces,  zone id: 41
+             62 2D interior faces,  zone id: 43
+           3775 2D wall faces,  zone id: 44
+           2149 2D wall faces,  zone id: 46
+            431 2D axis faces,  zone id: 47
+            641 2D pressure-outlet faces,  zone id: 50
+            144 2D wall faces,  zone id: 52
+         369151 2D interior faces,  zone id: 501
+          93303 2D interior faces,  zone id: 502
+      235552 nodes,     1 node zone  ...
+  Done.
+
+
+Building...
+     mesh
+	distributing mesh
+		parts....,
+		faces....,
+		nodes....,
+		cells....,
+        bandwidth reduction using Reverse Cuthill-McKee: 59174/950 = 62.2884
+     materials,
+     interface,
+     domains,
+	mixture
+     zones,
+	axis-1
+	interior:fluid
+	interior:vacuum
+	inlet
+	outlet
+	divergingside
+	convergingside
+	axis
+	vacuumboundaries
+	outsidewall
+	fluid
+	vacuum
+     parallel,
+Done.
+
+Reading from SimonAsusLaptop:"C:/Users/Simon/Projects/MEng Electronics/Development of a Resistojet Thruster/2) Simulations/CFD/2D Nozzle Simulation/2DNozzle_3_invicid_10000.dat.h5" in NODE0 mode ...
+
+
+  Reading results.
+Parallel variables...
+Done.
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(build-popup-menu)
+(cx-gui-do cx-activate-item "MenuBar*DisplaySubMenu*velocity-contour")
+(cx-use-window-id 51)
+(build-popup-menu)
+(cx-gui-do cx-activate-item "MenuBar*DisplaySubMenu*contour-temperature")
+(cx-use-window-id 51)
+(build-popup-menu)
+(cx-gui-do cx-activate-item "MenuBar*ReadSubMenu*Case & Data...")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "2DNozzle_4_35000.cas.h5") "CFF Case Files (*.cas.h5 )")
+
+       Clearing partially read grid.
+
+Reading from SimonAsusLaptop:"C:/Users/Simon/Projects/MEng Electronics/Development of a Resistojet Thruster/2) Simulations/CFD/2D Nozzle Simulation/2DNozzle_4_35000.cas.h5" in NODE0 mode ...
+  Reading mesh ...
+      234568 cells,     2 cell zones ...
+         187566 mixed cells,  zone id: 94
+          47002 mixed cells,  zone id: 100
+      470119 faces,    10 face zones ...
+            400 2D axis faces,  zone id: 1
+             63 2D pressure-inlet faces,  zone id: 41
+             62 2D interior faces,  zone id: 43
+           3775 2D wall faces,  zone id: 44
+           2149 2D wall faces,  zone id: 46
+            431 2D axis faces,  zone id: 47
+            641 2D pressure-outlet faces,  zone id: 50
+            144 2D wall faces,  zone id: 52
+         369151 2D interior faces,  zone id: 501
+          93303 2D interior faces,  zone id: 502
+      235552 nodes,     1 node zone  ...
+  Done.
+
+
+Building...
+     mesh
+	distributing mesh
+		parts....,
+		faces....,
+		nodes....,
+		cells....,
+        bandwidth reduction using Reverse Cuthill-McKee: 59174/950 = 62.2884
+     materials,
+     interface,
+     domains,
+	mixture
+     zones,
+	axis-1
+	interior:fluid
+	interior:vacuum
+	inlet
+	outlet
+	divergingside
+	convergingside
+	axis
+	vacuumboundaries
+	outsidewall
+	fluid
+	vacuum
+     parallel,
+Done.
+
+Reading from SimonAsusLaptop:"C:/Users/Simon/Projects/MEng Electronics/Development of a Resistojet Thruster/2) Simulations/CFD/2D Nozzle Simulation/2DNozzle_4_35000.dat.h5" in NODE0 mode ...
+
+
+  Reading results.
+Parallel variables...
+Done.
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(build-popup-menu)
+(cx-gui-do cx-activate-item "MenuBar*DisplaySubMenu*contour-temperature")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|contour-temperature"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|contour-temperature"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Results|Graphics|Contours|contour-temperature"))
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Table1*DropDownList2" '( 9))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Table1*DropDownList2")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Table1*DropDownList2" '( 2))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Table1*DropDownList2")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Table1*DropDownList2" '( 8))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Table1*DropDownList2")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Table1*DropDownList2" '( 12))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Table1*DropDownList2")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-set-list-selections "Contours*Table1*Frame3*Table1*DropDownList2" '( 13))
+(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Table1*DropDownList2")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton4(Compute)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "MenuBar*ReadSubMenu*Case & Data...")
+(cx-gui-do cx-activate-item "Question*OK")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "2DNozzle_3_invicid_10000.cas.h5") "CFF Case Files (*.cas.h5 )")
+
+       Clearing partially read grid.
+
+Reading from SimonAsusLaptop:"C:/Users/Simon/Projects/MEng Electronics/Development of a Resistojet Thruster/2) Simulations/CFD/2D Nozzle Simulation/2DNozzle_3_invicid_10000.cas.h5" in NODE0 mode ...
+  Reading mesh ...
+      234568 cells,     2 cell zones ...
+         187566 mixed cells,  zone id: 94
+          47002 mixed cells,  zone id: 100
+      470119 faces,    10 face zones ...
+            400 2D axis faces,  zone id: 1
+             63 2D pressure-inlet faces,  zone id: 41
+             62 2D interior faces,  zone id: 43
+           3775 2D wall faces,  zone id: 44
+           2149 2D wall faces,  zone id: 46
+            431 2D axis faces,  zone id: 47
+            641 2D pressure-outlet faces,  zone id: 50
+            144 2D wall faces,  zone id: 52
+         369151 2D interior faces,  zone id: 501
+          93303 2D interior faces,  zone id: 502
+      235552 nodes,     1 node zone  ...
+  Done.
+
+
+Building...
+     mesh
+	distributing mesh
+		parts....,
+		faces....,
+		nodes....,
+		cells....,
+        bandwidth reduction using Reverse Cuthill-McKee: 59174/950 = 62.2884
+     materials,
+     interface,
+     domains,
+	mixture
+     zones,
+	axis-1
+	interior:fluid
+	interior:vacuum
+	inlet
+	outlet
+	divergingside
+	convergingside
+	axis
+	vacuumboundaries
+	outsidewall
+	fluid
+	vacuum
+     parallel,
+Done.
+
+Reading from SimonAsusLaptop:"C:/Users/Simon/Projects/MEng Electronics/Development of a Resistojet Thruster/2) Simulations/CFD/2D Nozzle Simulation/2DNozzle_3_invicid_10000.dat.h5" in NODE0 mode ...
+
+
+  Reading results.
+Parallel variables...
+Done.
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(build-popup-menu)
+(cx-use-window-id 51)
+(build-popup-menu)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(cx-use-window-id 51)
+(build-popup-menu)
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|out-total-enthalpy-retention"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|out-total-enthalpy-retention"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|out-total-enthalpy-retention"))
+(cx-gui-do cx-activate-item "Expression Report Definition*PanelButtons*PushButton4(Compute)")
+                      Expression                  []
+-------------------------------- -------------------
+    out-total-enthalpy-retention                   1
+(cx-gui-do cx-activate-item "Expression Report Definition*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|out-total-pressure-retention"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|out-total-pressure-retention"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|out-total-pressure-retention"))
+(cx-gui-do cx-activate-item "Expression Report Definition*PanelButtons*PushButton4(Compute)")
+                      Expression                  []
+-------------------------------- -------------------
+    out-total-pressure-retention          0.97600735
+(cx-gui-do cx-activate-item "Expression Report Definition*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|out-thrust"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|out-thrust"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|out-thrust"))
+(cx-gui-do cx-activate-item "Expression Report Definition*PanelButtons*PushButton4(Compute)")
+                      Expression          [kg/s m/s]
+-------------------------------- -------------------
+                      out-thrust         0.036016936
+(cx-gui-do cx-set-expression-entry "Expression Report Definition*Table1*ExpressionEntry2" '("mass_flow_rate_outlet  * exit_velocity + outlet_area * (exit_static_pressure-1[Pa])" . 1))
+(cx-gui-do cx-set-expression-entry "Expression Report Definition*Table1*ExpressionEntry2" '("mass_flow_rate_outlet  * exit_velocity + outlet_area * (exit_static_pressure-1[Pa])" . 1))
+(cx-gui-do cx-set-expression-entry "Expression Report Definition*Table1*ExpressionEntry2" '("mass_flow_rate_outlet  * exit_velocity + outlet_area * (exit_static_pressure-1[Pa])" . 1))
+(cx-gui-do cx-activate-item "Expression Report Definition*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|out-isp"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|out-isp"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Report Definitions|out-isp"))
+(cx-gui-do cx-activate-item "Expression Report Definition*PanelButtons*PushButton4(Compute)")
+                      Expression                 [s]
+-------------------------------- -------------------
+                         out-isp           87.286087
+(cx-gui-do cx-activate-item "Expression Report Definition*PanelButtons*PushButton2(Cancel)")
+/exit y
+
+Posting ANSYS Product Improvement Program performance data 
+Done.
+Auto-Transcript Stop Time:  17:36:08, 20 Jul 2026 South Africa Standard Time 
+Total Transcript Time: 4 Hour 2 Minute 38 Second.

@@ -1,0 +1,50 @@
+Auto-Transcript Start Time:  12:33:14, 22 Jul 2026 South Africa Standard Time 
+Current Directory: "C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\2) Simulations\CFD"
+
+              Welcome to ANSYS Fluent 2026 R1
+
+              Copyright 2026 Synopsys, Inc. and ANSYS, Inc. All rights reserved.
+              Unauthorized use, distribution or duplication is prohibited.
+              This product is subject to U.S. laws governing export and re-export.
+              For full Legal Notice, see documentation.
+
+Build Time: Feb  2 2026 16:27:16 EST  Build Id: 10262  
+ 
+Connected License Server List:	<Non FlexNet Publisher License Server (FNPLS)>
+
+     --------------------------------------------------------------
+     This is a student version of ANSYS FLUENT. Usage of this product
+     license is limited to the terms and conditions specified in your ANSYS
+     license form, additional terms section.
+     --------------------------------------------------------------
+Host spawning Node 0 on machine "SimonAsusLaptop" (win64).
+Host waiting for connection from Node 0 at 127.0.0.1:58814 
+
+Node 0 connecting to the Host ... connection established.
+
+------------------------------------------------------------------------------------------
+ID    Hostname         Core  O.S.         PID    CPU Model Name                          
+------------------------------------------------------------------------------------------
+n3    SimonAsusLaptop  4/20  Windows-x64  4572   12th Gen Intel(R) Core(TM) i7-12700H    
+n2    SimonAsusLaptop  3/20  Windows-x64  14292  12th Gen Intel(R) Core(TM) i7-12700H    
+n1    SimonAsusLaptop  2/20  Windows-x64  23916  12th Gen Intel(R) Core(TM) i7-12700H    
+n0*   SimonAsusLaptop  1/20  Windows-x64  3812   12th Gen Intel(R) Core(TM) i7-12700H    
+host  SimonAsusLaptop        Windows-x64  20812  12th Gen Intel(R) Core(TM) i7-12700H    
+
+MPI Option Selected: intel
+Selected system interconnect: default
+------------------------------------------------------------------------------------------
+
+Cleanup script file is C:\\Users\\Simon\\Projects\\MEng Electronics\\Development of a Resistojet Thruster\\2) Simulations\\CFD\\cleanup-fluent-SimonAsusLaptop-20812.bat
+Note: Rank = 0: Process affinity not being set (6).
+Note: Rank = 1: Process affinity not being set (6).
+Note: Rank = 2: Process affinity not being set (6).
+Note: Rank = 3: Process affinity not being set (6).
+
+Graphics driver currently in use: dx11
+
+
+Posting ANSYS Product Improvement Program startup data
+Done.
+
+> (cx-gui-do cx-activate-item "MenuBar*ReadSubMenu*Case & Data...")

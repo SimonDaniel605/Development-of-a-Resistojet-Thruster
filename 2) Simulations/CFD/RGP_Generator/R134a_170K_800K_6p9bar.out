@@ -1,0 +1,18 @@
+python RGP_fixed.py -f R134a -b HEOS -p 1,690000 -T 170,800 -np 401 -nT 301 -mo 3 -me False -sp False -sf gas -st True -c False -op ./ -o R134a_170K_800K_6p9bar.rgp
+RGP table for fluid: 
+R134a [HelmholtzEOSBackend, CoolProp 7.2.0]
+T: [170.0: 800.0] K
+p: [0.001: 690.0] kPa
+RGP Size: (NT=301, Np=401)
+Allocating Super tables... 	0.0127 sec
+Generating Super Tables... 
+13.3311 sec
+Allocating Sat Table... 	0.0000 sec
+Generating Sat Table... 	0.0242 sec
+Writing Super Tables... 	4.3413 sec
+Writing Super Tables Matrices... 	0.0146 sec
+Writing Sat Table... 		0.0236 sec
+Writing Sat Table Matrices... 		0.0000 sec
+RGP file written... 		./R134a_170K_800K_6p9bar.rgp
+Total elapsed time... 		17.7505 sec
+END

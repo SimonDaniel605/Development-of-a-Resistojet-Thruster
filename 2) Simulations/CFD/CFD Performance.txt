@@ -1,9 +1,11 @@
 CFD performance for difference viscous models:
+g = 9.80665 m/s^2
 
-Baseline Ideal Nozzle Equations (MATLAB Simulation):
+Baseline Analytical Nozzle Equations (MATLAB Simulation):
 Me    = 5.21
 Ve    = 862.09 m/s
 Pe    = 16.754 Pa
+Te    = 315.43 K
 Pspace= 1e-7 Pa
 m_dot = 4.413e-05 kg/s
 F     = 39.36 mN
@@ -16,7 +18,7 @@ Pe    = 28.976 Pa  (area weighted average)
 Pspace= 1 Pa
 m_dot = 4.458e-05 kg/s
 F     = 31.16 mN
-Isp   = 71.25 s
+Isp   = 71.27 s
 
 SST K-Omega:
 Me    = 3.96       (mass weighted average)
@@ -25,4 +27,50 @@ Pe    = 28.850 Pa  (area weighted average)
 Pspace= 1 Pa
 m_dot = 4.420e-05 kg/s
 F     = 31.14 mN
-Isp   = 71.81 s
+Isp   = 71.83 s
+
+First 2D (12000):
+SST K-Omega:
+Me    = 3.97       (mass weighted average)
+Ve    = 677.37 m/s (mass weighted average)
+Pe    = 30.688 Pa  (area weighted average)
+Te    = 358.54 K   (mass weighted average)
+Pspace= 1e-7 Pa    (change back to 1)
+m_dot = 4.368e-05 kg/s
+F     = 31.92 mN
+Isp   = 74.52 s
+
+Second 2D (35000):
+SST K-Omega (Roughness Height = 0 m):
+Me    = 4.05       (mass weighted average)
+Ve    = 690.61 m/s (mass weighted average)
+Pe    = 29.295 Pa  (area weighted average)
+Te    = 363.87 K   (mass weighted average)
+Pspace= 1 Pa
+m_dot = 4.234e-05 kg/s
+F     = 31.46 mN
+Isp   = 75.77 s
+
+Third 2D (10000):
+Invicid:
+Me    = 5.54       (mass weighted average)
+Ve    = 832.81 m/s (mass weighted average)
+Pe    = 13.414 Pa  (area weighted average)
+Te    = 255.87 K   (mass weighted average)
+Pspace= 1 Pa
+m_dot = 4.208e-05 kg/s
+F     = 36.02 mN
+Isp   = 87.29 s
+
+Fourth 2D (35000):
+SST K-Omega (Roughness Height = 1e-5 m):
+Me    = 4.04       (mass weighted average)
+Ve    = 689.35 m/s (mass weighted average)
+Pe    = 29.278 Pa  (area weighted average)
+Te    = 364.87 K   (mass weighted average)
+Pspace= 1 Pa
+m_dot = 4.222e-05 kg/s
+F     = 31.33 mN
+Isp   = 75.66 s
+
+pv/ZRT
