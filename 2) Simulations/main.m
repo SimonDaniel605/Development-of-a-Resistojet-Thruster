@@ -26,17 +26,17 @@ cfg.tank.T          = 265;      % Storage Temperature (K)
 cfg.tank.P          = 6.9e5;    % Storage Pressure (Pa)
 
 cfg.Tp              = 333;      % Plenum Temperature (K) - set by heating stage
-cfg.heater.ri       = 1e-3;     % Heater pipe ID (m)
+cfg.heater.ri       = 0.5e-3;   % Heater pipe ID (m)
 cfg.heater.ro       = 2.5e-3;   % Heater pipe OD (m)
-cfg.heater.length   = 300e-3;   % Heater pipe length (m)
+cfg.heater.length   = 100e-3;   % Heater pipe length (m)
 cfg.heater.N        = 1000;     % Number of heater pipe length differentials
 cfg.heater.Twall    = 520;      % Heater wall temperature (K)
 
 cfg.p0              = 5e5;      % Chamber Pressure (Pa) - set by regulator
 cfg.T0              = 473;      % Chamber Temperature (K) - set by heating stage
 cfg.nozzle.ri       = 1e-3;     % Nozzle inlet radius (m)
-cfg.nozzle.rt       = 0.4e-3;   % Throat radius (m)
-cfg.nozzle.re       = 0.4e-3;   % Exit radius (m)
+cfg.nozzle.rt       = 0.2e-3;   % Throat radius (m)
+cfg.nozzle.re       = 0.2e-3;   % Exit radius (m)
 cfg.nozzle.tol      = 0e-6;     % Machining tolerance (m)
 cfg.environment.pa  = 1e5;     % Environmental Pressure (Pa)
 

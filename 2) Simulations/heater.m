@@ -5,7 +5,7 @@
 %   Institution:    Stellenbosch University,
 %                   Electronic Systems Laboratory (ESL)
 %   Date:           July 2026
-%   Version:        1.0
+%   Version:        1.1
 %   Project:        Development of a Resistojet Thruster
 %   Description:    
 %   This file calculates the outlet temperature of the propellant as it
@@ -15,7 +15,7 @@ function out = heater(cfg)
 state0 = thrusterState(cfg.tank.T, cfg.tank.P, cfg.T0, cfg.p0, cfg.environment.pa, ...
     cfg.nozzle.ri, cfg.nozzle.rt, cfg.nozzle.re, cfg.species);
 
-out = heater_analyser(cfg, state0.m_dot);
+out = heater_analyser(cfg, state0.m_dot/4);
 end
 %% -------------------------- local functions -------------------------- %%
 
@@ -493,6 +493,7 @@ D     = 2*cfg.heater.ri;
 P     = cfg.p0;
 
 T = Tin;
+P_heating = 0;
 
 A = pi*D^2/4;
 dP_total = 0;
@@ -514,6 +515,7 @@ profile.v       = zeros(N,1);
 profile.Mach    = zeros(N,1);
 profile.f       = zeros(N,1);
 profile.q_prime = zeros(N,1);
+profile.q_segment = zeros(N,1);
 profile.T(1) = T;
 
 for i = 1:N
@@ -583,7 +585,13 @@ for i = 1:N
     profile.q_prime(i) = q_prime_i;
     % exact segment solution, better than Euler
     NTU_i = h_i*pi*D*dx/(mdot*cp_i);
+    T_old = T;
     T = Twall - (Twall - T)*exp(-NTU_i);
+
+    q_segment_i = mdot * cp_i * (T - T_old);
+    P_heating = P_heating + q_segment_i;
+
+    profile.q_segment(i) = q_segment_i;
 
     profile.x(i+1) = i*dx;
     profile.T(i+1) = T;
@@ -603,6 +611,7 @@ out.Tout = T;
 out.Twall = Twall;
 out.m_dot = mdot;
 out.profile = profile;
+out.P_heating = P_heating;
 
 fprintf('\n============================================================\n');
 fprintf('Heater Performance Summary for %s\n', cfg.species);
@@ -615,6 +624,7 @@ fprintf('Re inlet    = %.6e\n', profile.Re(1));
 fprintf('Re outlet   = %.6e\n', profile.Re(end));
 fprintf('h inlet     = %.3f W/m^2/K\n', profile.h(1));
 fprintf('h outlet    = %.3f W/m^2/K\n', profile.h(end));
+fprintf('Power       = %.3f W\n', P_heating);
 fprintf('delta_P     = %.3f Pa\n', dP_total);
 fprintf('============================================================\n');
 

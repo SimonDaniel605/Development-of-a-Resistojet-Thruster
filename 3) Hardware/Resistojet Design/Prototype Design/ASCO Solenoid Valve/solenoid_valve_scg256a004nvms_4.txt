@@ -1,0 +1,12 @@
+﻿"Symbol";"Value";"Unit";
+"OMNICLASS23";"23.27.33.11.11";"";
+"REFERENCE";"SCG256A004NVMS 12V / DC";"";
+"TraceParts.PartVersion";"1.4.2";"";
+"TraceParts.InstanceId";"10-27072006-07732375X97GFFD78SLCO1KG6OTTJB5";"";
+"TraceParts.PartNumber";"10-27072006-077323";"";
+"TraceParts.PartTitle";"2/2 Solenoid valve NC, brass body, 256 series, 1/8";"";
+"SUPPLIER";"ASCO";"";
+"DESIGN";"2/2 Solenoid valve NC, 256 series - 12V / DC";"";
+"TRACEPARTS";"TRACEPARTS";"";
+"TraceParts.PartLanguage";"en";"";
+"MASS";"0.158";"kg";
