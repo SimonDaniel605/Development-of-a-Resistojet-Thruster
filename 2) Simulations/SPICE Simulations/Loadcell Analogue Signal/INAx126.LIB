@@ -1,0 +1,142 @@
+*$
+* INAx126
+*****************************************************************************
+* (C) Copyright 2023 Texas Instruments Incorporated. All rights reserved.     
+*****************************************************************************
+** This model is designed as an aid for customers of Texas Instruments.      
+** TI and its licensors and suppliers make no warranties, either expressed   
+** or implied, with respect to this model, including the warranties of       
+** merchantability or fitness for a particular purpose. The model is        
+** provided solely on an "as is" basis. The entire risk as to its quality   
+** and performance is with the customer
+*****************************************************************************
+*
+* This model is subject to change without notice. Texas Instruments
+* Incorporated is not responsible for updating this model.
+*
+*****************************************************************************
+*
+** Released by: Online Design Tools, Texas Instruments Inc.
+* Part: INAx126
+* Date: 27JAN2023
+* Model Type: ALL IN ONE
+* EVM Order Number: N/A 
+* EVM Users Guide:  N/A 
+* Datasheet: SBOS062C - SEPTEMBER 2000 - REVISED JANUARY 2022
+*
+* Model Version: Final 1.1
+*
+*****************************************************************************
+*
+* Updates:
+*
+* Final 1.1
+* 1. Updated PSpice symbol
+* 2. Updated Model Name from INA126 to INAx126
+* 3. Updated Pin order
+*
+* Final 1.0 : 
+* Release to Web
+*
+*****************************************************************************
+* Model Usage Notes:
+* 1. INAx126 model is available in single core(INA126) and dual core(INA2126)
+*****************************************************************************
+* CONNECTIONS:  NON-INVERTING INPUT
+*               | INVERTING INPUT
+*               | | POSITIVE POWER SUPPLY
+*               | | | NEGATIVE POWER SUPPLY
+*               | | | | OUTPUT
+*               | | | | | REFERENCE
+*               | | | | | | GAIN SENSE 1
+*               | | | | | | | GAIN SENSE 2
+*               | | | | | | | |
+.SUBCKT INAx126 3 2 7 4 6 5 1 8
+****************************************************************************
+* Components
+X1 2 1 7 4 222 5 OPAMP1_INAx126
+X2 3 8 7 4 6 222 OPAMP2_INAx126
+.ENDS INAx126 
+****************************************************************************
+.SUBCKT OPAMP1_INAx126 1 2 3 4 5 22
+****************************************************************************
+* Models
+.MODEL DX D (IS=800.0E-18)
+.MODEL QX PNP (IS=800.0E-18 BF=150)
+****************************************************************************
+* Components
+C1 11 12 2.9E-12
+C2 6 7 12.00E-12
+DC 5 53 DX
+DE 54 5 DX
+DLN 92 90 DX
+DLP 90 91 DX
+DP 4 3 DX
+EGND 99 0 POLY(2) (3,0) (4,0) 0 .5 .5
+FB 7 99 POLY(5) VB VC VE VLP VLN 0 42.44E6 -42E6 42E6 42E6 -42E6
+GA 6 0 11 12 94.25E-6
+GCM 0 6 10 99 942.5E-12
+HLIM 90 0 VLIM 1K
+IEE 3 10 DC 6.040E-6
+Q1 11 2 13 QX
+Q2 12 1 14 QX
+R2 6 9 100.0E3
+RC1 4 11 10.61E3
+RC2 4 12 10.61E3
+RE1 13 10 1.976E3
+RE2 14 10 1.976E3
+REE 10 99 33.11E6
+RFB1 2 22 40K
+RFB2 2 5 10K
+RO1 8 5 50
+RO2 7 99 25
+RP 3 4 379.8E3
+VB 9 0 DC 0
+VC 3 53 DC 1
+VE 54 4 DC 1
+VLIM 7 8 DC 0
+VLN 0 92 DC 2
+VLP 91 0 DC 2
+.ENDS OPAMP1_INAx126
+****************************************************************************
+.SUBCKT OPAMP2_INAx126 1 2 3 4 5 22
+****************************************************************************
+* Models
+.MODEL DX D (IS=800.0E-18)
+.MODEL QX PNP (IS=800.0E-18 BF=150)
+****************************************************************************
+* Components
+C1 11 12 2.9E-12
+C2 6 7 12.00E-12
+DC 5 53 DX
+DE 54 5 DX
+DLN 92 90 DX
+DLP 90 91 DX
+DP 4 3 DX
+EGND 99 0 POLY(2) (3,0) (4,0) 0 .5 .5
+FB 7 99 POLY(5) VB VC VE VLP VLN 0 42.44E6 -42E6 42E6 42E6 -42E6
+GA 6 0 11 12 94.25E-6
+GCM 0 6 10 99 942.5E-12
+HLIM 90 0 VLIM 1K
+IEE 3 10 DC 6.040E-6
+Q1 11 2 13 QX
+Q2 12 1 14 QX
+R2 6 9 100.0E3
+RC1 4 11 10.61E3
+RC2 4 12 10.61E3
+RE1 13 10 1.976E3
+RE2 14 10 1.976E3
+REE 10 99 33.11E6
+RFB3 2 22 10K
+RFB4 2 5 40K
+RO1 8 5 50
+RO2 7 99 25
+RP 3 4 379.8E3
+VB 9 0 DC 0
+VC 3 53 DC 1
+VE 54 4 DC 1
+VLIM 7 8 DC 0
+VLN 0 92 DC 2
+VLP 91 0 DC 2
+.ENDS OPAMP2_INAx126
+*

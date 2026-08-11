@@ -72,5 +72,3 @@ Pspace= 1 Pa
 m_dot = 4.222e-05 kg/s
 F     = 31.33 mN
 Isp   = 75.66 s
-
-pv/ZRT
