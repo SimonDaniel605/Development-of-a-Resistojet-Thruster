@@ -1,0 +1,6 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "ADS131M04IPWR")(type "KiCad")(uri "${KIPRJMOD}/Imported Parts/ADS131M04IPWR.kicad_sym")(options "")(descr ""))
+  (lib (name "INA216U")(type "KiCad")(uri "${KIPRJMOD}/Imported Parts/INA216U.kicad_sym")(options "")(descr ""))
+  (lib (name "MCP6024-E_SL")(type "KiCad")(uri "${KIPRJMOD}/Imported Parts/MCP6024-E_SL.kicad_sym")(options "")(descr ""))
+)

@@ -7,6 +7,8 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\4) Firmware\ResistojetV1"/>
+			<item value="C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\4) Firmware\TestPCB"/>
 			<item value="C:\Users\Simon\Projects\BEng Mechatronics\E-Design\E-Design_314Project"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
@@ -16,5 +18,16 @@
 	<section name="ChooseWorkspaceDialogSettings">
 		<item key="DIALOG_X_ORIGIN" value="582"/>
 		<item key="DIALOG_Y_ORIGIN" value="269"/>
+	</section>
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\4) Firmware\ResistojetV1"/>
+			<item value="C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\4) Firmware"/>
+			<item value="C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\4) Firmware\TestPCB"/>
+		</list>
 	</section>
 </section>

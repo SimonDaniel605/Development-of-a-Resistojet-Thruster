@@ -15,7 +15,7 @@ function out = heater(cfg)
 state0 = thrusterState(cfg.tank.T, cfg.tank.P, cfg.T0, cfg.p0, cfg.environment.pa, ...
     cfg.nozzle.ri, cfg.nozzle.rt, cfg.nozzle.re, cfg.species);
 
-out = heater_analyser(cfg, state0.m_dot/4);
+out = heater_analyser(cfg, state0.m_dot/1);
 end
 %% -------------------------- local functions -------------------------- %%
 

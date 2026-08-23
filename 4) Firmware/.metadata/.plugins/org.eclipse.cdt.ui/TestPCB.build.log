@@ -1,0 +1,16 @@
+15:12:18 **** Build of configuration Debug for project TestPCB ****
+make -j20 all 
+arm-none-eabi-gcc -o "TestPCB.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\4) Firmware\TestPCB\STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TestPCB.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TestPCB.elf
+ 
+arm-none-eabi-size  TestPCB.elf 
+arm-none-eabi-objdump -h -S TestPCB.elf  > "TestPCB.list"
+   text	   data	    bss	    dec	    hex	filename
+  48888	    468	   2340	  51696	   c9f0	TestPCB.elf
+Finished building: default.size.stdout
+ 
+Finished building: TestPCB.list
+ 
+
+15:12:20 Build Finished. 0 errors, 0 warnings. (took 1s.263ms)
+

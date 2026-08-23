@@ -1,0 +1,255 @@
+* ==========================================================
+* LOAD CELL -> INA126 -> CLAMPS -> MCP6024 -> STM32 ADC
+* ==========================================================
+
+.title Load Cell Analogue Front End
+
+* ----------------------------------------------------------
+* Manufacturer models
+* ----------------------------------------------------------
+.include INAx126.lib
+.include MCP6021.lib
+
+
+* ==========================================================
+* PARAMETERS
+* ==========================================================
+
+.param RGVAL = 100
+
+* Approximate source resistance of each load-cell signal lead.
+* Change this later if we know the actual bridge resistance.
+.param RLOADCELL = 175
+
+
+* ==========================================================
+* POWER SUPPLIES
+* ==========================================================
+
+* 5 V supply for load cell / INA126
+V5V V5 0 DC 5
+
+* INA126 local decoupling capacitor
+CINA_DEC V5 0 100n
+
+
+* 3.3 V supply for MCP6024 and upper clamp
+V3V3 V3V3 0 DC 3.3
+
+* MCP6024 local decoupling capacitor
+CMCP_DEC V3V3 0 100n
+
+
+* ==========================================================
+* LOAD CELL MODEL
+* ==========================================================
+*
+* The real bridge outputs sit around a common-mode voltage.
+* With a 5 V excited Wheatstone bridge, ~2.5 V common mode
+* is a useful starting approximation.
+*
+* V(SIG) represents the DIFFERENTIAL bridge signal.
+*
+* GREEN = + input of INA126
+* WHITE = - input of INA126
+*
+* Therefore:
+*
+*   Vgreen - Vwhite = V(SIG)
+*
+* ==========================================================
+
+* Example load-cell waveform:
+*
+* 0-10 ms      : zero load
+* 10-20 ms     : rise to 1 mV
+* 20-60 ms     : hold 1 mV
+* 60-70 ms     : rise to 2 mV
+* 70-110 ms    : hold 2 mV
+* 110-125 ms   : fall to 0.5 mV
+* 125-160 ms   : hold
+* 160-175 ms   : return to zero
+
+VSIG SIG 0 PWL(
++ 0       0
++ 10m     0
++ 20m     1m
++ 60m     1m
++ 70m     2m
++ 110m    2m
++ 125m    0.5m
++ 160m    0.5m
++ 175m    0
++ 200m    0
++ )
+
+
+* Generate the two bridge output voltages around 2.5 V
+
+BGREEN_SRC GREEN_SRC 0 V = 2.5 + 0.5*V(SIG)
+
+BWHITE_SRC WHITE_SRC 0 V = 2.5 - 0.5*V(SIG)
+
+
+* Approximate load-cell output resistance
+
+RGREEN GREEN_SRC GREEN {RLOADCELL}
+
+RWHITE WHITE_SRC WHITE {RLOADCELL}
+
+
+* ==========================================================
+* INA126 INSTRUMENTATION AMPLIFIER
+* ==========================================================
+*
+* TI model pin order:
+*
+* Xdevice
+*   NONINV
+*   INV
+*   V+
+*   V-
+*   OUT
+*   REF
+*   RG1
+*   RG2
+*   INAx126
+*
+* Your wiring:
+*
+* green -> VIN+
+* white -> VIN-
+* V+    -> 5 V
+* V-    -> GND
+* REF   -> GND
+*
+
+XINA
++ GREEN
++ WHITE
++ V5
++ 0
++ INA_OUT
++ 0
++ INA_RG1
++ INA_RG2
++ INAx126
+
+
+* Gain-setting resistor
+
+RGAIN INA_RG1 INA_RG2 {RGVAL}
+
+
+* ==========================================================
+* INA126 OUTPUT PROTECTION
+* ==========================================================
+
+* Your 100-ohm series resistor
+
+RSER INA_OUT CLAMP_NODE 100
+
+
+* ----------------------------------------------------------
+* Approximate 1N5819WS Schottky model
+* ----------------------------------------------------------
+*
+* Replace this later with the manufacturer's exact
+* 1N5819WS model if desired.
+*
+
+.model D5819 D(
++ IS=20u
++ N=1.08
++ RS=0.05
++ CJO=110p
++ M=0.33
++ BV=40
++ IBV=1m
++ )
+
+
+* Upper clamp:
+* conducts if CLAMP_NODE rises above 3.3 V + Vf
+
+DUPPER CLAMP_NODE V3V3 D5819
+
+
+* Lower clamp:
+* conducts if CLAMP_NODE goes below approximately -Vf
+
+DLOWER 0 CLAMP_NODE D5819
+
+
+* ==========================================================
+* MCP6024 CHANNEL A
+* ==========================================================
+*
+* Microchip subcircuit pin order:
+*
+*   1 = non-inverting input
+*   2 = inverting input
+*   3 = positive supply
+*   4 = negative supply
+*   5 = output
+*
+* Unity-gain follower:
+*
+*      +IN = CLAMP_NODE
+*      -IN = output
+*
+
+XMCPA
++ CLAMP_NODE
++ ADC
++ V3V3
++ 0
++ ADC
++ MCP6021
+
+
+* ==========================================================
+* STM32 ADC INPUT
+* ==========================================================
+*
+* For now the STM32 input is treated as a very high
+* impedance load.
+*
+* This does NOT yet model the ADC sample-and-hold capacitor.
+*
+
+RADC ADC 0 1G
+
+
+* ==========================================================
+* TRANSIENT ANALYSIS
+* ==========================================================
+
+.tran 10u 200m
+
+
+* Save important nodes
+
+.save
++ V(SIG)
++ V(GREEN)
++ V(WHITE)
++ V(INA_OUT)
++ V(CLAMP_NODE)
++ V(ADC)
+
+
+.control
+
+run
+
+* Plot original differential load-cell signal
+plot V(GREEN)-V(WHITE)
+
+* Plot amplified signal path
+plot V(INA_OUT) V(CLAMP_NODE) V(ADC)
+
+.endc
+
+
+.end
