@@ -1,0 +1,3 @@
+../Core/Src/usb.c:19:6:USB_Transmit	16	static
+../Core/Src/usb.c:34:6:USB_Receive	16	static
+../Core/Src/usb.c:45:6:USB_ProcessCommand	8	static

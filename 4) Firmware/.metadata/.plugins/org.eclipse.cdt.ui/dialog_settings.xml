@@ -2,7 +2,7 @@
 <section name="Workbench">
 	<item key="LastUsedHeaderTemplate" value="Default C header template"/>
 	<item key="LastUsedSourceTemplate" value="Default C source template"/>
-	<item key="org.eclipse.cdt.utils.ui.controls.FileListControl" value="-u _printf_float"/>
+	<item key="org.eclipse.cdt.utils.ui.controls.FileListControl" value="../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc"/>
 	<section name="CResourceRenameRefactoringInputPage">
 		<item key="updateReferences" value="true"/>
 	</section>
@@ -12,5 +12,9 @@
 	</section>
 	<section name="OptionalMessageDialog.hide.">
 		<item key="askReindex.detail" value="0"/>
+	</section>
+	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration.internal">
+		<item key="size.width" value="729"/>
+		<item key="size.height" value="203"/>
 	</section>
 </section>
