@@ -65,7 +65,7 @@ main-build: ResistojetV1.elf secondary-outputs
 
 # Tool invocations
 ResistojetV1.elf ResistojetV1.map: $(OBJS) $(USER_OBJS) C:\Users\Simon\Projects\MEng\ Electronics\Development\ of\ a\ Resistojet\ Thruster\4)\ Firmware\ResistojetV1\STM32G491CCTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "ResistojetV1.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\4) Firmware\ResistojetV1\STM32G491CCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ResistojetV1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+	arm-none-eabi-gcc -o "ResistojetV1.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\4) Firmware\ResistojetV1\STM32G491CCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ResistojetV1.map" -Wl,--gc-sections -static -u _scanf_float -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

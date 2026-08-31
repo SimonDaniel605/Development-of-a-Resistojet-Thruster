@@ -62,6 +62,8 @@ TIM_HandleTypeDef htim6;
 uint16_t adc1Buffer[ADC1_BUFFER_SIZE];
 uint16_t adc2Buffer[ADC2_BUFFER_SIZE];
 
+// Flags
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -637,7 +639,7 @@ void thrusterStartUp(void)
 {
     HAL_GPIO_WritePin(FILL_VALVE_Port, FILL_VALVE_Pin, GPIO_PIN_RESET);
     HAL_GPIO_WritePin(PLENUM_VALVE_Port, PLENUM_VALVE_Pin, GPIO_PIN_RESET);
-    HAL_GPIO_WritePin(THRUSTER_VALVE_Port, THRUSTER_VALVE_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(CHAMBER_VALVE_Port, CHAMBER_VALVE_Pin, GPIO_PIN_RESET);
 
     __HAL_TIM_SET_COMPARE(&htim4, HEATER1_CHANNEL, 0);
     __HAL_TIM_SET_COMPARE(&htim4, HEATER2_CHANNEL, 0);
@@ -659,6 +661,7 @@ void thrusterStartUp(void)
 void usbTask(void)
 {
 	USB_ProcessCommand();
+	USB_StreamData();
 }
 
 void sensorTask(void)

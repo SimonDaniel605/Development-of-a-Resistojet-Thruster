@@ -1,0 +1,17 @@
+/*
+ * sensors.h
+ *
+ *  Created on: Aug 31, 2026
+ *      Author: Simon
+ */
+
+#ifndef INC_SENSORS_H_
+#define INC_SENSORS_H_
+
+extern float tankPressure;
+extern float plenumPressure;
+extern float chamberPressure;
+extern float temperature;
+extern float thrust;
+
+#endif /* INC_SENSORS_H_ */

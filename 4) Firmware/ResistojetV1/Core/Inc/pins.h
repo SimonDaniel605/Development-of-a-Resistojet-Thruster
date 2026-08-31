@@ -15,8 +15,8 @@
 #define FILL_VALVE_Pin          GPIO_PIN_3
 #define PLENUM_VALVE_Port       GPIOB
 #define PLENUM_VALVE_Pin        GPIO_PIN_4
-#define THRUSTER_VALVE_Port     GPIOB
-#define THRUSTER_VALVE_Pin      GPIO_PIN_5
+#define CHAMBER_VALVE_Port      GPIOB
+#define CHAMBER_VALVE_Pin       GPIO_PIN_5
 
 /* Debug LED pins */
 #define LED1_Port               GPIOB

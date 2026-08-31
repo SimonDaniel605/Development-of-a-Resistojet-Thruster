@@ -5,7 +5,10 @@
  *      Author: Simon
  */
 
+#include "main.h"
 #include "usb.h"
+#include "sensors.h"
+#include "control.h"
 #include "usbd_cdc_if.h"
 #include <stdio.h>
 #include <stdarg.h>
@@ -15,6 +18,8 @@
 
 static char usbRxBuffer[USB_RX_BUFFER_SIZE];
 static volatile uint8_t usbCommandReady = 0;
+static uint8_t streamFlag = 0;
+static uint32_t usb_last = 0;
 
 void USB_Transmit(const char *fmt, ...)
 {
@@ -49,20 +54,98 @@ void USB_ProcessCommand(void)
 
     usbCommandReady = 0;
 
-    if (strcmp(usbRxBuffer, "STATUS") == 0)
+    if (strcmp(usbRxBuffer, "*STATUS#") == 0)
     {
         USB_Transmit("Thruster status requested\r\n");
     }
-    else if (strcmp(usbRxBuffer, "START") == 0)
+    else if (strcmp(usbRxBuffer, "*START#") == 0)
     {
         USB_Transmit("START command received\r\n");
     }
-    else if (strcmp(usbRxBuffer, "STOP") == 0)
+    else if (strcmp(usbRxBuffer, "*ABORT#") == 0)
     {
-        USB_Transmit("STOP command received\r\n");
+        USB_Transmit("Abort command received\r\n");
+    }
+    else if (strcmp(usbRxBuffer, "*STREAM ON#") == 0)
+    {
+    	streamFlag = 1;
+        USB_Transmit("Thruster USB stream activated\r\n");
+    }
+    else if (strcmp(usbRxBuffer, "*STREAM OFF#") == 0)
+    {
+    	streamFlag = 0;
+        USB_Transmit("Thruster USB stream deactivated\r\n");
+    }
+    else if (strcmp(usbRxBuffer, "*FILL VALVE OPEN#") == 0)
+    {
+        USB_Transmit("...\r\n");
+    }
+    else if (strcmp(usbRxBuffer, "*FILL VALVE CLOSE#") == 0)
+    {
+        USB_Transmit("...\r\n");
+    }
+    else if (strcmp(usbRxBuffer, "*PLENUM VALVE OPEN#") == 0)
+    {
+        USB_Transmit("...\r\n");
+    }
+    else if (strcmp(usbRxBuffer, "*PLENUM VALVE CLOSE#") == 0)
+    {
+        USB_Transmit("...\r\n");
+    }
+    else if (strcmp(usbRxBuffer, "*CHAMBER VALVE OPEN#") == 0)
+    {
+        USB_Transmit("...\r\n");
+    }
+    else if (strcmp(usbRxBuffer, "*CHAMBER VALVE CLOSE#") == 0)
+    {
+        USB_Transmit("...\r\n");
+    }
+    else if (strncmp(usbRxBuffer, "*PLENUM HEATER ", 16) == 0)
+    {
+        float setpoint;
+
+        if (sscanf(usbRxBuffer, "*PLENUM HEATER %f#", &setpoint) == 1)
+        {
+            plenumTempSetpoint = setpoint;
+
+            USB_Transmit("Plenum heater setpoint = %.1f\r\n",
+                         plenumTempSetpoint);
+        }
+    }
+    else if (strncmp(usbRxBuffer, "*CHAMBER HEATER ", 17) == 0)
+    {
+        float setpoint;
+
+        if (sscanf(usbRxBuffer, "*CHAMBER HEATER %f#", &setpoint) == 1)
+        {
+            chamberTempSetpoint = setpoint;
+
+            USB_Transmit("Chamber heater setpoint = %.1f\r\n",
+                         chamberTempSetpoint);
+        }
     }
     else
     {
         USB_Transmit("Unknown command: %s\r\n", usbRxBuffer);
     }
+}
+
+void USB_StreamData(void)
+{
+	uint32_t usb_now = HAL_GetTick();
+	if(streamFlag){
+		if((usb_now - usb_last)>=1)
+		{
+			USB_Transmit("P1=%.2f,P2=%.2f,P3=%.2f,"
+					"TPlenum=%.1f,TChamber=%.1f,"
+					"Thrust=%.3f\r\n",
+					tankPressure,
+			        plenumPressure,
+			        chamberPressure,
+			        plenumGasTemperature,
+			        chamberGasTemperature,
+			        thrust);
+		usb_last = usb_now;
+		}
+	}
 }

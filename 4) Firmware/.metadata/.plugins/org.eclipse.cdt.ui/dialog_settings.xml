@@ -2,7 +2,7 @@
 <section name="Workbench">
 	<item key="LastUsedHeaderTemplate" value="Default C header template"/>
 	<item key="LastUsedSourceTemplate" value="Default C source template"/>
-	<item key="org.eclipse.cdt.utils.ui.controls.FileListControl" value="../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc"/>
+	<item key="org.eclipse.cdt.utils.ui.controls.FileListControl" value="-u _printf_float"/>
 	<section name="CResourceRenameRefactoringInputPage">
 		<item key="updateReferences" value="true"/>
 	</section>

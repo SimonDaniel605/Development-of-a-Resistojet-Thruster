@@ -1,0 +1,14 @@
+/*
+ * sensors.c
+ *
+ *  Created on: Aug 31, 2026
+ *      Author: Simon
+ */
+
+#include "sensors.h"
+
+float tankPressure = 0.0f;
+float plenumPressure = 0.0f;
+float chamberPressure = 0.0f;
+float temperature = 0.0f;
+float thrust = 0.0f;
