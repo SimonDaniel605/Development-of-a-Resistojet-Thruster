@@ -24,6 +24,8 @@
 /* USER CODE BEGIN Includes */
 #include "pins.h"
 #include "usb.h"
+#include "sensors.h"
+#include "control.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -33,7 +35,11 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+#define MODE_EXPERIMENTAL  0
+#define MODE_MANUAL        1
 
+#define ADC1_BUFFER_SIZE 4
+#define ADC2_BUFFER_SIZE 1
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -56,14 +62,39 @@ TIM_HandleTypeDef htim4;
 TIM_HandleTypeDef htim6;
 
 /* USER CODE BEGIN PV */
-#define ADC1_BUFFER_SIZE 4
-#define ADC2_BUFFER_SIZE 1
-
+// ADC
 uint16_t adc1Buffer[ADC1_BUFFER_SIZE];
 uint16_t adc2Buffer[ADC2_BUFFER_SIZE];
 
 // Flags
+//uint8_t primeThrusterFlag;
+uint8_t startThrusterFlag;
+uint8_t abortThrusterFlag;
 
+uint8_t streamOnFlag;
+uint8_t streamOffFlag;
+uint8_t fillValveOpenFlag;
+uint8_t fillValveCloseFlag;
+uint8_t plenumValveOpenFlag;
+uint8_t plenumValveCloseFlag;
+uint8_t chamberValveOpenFlag;
+uint8_t chamberValveCloseFlag;
+
+// States
+uint8_t operatingMode = MODE_EXPERIMENTAL;
+
+uint8_t streamState;
+uint8_t fillValveState;
+uint8_t plenumValveState;
+uint8_t chamberValveState;
+uint8_t tankFilledState;
+uint8_t plenumClearState;
+uint8_t plenumPrimedState;
+uint8_t thrusterFiringState;
+
+// Setpoints
+//float plenumTempSetpoint;
+//float chamberTempSetpoint;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -81,7 +112,6 @@ void thrusterStartUp(void);
 
 void sensorTask(void);
 void usbTask(void);
-void stateTask(void);
 void controlTask(void);
 void heaterTask(void);
 void valveTask(void);
@@ -635,8 +665,7 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-void thrusterStartUp(void)
-{
+void thrusterStartUp(void){
     HAL_GPIO_WritePin(FILL_VALVE_Port, FILL_VALVE_Pin, GPIO_PIN_RESET);
     HAL_GPIO_WritePin(PLENUM_VALVE_Port, PLENUM_VALVE_Pin, GPIO_PIN_RESET);
     HAL_GPIO_WritePin(CHAMBER_VALVE_Port, CHAMBER_VALVE_Pin, GPIO_PIN_RESET);
@@ -658,34 +687,40 @@ void thrusterStartUp(void)
     HAL_GPIO_WritePin(ADS_RESET_Port, ADS_RESET_Pin, GPIO_PIN_SET);
 }
 
-void usbTask(void)
-{
+void usbTask(void){
 	USB_ProcessCommand();
 	USB_StreamData();
 }
 
-void sensorTask(void)
-{
+void sensorTask(void){
+
 }
 
-void stateTask(void)
-{
+void stateTask(void){
+
 }
 
-void controlTask(void)
-{
+void controlTask(void){
+
 }
 
-void heaterTask(void)
-{
+void heaterTask(void){
+
 }
 
-void valveTask(void)
-{
+void valveTask(void){
+	HAL_GPIO_WritePin(FILL_VALVE_Port, FILL_VALVE_Pin,
+			fillValveState ? GPIO_PIN_SET : GPIO_PIN_RESET);
+
+	HAL_GPIO_WritePin(PLENUM_VALVE_Port, PLENUM_VALVE_Pin,
+			plenumValveState ? GPIO_PIN_SET : GPIO_PIN_RESET);
+
+	HAL_GPIO_WritePin(CHAMBER_VALVE_Port, CHAMBER_VALVE_Pin,
+			chamberValveState ? GPIO_PIN_SET : GPIO_PIN_RESET);
 }
 
-void debugLEDTask(void)
-{
+void debugLEDTask(void){
+
 }
 /* USER CODE END 4 */
 

@@ -1,4 +1,4 @@
-../Core/Src/usb.c:24:6:USB_Transmit	16	static
-../Core/Src/usb.c:39:6:USB_Receive	16	static
-../Core/Src/usb.c:50:6:USB_ProcessCommand	16	static
-../Core/Src/usb.c:133:6:USB_StreamData	96	static
+../Core/Src/usb.c:25:6:USB_Transmit	16	static
+../Core/Src/usb.c:40:6:USB_Receive	16	static
+../Core/Src/usb.c:51:6:USB_ProcessCommand	40	static
+../Core/Src/usb.c:146:6:USB_StreamData	96	static
