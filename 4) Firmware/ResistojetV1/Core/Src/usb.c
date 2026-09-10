@@ -18,9 +18,30 @@
 
 static char usbRxBuffer[USB_RX_BUFFER_SIZE];
 static volatile uint8_t usbCommandReady = 0;
-uint8_t primeThrusterFlag = 0;
-static uint8_t streamFlag = 0;
 static uint32_t usb_last = 0;
+
+uint8_t commandRequest = 0;
+uint8_t manualRequest = 0;
+uint8_t experimentalRequest = 0;
+uint8_t abortThrusterRequest = 0;
+uint8_t settleThrusterRequest = 0;
+uint8_t primeThrusterRequest = 0;
+uint8_t startThrusterRequest = 0;
+uint8_t streamOnRequest = 0;
+uint8_t streamOffRequest = 0;
+uint8_t fillValveOpenRequest = 0;
+uint8_t fillValveCloseRequest = 0;
+uint8_t plenumValveOpenRequest = 0;
+uint8_t plenumValveCloseRequest = 0;
+uint8_t chamberValveOpenRequest = 0;
+uint8_t chamberValveCloseRequest = 0;
+uint8_t plenumHeaterRequest = 0;
+uint8_t chamberHeaterRequest = 0;
+
+float proposedPlenumTempSetpoint = 0.0f;
+float proposedChamberTempSetpoint = 0.0f;
+float proposedPlenumTargetTemp = 0.0f;
+float proposedPlenumTargetPressure = 0.0f;
 
 void USB_Transmit(const char *fmt, ...)
 {
@@ -48,102 +69,7 @@ void USB_Receive(uint8_t *data, uint32_t length)
     usbCommandReady = 1;
 }
 
-void USB_ProcessCommand(void)
-{
-    if (!usbCommandReady)
-        return;
-
-    usbCommandReady = 0;
-
-    if (strcmp(usbRxBuffer, "*STATUS#") == 0)
-    {
-        USB_Transmit("Thruster status requested\r\n");
-    }
-    else if (strncmp(usbRxBuffer, "*PRIME PLENUM ", 14) == 0)
-    {
-    	float temp;
-    	float pressure;
-    	if (sscanf(usbRxBuffer, "*PRIME PLENUM %f %f#", &temp, &pressure) == 2)
-    	{
-    		plenumTargetTemp = temp;
-    		plenumTargetPressure = pressure;
-    		primeThrusterFlag = 1;
-    		USB_Transmit("Plenum priming to %.1f K and %.1f bar\r\n", temp, pressure);
-    	}
-    }
-    else if (strcmp(usbRxBuffer, "*START#") == 0)
-    {
-        USB_Transmit("START command received\r\n");
-    }
-    else if (strcmp(usbRxBuffer, "*ABORT#") == 0)
-    {
-        USB_Transmit("Abort command received\r\n");
-    }
-    else if (strcmp(usbRxBuffer, "*STREAM ON#") == 0)
-    {
-    	streamFlag = 1;
-        USB_Transmit("Thruster USB stream activated\r\n");
-    }
-    else if (strcmp(usbRxBuffer, "*STREAM OFF#") == 0)
-    {
-    	streamFlag = 0;
-        USB_Transmit("Thruster USB stream deactivated\r\n");
-    }
-    else if (strcmp(usbRxBuffer, "*FILL VALVE OPEN#") == 0)
-    {
-        USB_Transmit("...\r\n");
-    }
-    else if (strcmp(usbRxBuffer, "*FILL VALVE CLOSE#") == 0)
-    {
-        USB_Transmit("...\r\n");
-    }
-    else if (strcmp(usbRxBuffer, "*PLENUM VALVE OPEN#") == 0)
-    {
-        USB_Transmit("...\r\n");
-    }
-    else if (strcmp(usbRxBuffer, "*PLENUM VALVE CLOSE#") == 0)
-    {
-        USB_Transmit("...\r\n");
-    }
-    else if (strcmp(usbRxBuffer, "*CHAMBER VALVE OPEN#") == 0)
-    {
-        USB_Transmit("...\r\n");
-    }
-    else if (strcmp(usbRxBuffer, "*CHAMBER VALVE CLOSE#") == 0)
-    {
-        USB_Transmit("...\r\n");
-    }
-    else if (strncmp(usbRxBuffer, "*PLENUM HEATER ", 16) == 0)
-    {
-        float setpoint;
-
-        if (sscanf(usbRxBuffer, "*PLENUM HEATER %f#", &setpoint) == 1)
-        {
-            plenumTempSetpoint = setpoint;
-
-            USB_Transmit("Plenum heater setpoint = %.1f\r\n",
-                         plenumTempSetpoint);
-        }
-    }
-    else if (strncmp(usbRxBuffer, "*CHAMBER HEATER ", 17) == 0)
-    {
-        float setpoint;
-
-        if (sscanf(usbRxBuffer, "*CHAMBER HEATER %f#", &setpoint) == 1)
-        {
-            chamberTempSetpoint = setpoint;
-
-            USB_Transmit("Chamber heater setpoint = %.1f\r\n",
-                         chamberTempSetpoint);
-        }
-    }
-    else
-    {
-        USB_Transmit("Unknown command: %s\r\n", usbRxBuffer);
-    }
-}
-
-void USB_StreamData(void)
+void usbStreamTask(void)
 {
 	uint32_t usb_now = HAL_GetTick();
 	if(streamFlag){
@@ -161,4 +87,86 @@ void USB_StreamData(void)
 		usb_last = usb_now;
 		}
 	}
+}
+
+void resetAllRequests(void)
+{
+	commandRequest = 0;
+    manualRequest = 0;
+    experimentalRequest = 0;
+    abortThrusterRequest = 0;
+    settleThrusterRequest = 0;
+    primeThrusterRequest = 0;
+    startThrusterRequest = 0;
+    streamOnRequest = 0;
+    streamOffRequest = 0;
+    fillValveOpenRequest = 0;
+    fillValveCloseRequest = 0;
+    plenumValveOpenRequest = 0;
+    plenumValveCloseRequest = 0;
+    chamberValveOpenRequest = 0;
+    chamberValveCloseRequest = 0;
+    plenumHeaterRequest = 0;
+    chamberHeaterRequest = 0;
+}
+
+void usbCommandTask(void)
+{
+    if (!usbCommandReady) return;
+    usbCommandReady = 0;
+    commandRequest = 1;
+
+    if 		(strcmp(usbRxBuffer, "*MANUAL#") == 0)						   manualRequest = 1;
+    else if (strcmp(usbRxBuffer, "*EXPERIMENTAL#") == 0)		     experimentalRequest = 1;
+    else if (strcmp(usbRxBuffer, "*START#") == 0) 				    startThrusterRequest = 1;
+    else if (strcmp(usbRxBuffer, "*ABORT#") == 0) 				    abortThrusterRequest = 1;
+    else if (strcmp(usbRxBuffer, "*STREAM ON#") == 0)  				     streamOnRequest = 1;
+    else if (strcmp(usbRxBuffer, "*STREAM OFF#") == 0)			 	    streamOffRequest = 1;
+    else if (strcmp(usbRxBuffer, "*FILL VALVE OPEN#") == 0)  	    fillValveOpenRequest = 1;
+    else if (strcmp(usbRxBuffer, "*FILL VALVE CLOSE#") == 0)       fillValveCloseRequest = 1;
+    else if (strcmp(usbRxBuffer, "*PLENUM VALVE OPEN#") == 0)     plenumValveOpenRequest = 1;
+    else if (strcmp(usbRxBuffer, "*PLENUM VALVE CLOSE#") == 0)   plenumValveCloseRequest = 1;
+    else if (strcmp(usbRxBuffer, "*CHAMBER VALVE OPEN#") == 0)   chamberValveOpenRequest = 1;
+    else if (strcmp(usbRxBuffer, "*CHAMBER VALVE CLOSE#") == 0) chamberValveCloseRequest = 1;
+    else if (strncmp(usbRxBuffer, "*PRIME PLENUM ", 14) == 0){
+    	primeThrusterRequest = 1;
+    	float temp;
+    	float pressure;
+    	if (sscanf(usbRxBuffer, "*PRIME PLENUM %f %f#", &temp, &pressure) == 2)
+    	{
+
+    		proposedPlenumTargetTemp = temp;
+    		proposedPlenumTargetPressure = pressure;
+    	}
+    }
+    else if (strncmp(usbRxBuffer, "*PLENUM HEATER ", 16) == 0){
+    	plenumHeaterRequest = 1;
+        float setpoint;
+
+        if (sscanf(usbRxBuffer, "*PLENUM HEATER %f#", &setpoint) == 1)
+        {
+        	proposedPlenumTempSetpoint = setpoint;
+
+            USB_Transmit("Plenum heater setpoint = %.1f\r\n",
+                         proposedPlenumTempSetpoint);
+        }
+    }
+    else if (strncmp(usbRxBuffer, "*CHAMBER HEATER ", 17) == 0){
+    	chamberHeaterRequest = 1;
+        float setpoint;
+
+        if (sscanf(usbRxBuffer, "*CHAMBER HEATER %f#", &setpoint) == 1)
+        {
+        	proposedChamberTempSetpoint = setpoint;
+
+            USB_Transmit("Chamber heater setpoint = %.1f\r\n",
+            		proposedChamberTempSetpoint);
+        }
+    }
+    else if (strcmp(usbRxBuffer, "*STATUS#") == 0){
+        USB_Transmit("Thruster status...\r\n");
+    }
+    else{
+        USB_Transmit("Unknown command: %s\r\n", usbRxBuffer);
+    }
 }

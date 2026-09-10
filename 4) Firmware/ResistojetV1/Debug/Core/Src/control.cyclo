@@ -1,1 +1,7 @@
-../Core/Src/control.c:15:6:PIDFunc	1
+../Core/Src/control.c:52:6:PIDFunc	1
+../Core/Src/control.c:54:6:settlingFunc	5
+../Core/Src/control.c:88:6:firingFunc	4
+../Core/Src/control.c:112:13:thrusterModeToString	5
+../Core/Src/control.c:130:13:thrusterStateToString	9
+../Core/Src/control.c:164:6:thrusterModeHandler	16
+../Core/Src/control.c:190:6:thrusterStateHandler	92

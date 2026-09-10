@@ -20,7 +20,7 @@ designThruster               = false;
 comparePropellantPerformance = false;
 
 % Resistojet Design Configurations
-cfg.species         = "R134a";  % Propellant
+cfg.species         = "R245fa";  % Propellant
 cfg.tank.V          = 300;      % Storage Volume (m^3)
 cfg.tank.T          = 265;      % Storage Temperature (K)
 cfg.tank.P          = 6.9e5;    % Storage Pressure (Pa)
@@ -30,13 +30,13 @@ cfg.heater.ri       = 0.75e-3;   % Heater pipe ID (m)
 cfg.heater.ro       = 2.5e-3;   % Heater pipe OD (m)
 cfg.heater.length   = 50e-3;   % Heater pipe length (m)
 cfg.heater.N        = 1000;     % Number of heater pipe length differentials
-cfg.heater.Twall    = 570;      % Heater wall temperature (K)
+cfg.heater.Twall    = 400;      % Heater wall temperature (K)
 
 cfg.p0              = 5e5;      % Chamber Pressure (Pa) - set by regulator
-cfg.T0              = 500;      % Chamber Temperature (K) - set by heating stage
+cfg.T0              = 350;      % Chamber Temperature (K) - set by heating stage
 cfg.nozzle.ri       = 1e-3;     % Nozzle inlet radius (m)
-cfg.nozzle.rt       = 0.4e-3;   % Throat radius (m)
-cfg.nozzle.re       = 0.4e-3;   % Exit radius (m)
+cfg.nozzle.rt       = 0.1e-3;   % Throat radius (m)
+cfg.nozzle.re       = 5e-3;     % Exit radius (m)
 cfg.nozzle.tol      = 0e-6;     % Machining tolerance (m)
 cfg.environment.pa  = 1e-5;     % Environmental Pressure (Pa)
 
@@ -362,7 +362,7 @@ finalCandidates = { ...
 % --------------------------- Design Settings --------------------------- %
 if simulateThrusterDesign
     nozzle(cfg);
-    heater(cfg);
+    %heater(cfg);
 end
 
 % --------------------------- Nozzle Designer --------------------------- %

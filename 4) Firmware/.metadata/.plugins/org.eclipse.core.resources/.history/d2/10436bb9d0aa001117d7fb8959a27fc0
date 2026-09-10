@@ -1,0 +1,15 @@
+/*
+ * control.h
+ *
+ *  Created on: Aug 31, 2026
+ *      Author: Simon
+ */
+
+#ifndef INC_CONTROL_H_
+#define INC_CONTROL_H_
+
+void PIDFunc(void);
+void thrusterModeHandler(void);
+void thrusterStateHandler(void);
+
+#endif /* INC_CONTROL_H_ */

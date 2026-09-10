@@ -35,9 +35,6 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define MODE_EXPERIMENTAL  0
-#define MODE_MANUAL        1
-
 #define ADC1_BUFFER_SIZE 4
 #define ADC2_BUFFER_SIZE 1
 /* USER CODE END PD */
@@ -67,34 +64,14 @@ uint16_t adc1Buffer[ADC1_BUFFER_SIZE];
 uint16_t adc2Buffer[ADC2_BUFFER_SIZE];
 
 // Flags
-//uint8_t primeThrusterFlag;
-uint8_t startThrusterFlag;
-uint8_t abortThrusterFlag;
+uint8_t settlingFlag = 0;
+uint8_t primingFlag = 0;
+uint8_t firingFlag = 0;
+uint8_t streamFlag = 0;
+uint8_t fillValveFlag = 0;
+uint8_t plenumValveFlag = 0;
+uint8_t chamberValveFlag = 0;
 
-uint8_t streamOnFlag;
-uint8_t streamOffFlag;
-uint8_t fillValveOpenFlag;
-uint8_t fillValveCloseFlag;
-uint8_t plenumValveOpenFlag;
-uint8_t plenumValveCloseFlag;
-uint8_t chamberValveOpenFlag;
-uint8_t chamberValveCloseFlag;
-
-// States
-uint8_t operatingMode = MODE_EXPERIMENTAL;
-
-uint8_t streamState;
-uint8_t fillValveState;
-uint8_t plenumValveState;
-uint8_t chamberValveState;
-uint8_t tankFilledState;
-uint8_t plenumClearState;
-uint8_t plenumPrimedState;
-uint8_t thrusterFiringState;
-
-// Setpoints
-//float plenumTempSetpoint;
-//float chamberTempSetpoint;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -108,12 +85,11 @@ static void MX_TIM2_Init(void);
 static void MX_TIM6_Init(void);
 static void MX_TIM4_Init(void);
 /* USER CODE BEGIN PFP */
-void thrusterStartUp(void);
+void thrusterStartup(void);
 
 void sensorTask(void);
-void usbTask(void);
+void stateTask(void);
 void controlTask(void);
-void heaterTask(void);
 void valveTask(void);
 void debugLEDTask(void);
 /* USER CODE END PFP */
@@ -161,7 +137,7 @@ int main(void)
   MX_TIM6_Init();
   MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
-  thrusterStartUp();
+  thrusterStartup();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -169,8 +145,10 @@ int main(void)
   while (1)
   {
 	  sensorTask();
-	  usbTask();
+	  usbCommandTask();
+	  stateTask();
 	  controlTask();
+	  usbStreamTask();
 	  valveTask();
 	  debugLEDTask();
     /* USER CODE END WHILE */
@@ -665,7 +643,7 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-void thrusterStartUp(void){
+void thrusterStartup(void){
     HAL_GPIO_WritePin(FILL_VALVE_Port, FILL_VALVE_Pin, GPIO_PIN_RESET);
     HAL_GPIO_WritePin(PLENUM_VALVE_Port, PLENUM_VALVE_Pin, GPIO_PIN_RESET);
     HAL_GPIO_WritePin(CHAMBER_VALVE_Port, CHAMBER_VALVE_Pin, GPIO_PIN_RESET);
@@ -687,36 +665,31 @@ void thrusterStartUp(void){
     HAL_GPIO_WritePin(ADS_RESET_Port, ADS_RESET_Pin, GPIO_PIN_SET);
 }
 
-void usbTask(void){
-	USB_ProcessCommand();
-	USB_StreamData();
-}
-
 void sensorTask(void){
 
 }
 
 void stateTask(void){
-
+	thrusterModeHandler();
+	thrusterStateHandler();
 }
 
 void controlTask(void){
-
-}
-
-void heaterTask(void){
-
+	settlingFunc();
+	//primingFunc();
+	firingFunc();
+	PIDFunc();
 }
 
 void valveTask(void){
 	HAL_GPIO_WritePin(FILL_VALVE_Port, FILL_VALVE_Pin,
-			fillValveState ? GPIO_PIN_SET : GPIO_PIN_RESET);
+			fillValveFlag ? GPIO_PIN_SET : GPIO_PIN_RESET);
 
 	HAL_GPIO_WritePin(PLENUM_VALVE_Port, PLENUM_VALVE_Pin,
-			plenumValveState ? GPIO_PIN_SET : GPIO_PIN_RESET);
+			plenumValveFlag ? GPIO_PIN_SET : GPIO_PIN_RESET);
 
 	HAL_GPIO_WritePin(CHAMBER_VALVE_Port, CHAMBER_VALVE_Pin,
-			chamberValveState ? GPIO_PIN_SET : GPIO_PIN_RESET);
+			chamberValveFlag ? GPIO_PIN_SET : GPIO_PIN_RESET);
 }
 
 void debugLEDTask(void){

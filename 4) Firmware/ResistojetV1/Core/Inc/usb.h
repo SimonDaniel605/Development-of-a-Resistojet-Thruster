@@ -10,11 +10,33 @@
 
 #include <stdint.h>
 
-extern uint8_t primeThrusterFlag;
+extern uint8_t commandRequest;
+extern uint8_t manualRequest;
+extern uint8_t experimentalRequest;
+extern uint8_t abortThrusterRequest;
+extern uint8_t settleThrusterRequest;
+extern uint8_t primeThrusterRequest;
+extern uint8_t startThrusterRequest;
+extern uint8_t streamOnRequest;
+extern uint8_t streamOffRequest;
+extern uint8_t fillValveOpenRequest;
+extern uint8_t fillValveCloseRequest;
+extern uint8_t plenumValveOpenRequest;
+extern uint8_t plenumValveCloseRequest;
+extern uint8_t chamberValveOpenRequest;
+extern uint8_t chamberValveCloseRequest;
+extern uint8_t plenumHeaterRequest;
+extern uint8_t chamberHeaterRequest;
+
+extern float proposedPlenumTempSetpoint;
+extern float proposedChamberTempSetpoint;
+extern float proposedPlenumTargetTemp;
+extern float proposedPlenumTargetPressure;
 
 void USB_Transmit(const char *fmt, ...);
 void USB_Receive(uint8_t *data, uint32_t length);
-void USB_ProcessCommand(void);
-void USB_StreamData(void);
+void usbStreamTask(void);
+void usbCommandTask(void);
+void resetAllRequests(void);
 
 #endif /* INC_USB_H_ */

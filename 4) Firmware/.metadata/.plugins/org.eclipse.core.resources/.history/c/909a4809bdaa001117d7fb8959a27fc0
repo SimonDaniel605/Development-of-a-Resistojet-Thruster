@@ -1,0 +1,91 @@
+/*
+ * control.c
+ *
+ *  Created on: Aug 31, 2026
+ *      Author: Simon
+ */
+
+#include "control.h"
+
+typedef enum
+{
+    MODE_EXPERIMENTAL,
+    MODE_MANUAL,
+    MODE_RESTRICTED_MANUAL
+} ThrusterMode_t;
+
+typedef enum
+{
+    STATE_LOADED,
+    STATE_UNLOADED,
+    STATE_SETTLING,
+    STATE_PRIMING,
+    STATE_PRIMED,
+    STATE_FIRING,
+    STATE_ABORT
+} ThrusterState_t;
+
+// Thruster mode and state
+ThrusterMode_t thrusterMode = MODE_EXPERIMENTAL;
+ThrusterState_t thrusterState = STATE_LOADED;
+
+// Thruster control targets
+float plenumTempSetpoint = 0.0f;
+float chamberTempSetpoint = 0.0f;
+float plenumTargetTemp = 0.0f;
+float plenumTargetPressure = 0.0f;
+
+void PIDFunc(void){}
+
+void thrusterModeHandler(void){
+	switch(thrusterMode)
+	{
+	case MODE_EXPERIMENTAL:
+		break;
+	case MODE_MANUAL:
+		break;
+	case MODE_RESTRICTED_MANUAL:
+		break;
+	}
+}
+
+void thrusterStateHandler(void){
+	switch(thrusterState)
+	{
+	case STATE_LOADED:
+		if (manualRequest){}
+		else if (experimentalRequest){}
+		else if (abortThrusterRequest){}
+		else if (settleThrusterRequest){}
+		else if (primeThrusterRequest){}
+		else if (startThrusterRequest){}
+		else if (streamOnRequest){}
+		else if (streamOffRequest){}
+		else if (fillValveOpenRequest){}
+		else if (fillValveCloseRequest){}
+		else if (plenumValveOpenRequest){}
+		else if (plenumValveCloseRequest){}
+		else if (chamberValveOpenRequest){}
+		else if (chamberValveCloseRequest){}
+		else if (plenumHeaterRequest){}
+		else if (chamberHeaterRequest){}
+		resetAllRequests();
+		break;
+	case STATE_UNLOADED:
+
+		break;
+	case STATE_SETTLING:
+		break;
+	case STATE_PRIMING:
+		break;
+	case STATE_PRIMED:
+		break;
+	case STATE_FIRING:
+		break;
+	case STATE_ABORT:
+		break;
+	default:
+		thrusterState = STATE_ABORT;
+		break;
+	}
+}

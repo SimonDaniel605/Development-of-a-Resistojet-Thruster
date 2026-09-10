@@ -1,4 +1,12 @@
-22:50:33 **** Incremental Build of configuration Debug for project ResistojetV1 ****
+10:27:31 **** Incremental Build of configuration Debug for project ResistojetV1 ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G491xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ResistojetV1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\4) Firmware\ResistojetV1\STM32G491CCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ResistojetV1.map" -Wl,--gc-sections -static -u _scanf_float -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/usb.o:C:/Users/Simon/Projects/MEng Electronics/Development of a Resistojet Thruster/4) Firmware/ResistojetV1/Debug/../Core/Src/usb.c:22: multiple definition of `streamFlag'; ./Core/Src/main.o:C:/Users/Simon/Projects/MEng Electronics/Development of a Resistojet Thruster/4) Firmware/ResistojetV1/Debug/../Core/Src/main.c:67: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:68: ResistojetV1.elf] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+10:30:43 **** Incremental Build of configuration Debug for project ResistojetV1 ****
 make -j20 all 
 arm-none-eabi-gcc "../USB_Device/App/usbd_cdc_if.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G491xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"USB_Device/App/usbd_cdc_if.d" -MT"USB_Device/App/usbd_cdc_if.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "USB_Device/App/usbd_cdc_if.o"
 arm-none-eabi-gcc "../Core/Src/control.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G491xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/control.d" -MT"Core/Src/control.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/control.o"
@@ -10,8 +18,300 @@ Finished building target: ResistojetV1.elf
 arm-none-eabi-size  ResistojetV1.elf 
 arm-none-eabi-objdump -h -S ResistojetV1.elf  > "ResistojetV1.list"
    text	   data	    bss	    dec	    hex	filename
-  71892	    844	  10148	  82884	  143c4	ResistojetV1.elf
+  71788	    844	  10164	  82796	  1436c	ResistojetV1.elf
 Finished building: default.size.stdout
  
 Finished building: ResistojetV1.list
+ 
+10:30:44 **** Incremental Build of configuration Debug for project TestPCB ****
+make -j20 all 
+arm-none-eabi-size  TestPCB.elf 
+   text	   data	    bss	    dec	    hex	filename
+  48888	    468	   2340	  51696	   c9f0	TestPCB.elf
+Finished building: default.size.stdout
+ 
+11:04:28 **** Build of configuration Debug for project ResistojetV1 ****
+make -j20 all 
+arm-none-eabi-gcc "../USB_Device/App/usbd_cdc_if.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G491xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"USB_Device/App/usbd_cdc_if.d" -MT"USB_Device/App/usbd_cdc_if.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "USB_Device/App/usbd_cdc_if.o"
+arm-none-eabi-gcc "../Core/Src/control.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G491xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/control.d" -MT"Core/Src/control.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/control.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G491xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32g4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G491xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32g4xx_hal_msp.d" -MT"Core/Src/stm32g4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32g4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32g4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G491xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32g4xx_it.d" -MT"Core/Src/stm32g4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32g4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/usb.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G491xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/usb.d" -MT"Core/Src/usb.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/usb.o"
+In file included from ../Core/Src/stm32g4xx_it.c:21:
+../Core/Inc/main.h:64:16: warning: 'settlingFlag' initialized and declared 'extern'
+   64 | extern uint8_t settlingFlag = 0;
+      |                ^~~~~~~~~~~~
+In file included from ../Core/Src/stm32g4xx_hal_msp.c:23:
+../Core/Inc/main.h:64:16: warning: 'settlingFlag' initialized and declared 'extern'
+   64 | extern uint8_t settlingFlag = 0;
+      |                ^~~~~~~~~~~~
+../Core/Inc/main.h:65:16: warning: 'primingFlag' initialized and declared 'extern'
+   65 | extern uint8_t primingFlag = 0;
+      |                ^~~~~~~~~~~
+../Core/Inc/main.h:65:16: warning: 'primingFlag' initialized and declared 'extern'
+   65 | extern uint8_t primingFlag = 0;
+      |                ^~~~~~~~~~~
+../Core/Inc/main.h:66:16: warning: 'firingFlag' initialized and declared 'extern'
+   66 | extern uint8_t firingFlag = 0;
+      |                ^~~~~~~~~~
+../Core/Inc/main.h:66:16: warning: 'firingFlag' initialized and declared 'extern'
+   66 | extern uint8_t firingFlag = 0;
+      |                ^~~~~~~~~~
+In file included from ../Core/Src/control.c:8:
+../Core/Inc/main.h:64:16: warning: 'settlingFlag' initialized and declared 'extern'
+   64 | extern uint8_t settlingFlag = 0;
+      |                ^~~~~~~~~~~~
+In file included from ../Core/Src/usb.c:8:
+../Core/Inc/main.h:64:16: warning: 'settlingFlag' initialized and declared 'extern'
+   64 | extern uint8_t settlingFlag = 0;
+      |                ^~~~~~~~~~~~
+In file included from ../Core/Src/main.c:20:
+../Core/Inc/main.h:64:16: warning: 'settlingFlag' initialized and declared 'extern'
+   64 | extern uint8_t settlingFlag = 0;
+      |                ^~~~~~~~~~~~
+../Core/Inc/main.h:65:16: warning: 'primingFlag' initialized and declared 'extern'
+   65 | extern uint8_t primingFlag = 0;
+      |                ^~~~~~~~~~~
+../Core/Inc/main.h:65:16: warning: 'primingFlag' initialized and declared 'extern'
+   65 | extern uint8_t primingFlag = 0;
+      |                ^~~~~~~~~~~
+../Core/Inc/main.h:65:16: warning: 'primingFlag' initialized and declared 'extern'
+   65 | extern uint8_t primingFlag = 0;
+      |                ^~~~~~~~~~~
+../Core/Inc/main.h:66:16: warning: 'firingFlag' initialized and declared 'extern'
+   66 | extern uint8_t firingFlag = 0;
+      |                ^~~~~~~~~~
+../Core/Inc/main.h:66:16: warning: 'firingFlag' initialized and declared 'extern'
+   66 | extern uint8_t firingFlag = 0;
+      |                ^~~~~~~~~~
+../Core/Inc/main.h:66:16: warning: 'firingFlag' initialized and declared 'extern'
+   66 | extern uint8_t firingFlag = 0;
+      |                ^~~~~~~~~~
+../Core/Src/control.c: In function 'thrusterModeHandler':
+../Core/Src/control.c:181:13: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  181 |             if (experimentalRequest &&
+      |             ^~
+../Core/Src/control.c:185:17: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  185 |                 break;
+      |                 ^~~~~
+../Core/Src/control.c: In function 'thrusterStateHandler':
+../Core/Src/control.c:359:35: error: 'FILL_VALVE_Port' undeclared (first use in this function)
+  359 |                 HAL_GPIO_WritePin(FILL_VALVE_Port, FILL_VALVE_Pin, GPIO_PIN_RESET);
+      |                                   ^~~~~~~~~~~~~~~
+../Core/Src/control.c:359:35: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:67:9: error: redefinition of 'settlingFlag'
+   67 | uint8_t settlingFlag = 0;
+      |         ^~~~~~~~~~~~
+../Core/Inc/main.h:64:16: note: previous definition of 'settlingFlag' with type 'uint8_t' {aka 'unsigned char'}
+   64 | extern uint8_t settlingFlag = 0;
+      |                ^~~~~~~~~~~~
+../Core/Src/main.c:68:9: error: redefinition of 'primingFlag'
+   68 | uint8_t primingFlag = 0;
+      |         ^~~~~~~~~~~
+../Core/Inc/main.h:65:16: note: previous definition of 'primingFlag' with type 'uint8_t' {aka 'unsigned char'}
+   65 | extern uint8_t primingFlag = 0;
+      |                ^~~~~~~~~~~
+../Core/Src/main.c:69:9: error: redefinition of 'firingFlag'
+   69 | uint8_t firingFlag = 0;
+      |         ^~~~~~~~~~
+../Core/Inc/main.h:66:16: note: previous definition of 'firingFlag' with type 'uint8_t' {aka 'unsigned char'}
+   66 | extern uint8_t firingFlag = 0;
+      |                ^~~~~~~~~~
+../Core/Src/control.c:359:52: error: 'FILL_VALVE_Pin' undeclared (first use in this function)
+  359 |                 HAL_GPIO_WritePin(FILL_VALVE_Port, FILL_VALVE_Pin, GPIO_PIN_RESET);
+      |                                                    ^~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/control.c:360:35: error: 'PLENUM_VALVE_Port' undeclared (first use in this function)
+  360 |                 HAL_GPIO_WritePin(PLENUM_VALVE_Port, PLENUM_VALVE_Pin, GPIO_PIN_RESET);
+      |                                   ^~~~~~~~~~~~~~~~~
+../Core/Src/control.c:360:54: error: 'PLENUM_VALVE_Pin' undeclared (first use in this function)
+  360 |                 HAL_GPIO_WritePin(PLENUM_VALVE_Port, PLENUM_VALVE_Pin, GPIO_PIN_RESET);
+      |                                                      ^~~~~~~~~~~~~~~~
+../Core/Src/control.c:361:35: error: 'CHAMBER_VALVE_Port' undeclared (first use in this function)
+  361 |                 HAL_GPIO_WritePin(CHAMBER_VALVE_Port, CHAMBER_VALVE_Pin, GPIO_PIN_RESET);
+      |                                   ^~~~~~~~~~~~~~~~~~
+../Core/Src/control.c:361:55: error: 'CHAMBER_VALVE_Pin' undeclared (first use in this function)
+  361 |                 HAL_GPIO_WritePin(CHAMBER_VALVE_Port, CHAMBER_VALVE_Pin, GPIO_PIN_RESET);
+      |                                                       ^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32g4xx_hal_conf.h:344,
+                 from ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30:
+../Core/Src/control.c:366:47: error: 'HEATER1_CHANNEL' undeclared (first use in this function)
+  366 |                 __HAL_TIM_SET_COMPARE(&htim4, HEATER1_CHANNEL, 0);
+      |                                               ^~~~~~~~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h:1672:6: note: in definition of macro '__HAL_TIM_SET_COMPARE'
+ 1672 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |      ^~~~~~~~~~~
+../Core/Src/control.c:366:40: error: 'htim4' undeclared (first use in this function)
+  366 |                 __HAL_TIM_SET_COMPARE(&htim4, HEATER1_CHANNEL, 0);
+      |                                        ^~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h:1672:41: note: in definition of macro '__HAL_TIM_SET_COMPARE'
+ 1672 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |                                         ^~~~~~~~~~
+../Core/Src/control.c:367:47: error: 'HEATER2_CHANNEL' undeclared (first use in this function)
+  367 |                 __HAL_TIM_SET_COMPARE(&htim4, HEATER2_CHANNEL, 0);
+      |                                               ^~~~~~~~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h:1672:6: note: in definition of macro '__HAL_TIM_SET_COMPARE'
+ 1672 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |      ^~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/control.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+11:04:29 **** Build of configuration Debug for project TestPCB ****
+make -j20 all 
+arm-none-eabi-size  TestPCB.elf 
+   text	   data	    bss	    dec	    hex	filename
+  48888	    468	   2340	  51696	   c9f0	TestPCB.elf
+Finished building: default.size.stdout
+ 
+11:05:24 **** Incremental Build of configuration Debug for project ResistojetV1 ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/control.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G491xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/control.d" -MT"Core/Src/control.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/control.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G491xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32g4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G491xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32g4xx_hal_msp.d" -MT"Core/Src/stm32g4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32g4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32g4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G491xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32g4xx_it.d" -MT"Core/Src/stm32g4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32g4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/usb.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G491xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/usb.d" -MT"Core/Src/usb.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/usb.o"
+../Core/Src/control.c: In function 'thrusterModeHandler':
+../Core/Src/control.c:181:13: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  181 |             if (experimentalRequest &&
+      |             ^~
+../Core/Src/control.c:185:17: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  185 |                 break;
+      |                 ^~~~~
+../Core/Src/control.c: In function 'thrusterStateHandler':
+../Core/Src/control.c:359:35: error: 'FILL_VALVE_Port' undeclared (first use in this function)
+  359 |                 HAL_GPIO_WritePin(FILL_VALVE_Port, FILL_VALVE_Pin, GPIO_PIN_RESET);
+      |                                   ^~~~~~~~~~~~~~~
+../Core/Src/control.c:359:35: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/control.c:359:52: error: 'FILL_VALVE_Pin' undeclared (first use in this function)
+  359 |                 HAL_GPIO_WritePin(FILL_VALVE_Port, FILL_VALVE_Pin, GPIO_PIN_RESET);
+      |                                                    ^~~~~~~~~~~~~~
+../Core/Src/control.c:360:35: error: 'PLENUM_VALVE_Port' undeclared (first use in this function)
+  360 |                 HAL_GPIO_WritePin(PLENUM_VALVE_Port, PLENUM_VALVE_Pin, GPIO_PIN_RESET);
+      |                                   ^~~~~~~~~~~~~~~~~
+../Core/Src/control.c:360:54: error: 'PLENUM_VALVE_Pin' undeclared (first use in this function)
+  360 |                 HAL_GPIO_WritePin(PLENUM_VALVE_Port, PLENUM_VALVE_Pin, GPIO_PIN_RESET);
+      |                                                      ^~~~~~~~~~~~~~~~
+../Core/Src/control.c:361:35: error: 'CHAMBER_VALVE_Port' undeclared (first use in this function)
+  361 |                 HAL_GPIO_WritePin(CHAMBER_VALVE_Port, CHAMBER_VALVE_Pin, GPIO_PIN_RESET);
+      |                                   ^~~~~~~~~~~~~~~~~~
+../Core/Src/control.c:361:55: error: 'CHAMBER_VALVE_Pin' undeclared (first use in this function)
+  361 |                 HAL_GPIO_WritePin(CHAMBER_VALVE_Port, CHAMBER_VALVE_Pin, GPIO_PIN_RESET);
+      |                                                       ^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32g4xx_hal_conf.h:344,
+                 from ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/control.c:8:
+../Core/Src/control.c:366:47: error: 'HEATER1_CHANNEL' undeclared (first use in this function)
+  366 |                 __HAL_TIM_SET_COMPARE(&htim4, HEATER1_CHANNEL, 0);
+      |                                               ^~~~~~~~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h:1672:6: note: in definition of macro '__HAL_TIM_SET_COMPARE'
+ 1672 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |      ^~~~~~~~~~~
+../Core/Src/control.c:366:40: error: 'htim4' undeclared (first use in this function)
+  366 |                 __HAL_TIM_SET_COMPARE(&htim4, HEATER1_CHANNEL, 0);
+      |                                        ^~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h:1672:41: note: in definition of macro '__HAL_TIM_SET_COMPARE'
+ 1672 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |                                         ^~~~~~~~~~
+../Core/Src/control.c:367:47: error: 'HEATER2_CHANNEL' undeclared (first use in this function)
+  367 |                 __HAL_TIM_SET_COMPARE(&htim4, HEATER2_CHANNEL, 0);
+      |                                               ^~~~~~~~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h:1672:6: note: in definition of macro '__HAL_TIM_SET_COMPARE'
+ 1672 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |      ^~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/control.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+11:05:25 **** Incremental Build of configuration Debug for project TestPCB ****
+make -j20 all 
+arm-none-eabi-size  TestPCB.elf 
+   text	   data	    bss	    dec	    hex	filename
+  48888	    468	   2340	  51696	   c9f0	TestPCB.elf
+Finished building: default.size.stdout
+ 
+11:06:27 **** Incremental Build of configuration Debug for project ResistojetV1 ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/control.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G491xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/control.d" -MT"Core/Src/control.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/control.o"
+../Core/Src/control.c: In function 'thrusterModeHandler':
+../Core/Src/control.c:182:13: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  182 |             if (experimentalRequest &&
+      |             ^~
+../Core/Src/control.c:186:17: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  186 |                 break;
+      |                 ^~~~~
+In file included from ../Core/Inc/stm32g4xx_hal_conf.h:344,
+                 from ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/control.c:8:
+../Core/Src/control.c: In function 'thrusterStateHandler':
+../Core/Src/control.c:367:40: error: 'htim4' undeclared (first use in this function)
+  367 |                 __HAL_TIM_SET_COMPARE(&htim4, HEATER1_CHANNEL, 0);
+      |                                        ^~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h:1672:41: note: in definition of macro '__HAL_TIM_SET_COMPARE'
+ 1672 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |                                         ^~~~~~~~~~
+../Core/Src/control.c:367:40: note: each undeclared identifier is reported only once for each function it appears in
+  367 |                 __HAL_TIM_SET_COMPARE(&htim4, HEATER1_CHANNEL, 0);
+      |                                        ^~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h:1672:41: note: in definition of macro '__HAL_TIM_SET_COMPARE'
+ 1672 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |                                         ^~~~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/control.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+11:06:28 **** Incremental Build of configuration Debug for project TestPCB ****
+make -j20 all 
+arm-none-eabi-size  TestPCB.elf 
+   text	   data	    bss	    dec	    hex	filename
+  48888	    468	   2340	  51696	   c9f0	TestPCB.elf
+Finished building: default.size.stdout
+ 
+11:10:13 **** Incremental Build of configuration Debug for project ResistojetV1 ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/control.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G491xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/control.d" -MT"Core/Src/control.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/control.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G491xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32g4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G491xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32g4xx_hal_msp.d" -MT"Core/Src/stm32g4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32g4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32g4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G491xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32g4xx_it.d" -MT"Core/Src/stm32g4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32g4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/usb.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G491xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/usb.d" -MT"Core/Src/usb.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/usb.o"
+../Core/Src/control.c: In function 'thrusterModeHandler':
+../Core/Src/control.c:182:13: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  182 |             if (experimentalRequest &&
+      |             ^~
+../Core/Src/control.c:186:17: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  186 |                 break;
+      |                 ^~~~~
+arm-none-eabi-gcc -o "ResistojetV1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\4) Firmware\ResistojetV1\STM32G491CCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ResistojetV1.map" -Wl,--gc-sections -static -u _scanf_float -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `controlTask':
+C:/Users/Simon/Projects/MEng Electronics/Development of a Resistojet Thruster/4) Firmware/ResistojetV1/Debug/../Core/Src/main.c:679: undefined reference to `primingFunc'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:68: ResistojetV1.elf] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+11:10:15 **** Incremental Build of configuration Debug for project TestPCB ****
+make -j20 all 
+arm-none-eabi-size  TestPCB.elf 
+   text	   data	    bss	    dec	    hex	filename
+  48888	    468	   2340	  51696	   c9f0	TestPCB.elf
+Finished building: default.size.stdout
+ 
+11:10:46 **** Incremental Build of configuration Debug for project ResistojetV1 ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G491xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ResistojetV1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\4) Firmware\ResistojetV1\STM32G491CCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ResistojetV1.map" -Wl,--gc-sections -static -u _scanf_float -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ResistojetV1.elf
+ 
+arm-none-eabi-size  ResistojetV1.elf 
+arm-none-eabi-objdump -h -S ResistojetV1.elf  > "ResistojetV1.list"
+   text	   data	    bss	    dec	    hex	filename
+  74892	    844	  10212	  85948	  14fbc	ResistojetV1.elf
+Finished building: default.size.stdout
+ 
+Finished building: ResistojetV1.list
+ 
+11:10:48 **** Incremental Build of configuration Debug for project TestPCB ****
+make -j20 all 
+arm-none-eabi-size  TestPCB.elf 
+   text	   data	    bss	    dec	    hex	filename
+  48888	    468	   2340	  51696	   c9f0	TestPCB.elf
+Finished building: default.size.stdout
  
