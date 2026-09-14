@@ -92,6 +92,8 @@ void stateTask(void);
 void controlTask(void);
 void valveTask(void);
 void debugLEDTask(void);
+
+float interpolateLinear(float x, float x1, float x2, float y1, float y2);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -676,7 +678,7 @@ void stateTask(void){
 
 void controlTask(void){
 	settlingFunc();
-	//primingFunc();
+	primingFunc();
 	firingFunc();
 	PIDFunc();
 }
@@ -691,6 +693,15 @@ void valveTask(void){
 	HAL_GPIO_WritePin(CHAMBER_VALVE_Port, CHAMBER_VALVE_Pin,
 			chamberValveFlag ? GPIO_PIN_SET : GPIO_PIN_RESET);
 }
+
+float interpolateLinear(float x, float x1, float x2,
+                        float y1,float y2){
+    if (x2 == x1)
+    	return y1;
+    float fraction = (x - x1) / (x2 - x1);
+    return y1 + fraction * (y2 - y1);
+}
+
 
 void debugLEDTask(void){
 

@@ -38,8 +38,8 @@ uint8_t chamberValveCloseRequest = 0;
 uint8_t plenumHeaterRequest = 0;
 uint8_t chamberHeaterRequest = 0;
 
-float proposedPlenumTempSetpoint = 0.0f;
-float proposedChamberTempSetpoint = 0.0f;
+char proposedPropellantSpecies[16];
+float proposedChamberTemp = 0.0f;
 float proposedPlenumTargetTemp = 0.0f;
 float proposedPlenumTargetPressure = 0.0f;
 
@@ -128,15 +128,20 @@ void usbCommandTask(void)
     else if (strcmp(usbRxBuffer, "*PLENUM VALVE CLOSE#") == 0)   plenumValveCloseRequest = 1;
     else if (strcmp(usbRxBuffer, "*CHAMBER VALVE OPEN#") == 0)   chamberValveOpenRequest = 1;
     else if (strcmp(usbRxBuffer, "*CHAMBER VALVE CLOSE#") == 0) chamberValveCloseRequest = 1;
-    else if (strncmp(usbRxBuffer, "*PRIME PLENUM ", 14) == 0){
-    	primeThrusterRequest = 1;
+    else if (strncmp(usbRxBuffer, "*PRIME ", 14) == 0){
+
+    	char species[16];
     	float temp;
     	float pressure;
-    	if (sscanf(usbRxBuffer, "*PRIME PLENUM %f %f#", &temp, &pressure) == 2)
+    	float chamberTemp;
+    	if (sscanf(usbRxBuffer, "*PRIME %15s %f %f %f#", species, &temp, &pressure, &chamberTemp) == 4)
     	{
-
+    		strcpy(proposedPropellantSpecies, species);
     		proposedPlenumTargetTemp = temp;
     		proposedPlenumTargetPressure = pressure;
+    		proposedChamberTemp = chamberTemp;
+
+    		primeThrusterRequest = 1;
     	}
     }
     else if (strncmp(usbRxBuffer, "*PLENUM HEATER ", 16) == 0){
@@ -145,7 +150,7 @@ void usbCommandTask(void)
 
         if (sscanf(usbRxBuffer, "*PLENUM HEATER %f#", &setpoint) == 1)
         {
-        	proposedPlenumTempSetpoint = setpoint;
+        	proposedPlenumTargetTemp = setpoint;
 
             USB_Transmit("Plenum heater setpoint = %.1f\r\n",
                          proposedPlenumTempSetpoint);
@@ -157,7 +162,7 @@ void usbCommandTask(void)
 
         if (sscanf(usbRxBuffer, "*CHAMBER HEATER %f#", &setpoint) == 1)
         {
-        	proposedChamberTempSetpoint = setpoint;
+        	proposedChamberTemp = setpoint;
 
             USB_Transmit("Chamber heater setpoint = %.1f\r\n",
             		proposedChamberTempSetpoint);

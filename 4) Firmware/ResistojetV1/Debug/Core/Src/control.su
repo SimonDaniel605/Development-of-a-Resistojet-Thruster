@@ -1,7 +1,0 @@
-../Core/Src/control.c:52:6:PIDFunc	4	static
-../Core/Src/control.c:54:6:settlingFunc	24	static
-../Core/Src/control.c:88:6:firingFunc	16	static
-../Core/Src/control.c:112:13:thrusterModeToString	16	static
-../Core/Src/control.c:130:13:thrusterStateToString	16	static
-../Core/Src/control.c:164:6:thrusterModeHandler	4	static
-../Core/Src/control.c:190:6:thrusterStateHandler	16	static

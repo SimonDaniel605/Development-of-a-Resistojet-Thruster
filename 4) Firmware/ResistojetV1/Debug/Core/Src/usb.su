@@ -1,5 +1,0 @@
-../Core/Src/usb.c:46:6:USB_Transmit	16	static
-../Core/Src/usb.c:61:6:USB_Receive	16	static
-../Core/Src/usb.c:72:6:usbStreamTask	96	static
-../Core/Src/usb.c:92:6:resetAllRequests	4	static
-../Core/Src/usb.c:113:6:usbCommandTask	24	static

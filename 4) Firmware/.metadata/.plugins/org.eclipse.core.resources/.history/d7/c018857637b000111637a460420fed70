@@ -1,0 +1,75 @@
+/*
+ * sensors.c
+ *
+ *  Created on: Aug 31, 2026
+ *      Author: Simon
+ */
+
+#include "sensors.h"
+#include "lookup_tables.h"
+
+float thrust;
+
+float tankPressure;
+float plenumPressure;
+float chamberPressure;
+
+float plenumGasTemperature;       // thermistor
+float plenumBodyTemperature;      // thermocouple
+float chamberHeaterTemperature1;  // thermocouple
+float chamberHeaterTemperature2;  // thermocouple
+float chamberGasTemperature;      // thermocouple
+
+
+float ADC_CountsToVolts(uint16_t counts, float vref)
+{
+    return ((float)counts * vref) / 4095.0f;
+}
+
+float ADC_GetThermistorVoltage(const volatile uint16_t *buf, float vref)
+{
+    return ADC_CountsToVolts(buf[ADC_IDX_THERMISTOR], vref);
+}
+
+float ADC_GetLoadCellVoltage(const volatile uint16_t *buf, float vref)
+{
+    return ADC_CountsToVolts(buf[ADC_IDX_LOADCELL], vref);
+}
+
+float ADC_GetThermistorResistanceOhms(const volatile uint16_t *buf, float vref)
+{
+    float vTherm = ADC_GetThermistorVoltage(buf, vref);
+
+    if (vTherm <= 0.0f)
+    {
+        return thermLUT[THERM_LUT_SIZE - 1U].resistanceOhms;
+    }
+
+    if (vTherm >= vref)
+    {
+        return thermLUT[0].resistanceOhms;
+    }
+
+    if (THERMISTOR_TO_GND)
+    {
+        /* Vref -- Rfixed -- ADC node -- Thermistor -- GND */
+        return THERM_FIXED_RESISTOR_OHMS * vTherm / (vref - vTherm);
+    }
+    else
+    {
+        /* Vref -- Thermistor -- ADC node -- Rfixed -- GND */
+        return THERM_FIXED_RESISTOR_OHMS * (vref - vTherm) / vTherm;
+    }
+}
+
+float ADC_GetThermistorTempC(const volatile uint16_t *buf, float vref)
+{
+    float rTherm = ADC_GetThermistorResistanceOhms(buf, vref);
+    return interpolateTempFromResistance(rTherm);
+}
+
+float ADC_GetLoadCellForceN(const volatile uint16_t *buf)
+{
+    float counts = (float)buf[ADC_IDX_LOADCELL];
+    return (counts - LOADCELL_ZERO_COUNTS) / LOADCELL_COUNTS_PER_N;
+}

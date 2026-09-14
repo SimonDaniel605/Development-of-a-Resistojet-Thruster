@@ -27,7 +27,18 @@ typedef enum
     STATE_ABORT
 } ThrusterState_t;
 
+typedef enum
+{
+	PRIMING_OFF,
+	PRIMING_FILL,
+    PRIMING_HEAT,
+} PrimingStage_t;
+
 void PIDFunc(void);
+
+float lookupDensity(PropellantSpecies_t species, float temperature, float pressure);
+float lookupPressure(PropellantSpecies_t species, float temperature, float density);
+
 void settlingFunc(void);
 void primingFunc(void);
 void firingFunc(void);

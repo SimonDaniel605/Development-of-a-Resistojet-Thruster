@@ -6,6 +6,7 @@
  */
 
 #include "sensors.h"
+#include "lookup_tables.h"
 
 float thrust;
 
@@ -14,8 +15,10 @@ float plenumPressure;
 float chamberPressure;
 
 float plenumGasTemperature;       // thermistor
-
 float plenumBodyTemperature;      // thermocouple
 float chamberHeaterTemperature1;  // thermocouple
 float chamberHeaterTemperature2;  // thermocouple
 float chamberGasTemperature;      // thermocouple
+
+
+

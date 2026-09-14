@@ -20,8 +20,10 @@
 #define SETTLING_TEMPERATURE_TOLERANCE 0.2f    // K
 #define SETTLING_TIME                  2000    // ms
 // Plenum priming criteria
+#define PRIMING_PRESSURE_CORRECTION    0.05f   // bar
 #define PRIMING_PRESSURE_TOLERANCE     0.05f   // bar
 #define PRIMING_TEMPERATURE_TOLERANCE  1.0f    // K
+#define PRIMING_TIME				   2000	   // ms
 // Thruster firing criteria
 #define FIRING_PRESSURE_TOLERANCE      0.05f   // bar
 #define FIRING_TIME                    2000    // ms
@@ -29,20 +31,22 @@
 // Thruster mode and state
 ThrusterMode_t thrusterMode = MODE_EXPERIMENTAL;
 ThrusterState_t thrusterState = STATE_LOADED;
+PrimingStage_t primingStage = PRIMING_OFF;
 
 // Thruster control targets
 float plenumTempSetpoint = 0.0f;
 float chamberTempSetpoint = 0.0f;
 float plenumTargetTemp = 0.0f;
-float plenumTargetPressure = 0.0f;
+float fillPressure = 0.0f;
 
 // Previous settling variables
 uint32_t settle_last = 0;
 float settle_last_pressure = 0.0f;
 float settle_last_temp = 0.0f;
 
-// Priming variables
-float primingFillPressure = 0.0f;
+// Previous settling variables
+uint32_t priming_last = 0;
+float priming_last_temp = 0.0f;
 
 // Previous settling variables
 uint32_t firing_last = 0;
@@ -50,6 +54,78 @@ float firing_last_pressure = 0.0f;
 float firing_last_temp = 0.0f;
 
 void PIDFunc(void){}
+
+float lookupDensity(PropellantSpecies_t species, float temperature, float pressure){
+    const LookupEntry *table = NULL;
+    uint32_t tableSize = 0;
+
+    switch (species){
+        case R134A:
+            table = R134a_lookupTable;
+            tableSize = sizeof(R134a_lookupTable) /
+                        sizeof(R134a_lookupTable[0]);
+            break;
+        case R245FA:
+            table = R245fa_lookupTable;
+            tableSize = sizeof(R245fa_lookupTable) /
+                        sizeof(R245fa_lookupTable[0]);
+            break;
+        default:
+            return 0.0f;
+    }
+
+    for (uint32_t i = 0; i < tableSize - 1; i++){
+        if (table[i].temperature == temperature &&
+            table[i + 1].temperature == temperature &&
+            pressure >= table[i].pressure &&
+            pressure <= table[i + 1].pressure){
+            return interpolateLinear(
+                pressure,
+                table[i].pressure,
+                table[i + 1].pressure,
+                table[i].density,
+                table[i + 1].density
+            );
+        }
+    }
+    return 0.0f;
+}
+
+float lookupPressure(PropellantSpecies_t species, float temperature, float density){
+    const LookupEntry *table = NULL;
+    uint32_t tableSize = 0;
+
+    switch (species){
+        case R134A:
+            table = R134a_lookupTable;
+            tableSize = sizeof(R134a_lookupTable) /
+                        sizeof(R134a_lookupTable[0]);
+            break;
+        case R245FA:
+            table = R245fa_lookupTable;
+            tableSize = sizeof(R245fa_lookupTable) /
+                        sizeof(R245fa_lookupTable[0]);
+            break;
+        default:
+            return 0.0f;
+    }
+
+    for (uint32_t i = 0; i < tableSize - 1; i++){
+        if (table[i].temperature == temperature &&
+            table[i + 1].temperature == temperature &&
+            density >= table[i].density &&
+            density <= table[i + 1].density){
+            return interpolateLinear(
+                density,
+                table[i].density,
+                table[i + 1].density,
+                table[i].pressure,
+                table[i + 1].pressure
+            );
+        }
+    }
+    return 0.0f;
+}
 
 void settlingFunc(void){
     if (!settlingFlag)
@@ -80,11 +156,47 @@ void settlingFunc(void){
         settle_last_temp = settle_now_temp;
     }
 }
-/*
+
 void primingFunc(void){
-	if (primingFlag){}
-	if () primingFlag = 0;
-}*/
+	if (!primingFlag)
+		return;
+	switch(primingStage){
+	case PRIMING_FILL:
+		plenumValveFlag = 1;
+		if(plenumPressure>=fillPressure-PRIMING_PRESSURE_CORRECTION){
+			plenumValveFlag = 0;
+
+		    priming_last = HAL_GetTick();
+		    priming_last_temp = plenumGasTemperature;
+
+			primingStage = PRIMING_HEAT;
+		}
+		break;
+	case PRIMING_HEAT:
+		plenumTargetTemp = proposedPlenumTargetTemp;
+	    uint32_t priming_now = HAL_GetTick();
+		if ((priming_now - priming_last) >= PRIMING_TIME){
+			float priming_now_temp = plenumGasTemperature;
+			if ((fabsf(priming_now_temp - priming_last_temp) < SETTLING_TEMPERATURE_TOLERANCE) &&
+					(fabsf(priming_now_temp - plenumTargetTemp) < SETTLING_TEMPERATURE_TOLERANCE)){
+				// Plenum has settled
+			    primingFlag = 0;
+			    primingStage = PRIMING_OFF;
+			}
+			priming_last = priming_now;
+			priming_last_temp = priming_now_temp;
+		}
+	break;
+	case PRIMING_OFF:
+		plenumValveFlag = 0;
+		primingFlag = 0;
+	break;
+	default:
+		primingStage = PRIMING_OFF;
+	break;
+	}
+}
+
 void firingFunc(void){
 	if (!firingFlag)
 		return;
@@ -279,7 +391,13 @@ void thrusterStateHandler(void){
 		if (primeThrusterRequest&&
 			    thrusterMode == MODE_EXPERIMENTAL){
 			primingFlag = 1;
+			primingStage = PRIMING_FILL;
 			thrusterState = STATE_PRIMING;
+
+			float targetDensity = lookupDensity(proposedPropellantSpecies,
+					roundf(proposedPlenumTargetTemp), proposedPlenumTargetPressure);
+			fillPressure = lookupPressure(proposedPropellantSpecies,
+			        roundf(plenumBodyTemperature), targetDensity);
 		}
 		else if (streamOnRequest)  streamFlag = 1;
 		else if (streamOffRequest) streamFlag = 0;
