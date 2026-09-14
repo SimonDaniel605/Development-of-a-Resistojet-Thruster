@@ -34,8 +34,9 @@ Core/Src/control.o: ../Core/Src/control.c ../Core/Inc/main.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h \
- ../Core/Inc/pins.h ../Core/Inc/main.h ../Core/Inc/control.h \
- ../Core/Inc/sensors.h ../Core/Inc/usb.h
+ ../Core/Inc/pins.h ../Core/Inc/main.h ../Core/Inc/lookup_tables.h \
+ ../Core/Inc/control.h ../Core/Inc/sensors.h ../Core/Inc/usb.h \
+ ../Core/Inc/lookup_tables.h
 ../Core/Inc/main.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:
 ../Core/Inc/stm32g4xx_hal_conf.h:
@@ -74,6 +75,8 @@ Core/Src/control.o: ../Core/Src/control.c ../Core/Inc/main.h \
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h:
 ../Core/Inc/pins.h:
 ../Core/Inc/main.h:
+../Core/Inc/lookup_tables.h:
 ../Core/Inc/control.h:
 ../Core/Inc/sensors.h:
 ../Core/Inc/usb.h:
+../Core/Inc/lookup_tables.h:

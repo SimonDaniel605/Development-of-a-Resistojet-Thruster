@@ -68,8 +68,6 @@ extern uint8_t streamFlag;
 extern uint8_t fillValveFlag;
 extern uint8_t plenumValveFlag;
 extern uint8_t chamberValveFlag;
-
-extern float interpolateLinear(float x, float x1, float x2, float y1,float y2);
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

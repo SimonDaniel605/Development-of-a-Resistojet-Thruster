@@ -9,6 +9,7 @@
 #define INC_USB_H_
 
 #include <stdint.h>
+#include "lookup_tables.h"
 
 extern uint8_t commandRequest;
 extern uint8_t manualRequest;
@@ -28,6 +29,7 @@ extern uint8_t chamberValveCloseRequest;
 extern uint8_t plenumHeaterRequest;
 extern uint8_t chamberHeaterRequest;
 
+extern PropellantSpecies_t proposedPropellantSpecies;
 extern float proposedPlenumTempSetpoint;
 extern float proposedChamberTempSetpoint;
 extern float proposedPlenumTargetTemp;

@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="ThrusterMode"/>
+		<item key="selection" value="proposedPlenumTem"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="proposedPlenumTem"/>
+			<item value="propel"/>
+			<item value="prop"/>
+			<item value="propell"/>
 			<item value="thrusterMode"/>
 			<item value="target"/>
 			<item value="resetAllRequests"/>
@@ -21,7 +25,7 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="976"/>
+		<item key="DIALOG_X_ORIGIN" value="628"/>
 		<item key="DIALOG_Y_ORIGIN" value="586"/>
 		<item key="DIALOG_WIDTH" value="414"/>
 		<item key="DIALOG_HEIGHT" value="432"/>

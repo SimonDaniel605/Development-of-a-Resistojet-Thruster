@@ -24,8 +24,8 @@ safeFluidName = matlab.lang.makeValidName(fluid);
 
 % Lookup table ranges
 
-temperatureGrid = 270:1:370;      % K
-pressureGrid = 0.1:0.1:6.0;     % bar
+temperatureGrid = 270:1:350;      % K
+pressureGrid = 0.2:0.2:6.0;     % bar
 
 nT = length(temperatureGrid);
 nP = length(pressureGrid);

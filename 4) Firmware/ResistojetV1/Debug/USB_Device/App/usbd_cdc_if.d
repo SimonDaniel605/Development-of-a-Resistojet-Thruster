@@ -42,7 +42,7 @@ USB_Device/App/usbd_cdc_if.o: ../USB_Device/App/usbd_cdc_if.c \
  ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h \
  ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h \
  ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h \
- ../Core/Inc/usb.h
+ ../Core/Inc/usb.h ../Core/Inc/lookup_tables.h
 ../USB_Device/App/usbd_cdc_if.h:
 ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h:
 ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h:
@@ -87,3 +87,4 @@ USB_Device/App/usbd_cdc_if.o: ../USB_Device/App/usbd_cdc_if.c \
 ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h:
 ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h:
 ../Core/Inc/usb.h:
+../Core/Inc/lookup_tables.h:

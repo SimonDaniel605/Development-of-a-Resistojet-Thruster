@@ -36,9 +36,6 @@ typedef enum
 
 void PIDFunc(void);
 
-float lookupDensity(PropellantSpecies_t species, float temperature, float pressure);
-float lookupPressure(PropellantSpecies_t species, float temperature, float density);
-
 void settlingFunc(void);
 void primingFunc(void);
 void firingFunc(void);

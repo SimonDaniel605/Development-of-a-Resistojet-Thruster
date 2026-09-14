@@ -1,0 +1,3 @@
+../Core/Src/lookup_tables.c:5095:7:interpolateLinear	40	static
+../Core/Src/lookup_tables.c:5103:7:lookupDensity	40	static
+../Core/Src/lookup_tables.c:5139:7:lookupPressure	40	static

@@ -8,6 +8,7 @@
 #include "main.h"
 #include "math.h"
 #include "pins.h"
+#include "lookup_tables.h"
 #include "control.h"
 #include "sensors.h"
 #include "usb.h"
@@ -54,78 +55,6 @@ float firing_last_pressure = 0.0f;
 float firing_last_temp = 0.0f;
 
 void PIDFunc(void){}
-
-float lookupDensity(PropellantSpecies_t species, float temperature, float pressure){
-    const LookupEntry *table = NULL;
-    uint32_t tableSize = 0;
-
-    switch (species){
-        case R134A:
-            table = R134a_lookupTable;
-            tableSize = sizeof(R134a_lookupTable) /
-                        sizeof(R134a_lookupTable[0]);
-            break;
-        case R245FA:
-            table = R245fa_lookupTable;
-            tableSize = sizeof(R245fa_lookupTable) /
-                        sizeof(R245fa_lookupTable[0]);
-            break;
-        default:
-            return 0.0f;
-    }
-
-    for (uint32_t i = 0; i < tableSize - 1; i++){
-        if (table[i].temperature == temperature &&
-            table[i + 1].temperature == temperature &&
-            pressure >= table[i].pressure &&
-            pressure <= table[i + 1].pressure){
-            return interpolateLinear(
-                pressure,
-                table[i].pressure,
-                table[i + 1].pressure,
-                table[i].density,
-                table[i + 1].density
-            );
-        }
-    }
-    return 0.0f;
-}
-
-float lookupPressure(PropellantSpecies_t species, float temperature, float density){
-    const LookupEntry *table = NULL;
-    uint32_t tableSize = 0;
-
-    switch (species){
-        case R134A:
-            table = R134a_lookupTable;
-            tableSize = sizeof(R134a_lookupTable) /
-                        sizeof(R134a_lookupTable[0]);
-            break;
-        case R245FA:
-            table = R245fa_lookupTable;
-            tableSize = sizeof(R245fa_lookupTable) /
-                        sizeof(R245fa_lookupTable[0]);
-            break;
-        default:
-            return 0.0f;
-    }
-
-    for (uint32_t i = 0; i < tableSize - 1; i++){
-        if (table[i].temperature == temperature &&
-            table[i + 1].temperature == temperature &&
-            density >= table[i].density &&
-            density <= table[i + 1].density){
-            return interpolateLinear(
-                density,
-                table[i].density,
-                table[i + 1].density,
-                table[i].pressure,
-                table[i + 1].pressure
-            );
-        }
-    }
-    return 0.0f;
-}
 
 void settlingFunc(void){
     if (!settlingFlag)

@@ -6,13 +6,15 @@
  */
 
 #include "main.h"
-#include "usb.h"
-#include "sensors.h"
-#include "control.h"
 #include "usbd_cdc_if.h"
 #include <stdio.h>
 #include <stdarg.h>
 #include <string.h>
+#include "usb.h"
+#include "sensors.h"
+#include "control.h"
+#include "lookup_tables.h"
+
 
 #define USB_RX_BUFFER_SIZE 128
 
@@ -38,7 +40,7 @@ uint8_t chamberValveCloseRequest = 0;
 uint8_t plenumHeaterRequest = 0;
 uint8_t chamberHeaterRequest = 0;
 
-char proposedPropellantSpecies[16];
+PropellantSpecies_t proposedPropellantSpecies;
 float proposedChamberTemp = 0.0f;
 float proposedPlenumTargetTemp = 0.0f;
 float proposedPlenumTargetPressure = 0.0f;
@@ -134,9 +136,16 @@ void usbCommandTask(void)
     	float temp;
     	float pressure;
     	float chamberTemp;
-    	if (sscanf(usbRxBuffer, "*PRIME %15s %f %f %f#", species, &temp, &pressure, &chamberTemp) == 4)
-    	{
-    		strcpy(proposedPropellantSpecies, species);
+    	if (sscanf(usbRxBuffer, "*PRIME %15s %f %f %f#", species, &temp, &pressure, &chamberTemp) == 4){
+    		if (strcmp(species, "R134A") == 0){
+    		    proposedPropellantSpecies = R134A;
+    		}
+    		else if (strcmp(species, "R245FA") == 0){
+    		    proposedPropellantSpecies = R245FA;
+    		}
+    		else{
+    			return;
+    		}
     		proposedPlenumTargetTemp = temp;
     		proposedPlenumTargetPressure = pressure;
     		proposedChamberTemp = chamberTemp;
@@ -153,7 +162,7 @@ void usbCommandTask(void)
         	proposedPlenumTargetTemp = setpoint;
 
             USB_Transmit("Plenum heater setpoint = %.1f\r\n",
-                         proposedPlenumTempSetpoint);
+            		proposedPlenumTargetTemp);
         }
     }
     else if (strncmp(usbRxBuffer, "*CHAMBER HEATER ", 17) == 0){
@@ -165,7 +174,7 @@ void usbCommandTask(void)
         	proposedChamberTemp = setpoint;
 
             USB_Transmit("Chamber heater setpoint = %.1f\r\n",
-            		proposedChamberTempSetpoint);
+            		proposedChamberTemp);
         }
     }
     else if (strcmp(usbRxBuffer, "*STATUS#") == 0){

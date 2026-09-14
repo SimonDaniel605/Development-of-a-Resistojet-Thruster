@@ -694,15 +694,6 @@ void valveTask(void){
 			chamberValveFlag ? GPIO_PIN_SET : GPIO_PIN_RESET);
 }
 
-float interpolateLinear(float x, float x1, float x2,
-                        float y1,float y2){
-    if (x2 == x1)
-    	return y1;
-    float fraction = (x - x1) / (x2 - x1);
-    return y1 + fraction * (y2 - y1);
-}
-
-
 void debugLEDTask(void){
 
 }
