@@ -1,0 +1,4 @@
+../Core/Src/sensors.c:26:13:ADS131M04_ReadFrame	1
+../Core/Src/sensors.c:29:16:ADS131M04_Convert24Bit	2
+../Core/Src/sensors.c:39:14:ADS131M04_CodeToVoltage	1
+../Core/Src/sensors.c:42:14:thermocoupleVoltageToTemperature	1

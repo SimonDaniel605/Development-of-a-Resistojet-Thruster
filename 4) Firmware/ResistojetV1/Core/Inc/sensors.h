@@ -8,6 +8,8 @@
 #ifndef INC_SENSORS_H_
 #define INC_SENSORS_H_
 
+#include "main.h"
+
 extern float thrust;
 
 extern float tankPressure;
@@ -18,5 +20,10 @@ extern float plenumBodyTemperature;
 extern float chamberHeaterTemperature1;
 extern float chamberHeaterTemperature2;
 extern float chamberGasTemperature;
+
+static void ADS131M04_ReadFrame(void);
+static int32_t ADS131M04_Convert24Bit(uint8_t *data);
+static float ADS131M04_CodeToVoltage(int32_t code);
+static float thermocoupleVoltageToTemperature(float voltage);
 
 #endif /* INC_SENSORS_H_ */

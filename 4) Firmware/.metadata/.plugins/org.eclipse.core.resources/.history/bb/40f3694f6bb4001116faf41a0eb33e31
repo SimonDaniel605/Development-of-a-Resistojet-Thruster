@@ -1,0 +1,85 @@
+/*
+ * sensors.c
+ *
+ *  Created on: Aug 31, 2026
+ *      Author: Simon
+ */
+
+#include "sensors.h"
+#include "lookup_tables.h"
+#include "pins.h"
+
+float thrust;
+
+float tankPressure;
+float plenumPressure;
+float chamberPressure;
+
+float plenumGasTemperature;       // thermistor
+float plenumBodyTemperature;      // thermocouple
+float chamberHeaterTemperature1;  // thermocouple
+float chamberHeaterTemperature2;  // thermocouple
+float chamberGasTemperature;      // thermocouple
+
+
+/* ADS131M04 CODE BEGIN */
+static void ADS131M04_Init(void){
+	// CODE HERE
+    HAL_TIM_PWM_Start(&htim2, ADS_CLKIN_CHANNEL);
+    HAL_GPIO_WritePin(ADS_CS_Port, ADS_CS_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(ADS_RESET_Port, ADS_RESET_Pin, GPIO_PIN_SET);
+}
+static void ADS131M04_ReadFrame(void){
+	// CODE HERE
+}
+static int32_t ADS131M04_Convert24Bit(uint8_t *data){
+    // Combine three bytes into a 24-bit value
+    int32_t value = ((int32_t)data[0] << 16) |
+                    ((int32_t)data[1] << 8)  |
+                    ((int32_t)data[2]);
+    // Sign extend from 24-bit signed to 32-bit signed
+    if (value & 0x00800000)
+    	value |= 0xFF000000;
+    return value;
+}
+static float ADS131M04_CodeToVoltage(int32_t code){
+	// CODE HERE
+}
+static float thermocoupleVoltageToTemperature(float voltage){
+	/*
+	 https://its90.nist.gov/downloadFiles/type_k.tab.txt
+	 Temperature range 0 to 500 deg C
+	 Voltage range 0 to 20.644 mV
+	 Error range 0.04 to -0.05 deg C
+	 */
+	float temp;
+	temp = 0 + (2.508355e1)*voltage + (7.860106e-2)*voltage^2 + (-2.503131e-1)*voltage^3 +
+			(8.315270e-2)*voltage^4 + (-1.228034e-2)*voltage^5 + (9.804036e-4)*voltage^6 +
+			(-4.413030e-5)*voltage^7 + (1.057734e-6)*voltage^8 + (-1.052755e-8)*voltage^9;
+	return temp;
+}
+
+
+/*
+ The coefficients for Temperature range 0 deg C to 500 deg C
+
+ Voltage range 0 mV to 20.644 mV
+
+ Error range .04 deg C to -.05 deg C are:
+
+
+ C0 = 0
+ C1 = 2.508355 * 10^1
+ C2 = 7.860106 * 10^-2
+ C3 = -2.503131 * 10^-1
+ C4 = 8.315270 * 10^-2
+ C5 = -1.228034 * 10^-2
+ C6 = 9.804036 * 10^-4
+ C7 = -4.413030 * 10^-5
+
+ C8 = 1.057734 * 10^-6
+
+ C9 = -1.052755 * 10^-8
+*/
+/* ADS131M04 CODE END */
+

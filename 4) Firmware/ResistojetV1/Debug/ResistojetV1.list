@@ -27,25 +27,25 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  11 .ARM.attributes 00000030  00000000  00000000  0002234c  2**0
                   CONTENTS, READONLY
- 12 .debug_info   0001e051  00000000  00000000  0002237c  2**0
+ 12 .debug_info   0001e13b  00000000  00000000  0002237c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_abbrev 0000499d  00000000  00000000  000403cd  2**0
+ 13 .debug_abbrev 00004a10  00000000  00000000  000404b7  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_aranges 00001bc0  00000000  00000000  00044d70  2**3
+ 14 .debug_aranges 00001be0  00000000  00000000  00044ec8  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_rnglists 00001539  00000000  00000000  00046930  2**0
+ 15 .debug_rnglists 0000155f  00000000  00000000  00046aa8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_macro  00025709  00000000  00000000  00047e69  2**0
+ 16 .debug_macro  000259f1  00000000  00000000  00048007  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   00022068  00000000  00000000  0006d572  2**0
+ 17 .debug_line   000224e2  00000000  00000000  0006d9f8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    000e7747  00000000  00000000  0008f5da  2**0
+ 18 .debug_str    000e77bf  00000000  00000000  0008feda  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000043  00000000  00000000  00176d21  2**0
+ 19 .comment      00000043  00000000  00000000  00177699  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00008c2c  00000000  00000000  00176d64  2**2
+ 20 .debug_frame  00008cd4  00000000  00000000  001776dc  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 00000095  00000000  00000000  0017f990  2**0
+ 21 .debug_line_str 00000095  00000000  00000000  001803b0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -4622,26 +4622,26 @@ void thrusterStartup(void){
  80024c4:	4810      	ldr	r0, [pc, #64]	@ (8002508 <thrusterStartup+0x80>)
  80024c6:	f005 fe9b 	bl	8008200 <HAL_TIM_PWM_Start>
 
-    HAL_TIM_PWM_Start(&htim2, ADS_CLKIN_CHANNEL);
- 80024ca:	2108      	movs	r1, #8
- 80024cc:	480f      	ldr	r0, [pc, #60]	@ (800250c <thrusterStartup+0x84>)
- 80024ce:	f005 fe97 	bl	8008200 <HAL_TIM_PWM_Start>
-
-    HAL_ADC_Start_DMA(&hadc1, (uint32_t *)adc1Buffer, ADC1_BUFFER_SIZE);
- 80024d2:	2204      	movs	r2, #4
- 80024d4:	490e      	ldr	r1, [pc, #56]	@ (8002510 <thrusterStartup+0x88>)
- 80024d6:	480f      	ldr	r0, [pc, #60]	@ (8002514 <thrusterStartup+0x8c>)
- 80024d8:	f001 fb1a 	bl	8003b10 <HAL_ADC_Start_DMA>
-    HAL_ADC_Start_DMA(&hadc2, (uint32_t *)adc2Buffer, ADC2_BUFFER_SIZE);
- 80024dc:	2201      	movs	r2, #1
- 80024de:	490e      	ldr	r1, [pc, #56]	@ (8002518 <thrusterStartup+0x90>)
- 80024e0:	480e      	ldr	r0, [pc, #56]	@ (800251c <thrusterStartup+0x94>)
- 80024e2:	f001 fb15 	bl	8003b10 <HAL_ADC_Start_DMA>
-
+    // Initialize ADC
     HAL_TIM_Base_Start(&htim6);
- 80024e6:	480e      	ldr	r0, [pc, #56]	@ (8002520 <thrusterStartup+0x98>)
- 80024e8:	f005 fdc0 	bl	800806c <HAL_TIM_Base_Start>
+ 80024ca:	4810      	ldr	r0, [pc, #64]	@ (800250c <thrusterStartup+0x84>)
+ 80024cc:	f005 fdce 	bl	800806c <HAL_TIM_Base_Start>
+    HAL_ADC_Start_DMA(&hadc1, (uint32_t *)adc1Buffer, ADC1_BUFFER_SIZE);
+ 80024d0:	2204      	movs	r2, #4
+ 80024d2:	490f      	ldr	r1, [pc, #60]	@ (8002510 <thrusterStartup+0x88>)
+ 80024d4:	480f      	ldr	r0, [pc, #60]	@ (8002514 <thrusterStartup+0x8c>)
+ 80024d6:	f001 fb1b 	bl	8003b10 <HAL_ADC_Start_DMA>
+    HAL_ADC_Start_DMA(&hadc2, (uint32_t *)adc2Buffer, ADC2_BUFFER_SIZE);
+ 80024da:	2201      	movs	r2, #1
+ 80024dc:	490e      	ldr	r1, [pc, #56]	@ (8002518 <thrusterStartup+0x90>)
+ 80024de:	480f      	ldr	r0, [pc, #60]	@ (800251c <thrusterStartup+0x94>)
+ 80024e0:	f001 fb16 	bl	8003b10 <HAL_ADC_Start_DMA>
 
+    // Initialize ADS131M04
+    HAL_TIM_PWM_Start(&htim2, ADS_CLKIN_CHANNEL);
+ 80024e4:	2108      	movs	r1, #8
+ 80024e6:	480e      	ldr	r0, [pc, #56]	@ (8002520 <thrusterStartup+0x98>)
+ 80024e8:	f005 fe8a 	bl	8008200 <HAL_TIM_PWM_Start>
     HAL_GPIO_WritePin(ADS_CS_Port, ADS_CS_Pin, GPIO_PIN_SET);
  80024ec:	2201      	movs	r2, #1
  80024ee:	2102      	movs	r1, #2
@@ -4657,12 +4657,12 @@ void thrusterStartup(void){
  8002502:	bd80      	pop	{r7, pc}
  8002504:	48000400 	.word	0x48000400
  8002508:	200006a0 	.word	0x200006a0
- 800250c:	20000654 	.word	0x20000654
+ 800250c:	200006ec 	.word	0x200006ec
  8002510:	20000738 	.word	0x20000738
  8002514:	20000398 	.word	0x20000398
  8002518:	20000740 	.word	0x20000740
  800251c:	20000404 	.word	0x20000404
- 8002520:	200006ec 	.word	0x200006ec
+ 8002520:	20000654 	.word	0x20000654
 
 08002524 <sensorTask>:
 

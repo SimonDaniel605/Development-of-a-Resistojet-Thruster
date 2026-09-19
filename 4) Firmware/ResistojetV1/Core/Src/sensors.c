@@ -7,6 +7,7 @@
 
 #include "sensors.h"
 #include "lookup_tables.h"
+#include "pins.h"
 
 float thrust;
 
@@ -21,4 +22,43 @@ float chamberHeaterTemperature2;  // thermocouple
 float chamberGasTemperature;      // thermocouple
 
 
+/* ADS131M04 CODE BEGIN */
+static void ADS131M04_ReadFrame(void){
+	// CODE HERE
+}
+static int32_t ADS131M04_Convert24Bit(uint8_t *data){
+    // Combine three bytes into a 24-bit value
+    int32_t value = ((int32_t)data[0] << 16) |
+                    ((int32_t)data[1] << 8)  |
+                    ((int32_t)data[2]);
+    // Sign extend from 24-bit signed to 32-bit signed
+    if (value & 0x00800000)
+    	value |= 0xFF000000;
+    return value;
+}
+static float ADS131M04_CodeToVoltage(int32_t code){
+	// CODE HERE
+}
+static float thermocoupleVoltageToTemperature(float voltage){
+	/*
+	 https://its90.nist.gov/downloadFiles/type_k.tab.txt
+	 Temperature range 0 to 500 deg C
+	 Voltage range 0 to 20.644 mV
+	 Error range -0.05 to 0.04 deg C
+	 */
+	float tempPerMilliVolt;
+
+	tempPerMilliVolt = 2.508355e1f
+	         + voltage * (7.860106e-2f
+	         + voltage * (-2.503131e-1f
+	         + voltage * (8.315270e-2f
+	         + voltage * (-1.228034e-2f
+	         + voltage * (9.804036e-4f
+	         + voltage * (-4.413030e-5f
+	         + voltage * (1.057734e-6f
+	         + voltage * (-1.052755e-8f))))))));
+	return tempPerVolt * voltage;
+}
+
+/* ADS131M04 CODE END */
 

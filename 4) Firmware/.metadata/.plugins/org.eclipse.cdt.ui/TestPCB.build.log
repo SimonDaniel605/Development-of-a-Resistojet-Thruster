@@ -1,4 +1,4 @@
-23:43:42 **** Incremental Build of configuration Debug for project TestPCB ****
+22:47:22 **** Incremental Build of configuration Debug for project TestPCB ****
 make -j20 all 
 arm-none-eabi-size  TestPCB.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size  TestPCB.elf
 Finished building: default.size.stdout
  
 
-23:43:43 Build Finished. 0 errors, 0 warnings. (took 368ms)
+22:47:23 Build Finished. 0 errors, 0 warnings. (took 310ms)
 

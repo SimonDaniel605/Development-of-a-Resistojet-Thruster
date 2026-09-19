@@ -1,6 +1,73 @@
-23:43:41 **** Incremental Build of configuration Debug for project ResistojetV1 ****
+22:47:21 **** Incremental Build of configuration Debug for project ResistojetV1 ****
 make -j20 all 
+arm-none-eabi-gcc "../Core/Src/control.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G491xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/control.d" -MT"Core/Src/control.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/control.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G491xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/sensors.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G491xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sensors.d" -MT"Core/Src/sensors.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/sensors.o"
 arm-none-eabi-gcc "../Core/Src/usb.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G491xx -c -I../Core/Inc -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/usb.d" -MT"Core/Src/usb.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/usb.o"
+../Core/Src/sensors.c: In function 'ADS131M04_CodeToVoltage':
+../Core/Src/sensors.c:41:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   41 | }
+      | ^
+../Core/Src/sensors.c: At top level:
+../Core/Src/sensors.c:42:14: warning: 'thermocoupleVoltageToTemperature' defined but not used [-Wunused-function]
+   42 | static float thermocoupleVoltageToTemperature(float voltage){
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/sensors.c:39:14: warning: 'ADS131M04_CodeToVoltage' defined but not used [-Wunused-function]
+   39 | static float ADS131M04_CodeToVoltage(int32_t code){
+      |              ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/sensors.c:29:16: warning: 'ADS131M04_Convert24Bit' defined but not used [-Wunused-function]
+   29 | static int32_t ADS131M04_Convert24Bit(uint8_t *data){
+      |                ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/sensors.c:26:13: warning: 'ADS131M04_ReadFrame' defined but not used [-Wunused-function]
+   26 | static void ADS131M04_ReadFrame(void){
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/control.c: In function 'thrusterModeHandler':
+../Core/Src/control.c:223:13: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  223 |             if (experimentalRequest &&
+      |             ^~
+../Core/Src/control.c:227:17: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  227 |                 break;
+      |                 ^~~~~
+In file included from ../Core/Src/control.c:13:
+../Core/Inc/sensors.h: At top level:
+../Core/Inc/sensors.h:24:13: warning: 'ADS131M04_ReadFrame' declared 'static' but never defined [-Wunused-function]
+   24 | static void ADS131M04_ReadFrame(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Inc/sensors.h:25:16: warning: 'ADS131M04_Convert24Bit' declared 'static' but never defined [-Wunused-function]
+   25 | static int32_t ADS131M04_Convert24Bit(uint8_t *data);
+      |                ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Inc/sensors.h:26:14: warning: 'ADS131M04_CodeToVoltage' declared 'static' but never defined [-Wunused-function]
+   26 | static float ADS131M04_CodeToVoltage(int32_t code);
+      |              ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/Inc/sensors.h:27:14: warning: 'thermocoupleVoltageToTemperature' declared 'static' but never defined [-Wunused-function]
+   27 | static float thermocoupleVoltageToTemperature(float voltage);
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/sensors.h:24:13: warning: 'ADS131M04_ReadFrame' declared 'static' but never defined [-Wunused-function]
+   24 | static void ADS131M04_ReadFrame(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Inc/sensors.h:25:16: warning: 'ADS131M04_Convert24Bit' declared 'static' but never defined [-Wunused-function]
+   25 | static int32_t ADS131M04_Convert24Bit(uint8_t *data);
+      |                ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Inc/sensors.h:26:14: warning: 'ADS131M04_CodeToVoltage' declared 'static' but never defined [-Wunused-function]
+   26 | static float ADS131M04_CodeToVoltage(int32_t code);
+      |              ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/Inc/sensors.h:27:14: warning: 'thermocoupleVoltageToTemperature' declared 'static' but never defined [-Wunused-function]
+   27 | static float thermocoupleVoltageToTemperature(float voltage);
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../Core/Src/usb.c:14:
+../Core/Inc/sensors.h:24:13: warning: 'ADS131M04_ReadFrame' declared 'static' but never defined [-Wunused-function]
+   24 | static void ADS131M04_ReadFrame(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Inc/sensors.h:25:16: warning: 'ADS131M04_Convert24Bit' declared 'static' but never defined [-Wunused-function]
+   25 | static int32_t ADS131M04_Convert24Bit(uint8_t *data);
+      |                ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Inc/sensors.h:26:14: warning: 'ADS131M04_CodeToVoltage' declared 'static' but never defined [-Wunused-function]
+   26 | static float ADS131M04_CodeToVoltage(int32_t code);
+      |              ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/Inc/sensors.h:27:14: warning: 'thermocoupleVoltageToTemperature' declared 'static' but never defined [-Wunused-function]
+   27 | static float thermocoupleVoltageToTemperature(float voltage);
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 arm-none-eabi-gcc -o "ResistojetV1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Simon\Projects\MEng Electronics\Development of a Resistojet Thruster\4) Firmware\ResistojetV1\STM32G491CCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ResistojetV1.map" -Wl,--gc-sections -static -u _scanf_float -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: ResistojetV1.elf
  
@@ -13,5 +80,5 @@ Finished building: default.size.stdout
 Finished building: ResistojetV1.list
  
 
-23:43:42 Build Finished. 0 errors, 0 warnings. (took 1s.534ms)
+22:47:22 Build Finished. 0 errors, 18 warnings. (took 1s.170ms)
 
